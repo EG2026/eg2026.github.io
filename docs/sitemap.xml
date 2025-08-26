@@ -2,6 +2,8 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://eg2026.github.io/accommodation/</loc>
+  </url><url>
     <loc>https://eg2026.github.io/attend/</loc>
   </url><url>
     <loc>https://eg2026.github.io/awards/</loc>
@@ -20,15 +22,27 @@
   </url><url>
     <loc>https://eg2026.github.io/categories/</loc>
   </url><url>
+    <loc>https://eg2026.github.io/code_of_conduct/</loc>
+  </url><url>
+    <loc>https://eg2026.github.io/diversity_panel/</loc>
+  </url><url>
     <loc>https://eg2026.github.io/doctoral_consortium/</loc>
+  </url><url>
+    <loc>https://eg2026.github.io/presentation_policy/</loc>
   </url><url>
     <loc>https://eg2026.github.io/</loc>
   </url><url>
     <loc>https://eg2026.github.io/organization/</loc>
   </url><url>
+    <loc>https://eg2026.github.io/presenting/</loc>
+  </url><url>
     <loc>https://eg2026.github.io/program/</loc>
   </url><url>
+    <loc>https://eg2026.github.io/registration/</loc>
+  </url><url>
     <loc>https://eg2026.github.io/submit/</loc>
+  </url><url>
+    <loc>https://eg2026.github.io/sustainability_panel/</loc>
   </url><url>
     <loc>https://eg2026.github.io/tags/</loc>
   </url>

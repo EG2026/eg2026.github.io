@@ -115,15 +115,21 @@
 - id: call_for_short_papers
   translation: "Call for Short Papers"
 - id: call_for_stars
-  translation: "Call for Stars"
+  translation: "Call for STARs"
 - id: call_for_tutorials
   translation: "Call for Tutorials"
 - id: call_for_posters
   translation: "Call for Posters"
 - id: call_for_education_papers
   translation: "Call for Education Papers"
+- id: diversity_panel
+  translation: "Diversity Panel"
+- id: sustainability_panel
+  translation: "Sustainability Panel"
 - id: doctoral_consortium
   translation: "Doctoral Consortium"
+- id: presentation_policy
+  translation: "In-Person Presentation Policy"
 - id: registration
   translation: "Registration"
 - id: presenting

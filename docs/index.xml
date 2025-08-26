@@ -8,6 +8,13 @@
     <language>en</language>
     <atom:link href="https://eg2026.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>Accommodation</title>
+      <link>https://eg2026.github.io/accommodation/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://eg2026.github.io/accommodation/</guid>
+      <description>TBA </description>
+    </item>
+    <item>
       <title>Attend</title>
       <link>https://eg2026.github.io/attend/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -50,17 +57,31 @@
       <description>TBA </description>
     </item>
     <item>
-      <title>Call for Stars</title>
+      <title>Call for STARs</title>
       <link>https://eg2026.github.io/call_for_stars/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://eg2026.github.io/call_for_stars/</guid>
-      <description>TBA </description>
+      <description>The State-of-the-Art Reports (STARs) track at the Eurographics conference is a prestigious and integral component of the event, dedicated to providing comprehensive surveys on current and emerging topics in computer graphics. These reports synthesize recent advancements, significant research findings, and future directions in various subfields. STARs reports have a significant impact on the community, as evidenced by their high number of citations.&#xA;Timeline All following deadlines are at 23:59 UTC:</description>
     </item>
     <item>
       <title>Call for Tutorials</title>
       <link>https://eg2026.github.io/call_for_tutorials/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://eg2026.github.io/call_for_tutorials/</guid>
+      <description>TBA </description>
+    </item>
+    <item>
+      <title>Code of Conduct</title>
+      <link>https://eg2026.github.io/code_of_conduct/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://eg2026.github.io/code_of_conduct/</guid>
+      <description>Eurographics is an inclusive and harassment-free conference that welcomes all participants independently of race, ethnicity, religion, citizenship, nationality, age, sexual or gender identity, disability, or any other characteristic protected by law in the location where Eurographics takes place. A respectful communication is vital for a healthy exchange of ideas and thoughts. Eurographics does not tolerate abuse or harassment in any form. Behaviors such as exclusion, intimidation, use of abusive or degrading language, stalking, harassing photography or recording, inappropriate physical contact, unwelcome sexual attention, and all other forms of harassment will face consequences.</description>
+    </item>
+    <item>
+      <title>Diversity Panel</title>
+      <link>https://eg2026.github.io/diversity_panel/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://eg2026.github.io/diversity_panel/</guid>
       <description>TBA </description>
     </item>
     <item>
@@ -71,11 +92,25 @@
       <description>TBA </description>
     </item>
     <item>
+      <title>In-Person Presentation Policy</title>
+      <link>https://eg2026.github.io/presentation_policy/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://eg2026.github.io/presentation_policy/</guid>
+      <description>Physical attendance in combination with appropriate presentation of accepted work is at the very heart of a scientific conference. This year, at EG26, we would like to make explicit what this entails, so that both authors and audience get the best experience and the integrity of scientific discussion is maintained. Hence,&#xA;· If authors of accepted work do not present in person the work will not be published. Remote presentation or pre-recorded material is not considered a presentation.</description>
+    </item>
+    <item>
       <title>Organization</title>
       <link>https://eg2026.github.io/organization/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://eg2026.github.io/organization/</guid>
       <description></description>
+    </item>
+    <item>
+      <title>Presenting</title>
+      <link>https://eg2026.github.io/presenting/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://eg2026.github.io/presenting/</guid>
+      <description>TBA </description>
     </item>
     <item>
       <title>Program</title>
@@ -85,11 +120,25 @@
       <description></description>
     </item>
     <item>
+      <title>Registration</title>
+      <link>https://eg2026.github.io/registration/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://eg2026.github.io/registration/</guid>
+      <description>TBA </description>
+    </item>
+    <item>
       <title>Submit</title>
       <link>https://eg2026.github.io/submit/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://eg2026.github.io/submit/</guid>
       <description> </description>
+    </item>
+    <item>
+      <title>Sustainability Panel</title>
+      <link>https://eg2026.github.io/sustainability_panel/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://eg2026.github.io/sustainability_panel/</guid>
+      <description>TBA </description>
     </item>
   </channel>
 </rss>

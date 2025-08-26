@@ -109,6 +109,24 @@ menu:
       url: /doctoral_consortium/#doctoral_consortium
       weight: 9
 
+    - identifier: diversity_panel
+      parent: submit
+      name: diversity_panel
+      url: /diversity_panel/#diversity_panel
+      weight: 10
+
+    - identifier: sustainability_panel
+      parent: submit
+      name: sustainability_panel
+      url: /sustainability_panel/#sustainability_panel
+      weight: 11
+
+    - identifier: presentation_policy
+      parent: submit
+      name: presentation_policy
+      url: /presentation_policy/#presentation_policy
+      weight: 12
+
 
 
     - name: program
@@ -192,25 +210,25 @@ menu:
     - identifier: registration
       parent: attend
       name: registration
-      url: /attend/#registration
+      url: /registration/#registration
       weight: 1
 
     - identifier: presenting
       parent: attend
       name: presenting
-      url: /attend/#presenting
+      url: /presenting/#presenting
       weight: 2
 
     - identifier: code_of_conduct
       parent: attend
       name: code_of_conduct
-      url: /attend/#code_of_conduct
+      url: /code_of_conduct/#code_of_conduct
       weight: 3
 
     - identifier: accommodation
       parent: attend
       name: accommodation
-      url: /attend/#accommodation
+      url: /accommodation/#accommodation
       weight: 4
 Params:
   sponsorContact: "eg2026@cs.rwth-aachen.de"
