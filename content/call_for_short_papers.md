@@ -25,7 +25,7 @@ All following deadlines are at **23:59 UTC**:
 
 ---
 
-### Submission details
+### Submission Details
 
 Submissions will be made electronically through the Eurographics [Submission and Review Management (SRM) system](https://srmv2.eg.org/COMFy/Conference/EG_2026S). Submitted papers must be anonymous, up to 4 pages in length, and formatted according to the Eurographics Author’s guidelines (short papers LaTeX style package available from the [SRM](https://srmv2.eg.org/COMFy/Conference/EG_2026S/Instruction) system).
 
