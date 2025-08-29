@@ -25,7 +25,7 @@ Digital support materials of accepted tutorials will be made available to every 
 
 ### Submission Details
 
-Tutorial proposals (in PDF) should be submitted by using the [Eurographics Submission and Review Management (SRMv2) System](Website coming soon). The submitted proposals should contain the following information:
+Tutorial proposals (in PDF) should be submitted by using the [Eurographics Submission and Review Management (SRMv2) System]([Website coming soon](https://srmv2.eg.org/COMFy/Conference/EG_2026TUT)). The submitted proposals should contain the following information:
 
 **Presenter(s) details:**
 
