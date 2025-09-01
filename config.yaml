@@ -403,7 +403,7 @@ Params:
           affiliation: "Paderborn University"
 
         - name: "Valentin Deschaintre"
-          affiliation: "Adobe Research"
+          affiliation: "Adobe"
 
         - name: "Marc Habermann"
           affiliation: "Max Planck Institute for Informatics"
@@ -425,9 +425,6 @@ Params:
         - name: "Marco Attene"
           affiliation: "CNR - IMATI"
 
-        - name: "Hadar Averbuch-Elor"
-          affiliation: "Cornell University"
-
         - name: "Jakob Andreas Bærentzen"
           affiliation: "Technical University of Denmark"
 
@@ -441,7 +438,7 @@ Params:
           affiliation: "Max Planck Institute for Informatics"
 
         - name: "Amit Bermano"
-          affiliation: "Tel-Aviv University"
+          affiliation: "Tel Aviv University"
 
         - name: "David Bommes"
           affiliation: "University of Bern"
@@ -474,7 +471,7 @@ Params:
           affiliation: "University of Cyprus & CYENS"
 
         - name: "Daniel Cohen-Or"
-          affiliation: "Tel-Aviv University"
+          affiliation: "Tel Aviv University"
 
         - name: "Carsten Dachsbacher"
           affiliation: "Karlsruhe Institute of Technology"
@@ -497,9 +494,6 @@ Params:
         - name: "Michael Doggett"
           affiliation: "Lund University"
 
-        - name: "Elmar Eisemann"
-          affiliation: "Delft University of Technology"
-
         - name: "Noura Faraj"
           affiliation: "Université de Montpellier"
 
@@ -510,7 +504,7 @@ Params:
           affiliation: "Max Planck Institute for Intelligent Systems"
 
         - name: "Michael Fischer"
-          affiliation: "Adobe Research"
+          affiliation: "Adobe"
 
         - name: "Linus Franke"
           affiliation: "Inria"
@@ -584,9 +578,6 @@ Params:
         - name: "Daniel Martin"
           affiliation: "Universidad de Zaragoza"
 
-        - name: "Radomir Mech"
-          affiliation: "Adobe Research"
-
         - name: "Pooran Memari"
           affiliation: "Ecole Polytechnique"
 
@@ -632,16 +623,13 @@ Params:
         - name: "Christian Richardt"
           affiliation: "Meta Reality Labs"
 
-        - name: "Tobias Ritschel"
-          affiliation: "University College London"
-
         - name: "Damien Rohmer"
           affiliation: "Ecole Polytechnique"
 
         - name: "Timo Ropinski"
           affiliation: "Ulm University"
 
-        - name: "Beatriz Santos"
+        - name: "Beatriz Sousa Santos"
           affiliation: "University of Aveiro"
 
         - name: "Silvia Sellan"
@@ -663,7 +651,7 @@ Params:
           affiliation: "Max Planck Institute for Informatics"
 
         - name: "Jean-Marc Thiery"
-          affiliation: "Adobe Research"
+          affiliation: "Adobe"
 
         - name: "Bernhard Thomaszewski"
           affiliation: "ETH Zurich"
@@ -693,10 +681,10 @@ Params:
           affiliation: "Beihang University"
 
         - name: "Li-Yi Wei"
-          affiliation: "Adobe Research"
+          affiliation: "Adobe"
 
         - name: "Sebastian Weiss"
-          affiliation: "Disney Research"
+          affiliation: "Disney Research Studios"
 
         - name: "Tim Weyrich"
           affiliation: "Friedrich-Alexander University of Erlangen-Nuremberg"
@@ -729,7 +717,25 @@ Params:
           affiliation: "New York University"
 
         - name: "Gaspard Zoss"
-          affiliation: "Disney Research"
+          affiliation: "Google"
+
+        - name: "Michael Guthe"
+          affiliation: "University of Bayreuth"
+
+        - name: "Wenzel Jakob"
+          affiliation: "EPFL"
+
+        - name: "Rafael Kuffner dos Anjos"
+          affiliation: "University of Leeds"
+
+        - name: "Zahra Montazeri"
+          affiliation: "University of Manchester"
+
+        - name: "Erik Sintorn"
+          affiliation: "Chalmers University of Technology"
+
+        - name: "Ofir Weber"
+          affiliation: "Bar-Ilan University"
   
   committees:
     - id: technical_papers_committee
