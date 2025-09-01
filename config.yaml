@@ -422,6 +422,9 @@ Params:
         - name: "Marc Alexa"
           affiliation: "Technical University of Berlin"
 
+        - name: "Rafael Kuffner dos Anjos"
+          affiliation: "University of Leeds"
+
         - name: "Marco Attene"
           affiliation: "CNR - IMATI"
 
@@ -530,6 +533,9 @@ Params:
         - name: "Jie Guo"
           affiliation: "Nanjing University"
 
+        - name: "Michael Guthe"
+          affiliation: "University of Bayreuth"
+
         - name: "Toshiya Hachisuka"
           affiliation: "University of Waterloo"
 
@@ -547,6 +553,9 @@ Params:
 
         - name: "Klaus Hildebrandt"
           affiliation: "Delft University of Technology"
+
+        - name: "Wenzel Jakob"
+          affiliation: "EPFL"
 
         - name: "Nima Kalantari"
           affiliation: "Texas A&M University"
@@ -583,6 +592,9 @@ Params:
 
         - name: "Dominik Michels"
           affiliation: "KAUST"
+
+        - name: "Zahra Montazeri"
+          affiliation: "University of Manchester"
 
         - name: "Przemyslaw Musialski"
           affiliation: "New Jersey Institute of Technology"
@@ -638,6 +650,9 @@ Params:
         - name: "Karan Singh"
           affiliation: "University of Toronto"
 
+        - name: "Erik Sintorn"
+          affiliation: "Chalmers University of Technology"
+
         - name: "Philipp Slusallek"
           affiliation: "DFKI & Saarland University"
 
@@ -680,6 +695,9 @@ Params:
         - name: "Miao Wang"
           affiliation: "Beihang University"
 
+        - name: "Ofir Weber"
+          affiliation: "Bar-Ilan University"
+
         - name: "Li-Yi Wei"
           affiliation: "Adobe"
 
@@ -719,23 +737,6 @@ Params:
         - name: "Gaspard Zoss"
           affiliation: "Google"
 
-        - name: "Michael Guthe"
-          affiliation: "University of Bayreuth"
-
-        - name: "Wenzel Jakob"
-          affiliation: "EPFL"
-
-        - name: "Rafael Kuffner dos Anjos"
-          affiliation: "University of Leeds"
-
-        - name: "Zahra Montazeri"
-          affiliation: "University of Manchester"
-
-        - name: "Erik Sintorn"
-          affiliation: "Chalmers University of Technology"
-
-        - name: "Ofir Weber"
-          affiliation: "Bar-Ilan University"
   
   committees:
     - id: technical_papers_committee
