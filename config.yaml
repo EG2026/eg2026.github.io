@@ -372,6 +372,10 @@ Params:
       - name: "Yanjiang He"
         email: "he@cs.rwth-aachen.de"
         affiliation: "RWTH Aachen University"
+      - name: "Tanja Kobbelt"
+        affiliation: "RWTH Aachen University"
+      - name: "Aleksandra Lukic"
+        affiliation: "RWTH Aachen University"
 
   ipc:
     - id: ipc_advisory_board
