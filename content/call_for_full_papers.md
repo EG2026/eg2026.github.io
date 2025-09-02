@@ -28,23 +28,6 @@ All following deadlines are at **23:59 UTC**:
 [Mon] May   4, 2026: Conference begins!
 ```
 
-
-
-
-
-<!-- |            | Date              | Event                                                       |
-|------------|-------------------|-------------------------------------------------------------|
-| Mon        | Sep. 22, 2025     | Abstract and submission form deadline                       |
-| Fri        | Sep. 26, 2025     | Full paper deadline                                         |
-| Wed        | Nov. 19, 2025     | Reviews released                                            |
-| Wed        | Nov. 26, 2025     | Rebuttal due                                                |
-| Mon        | Dec. 15, 2025     | Notification for conditional acceptance or rejection        |
-| Fri        | Jan. 23, 2026     | Revised version due                                         |
-| Fri        | Feb. 6, 2026      | Final notification                                          |
-| Fri        | Feb. 20, 2026     | Camera-ready version due                                    |
-| Fri        | Apr. 3, 2026      | Registration deadline for at least one paper author         |
-| Mon        | May  4, 2026      | Conference begins                                           | -->
-
 ---
 
 ### Reviewing Process & Upon Acceptance
@@ -108,6 +91,12 @@ As authors, putting a submission on a repository like arXiv is allowed, either b
 2. · No publicity via university or company PR teams regardless of whether authors or institutions are kept anonymous – this includes any postings or dissemination via institutional or promoted social media accounts.
 3. · No media interviews regardless of mainstream media or tech-focused outlets (small-scale, non-public seminars are allowed).
 4. · Do not post papers or supplementary material on university, company, or other private servers that may identify preprints as Eurographics submissions.
+
+---
+
+### Generative AI Policy
+
+Authors can utilize generative AI tools to assist with grammar corrections and other similar tasks while preparing their submissions. However, authors are fully responsible for the contents of their submission, including any misrepresentation, factual inaccuracy, or plagiarism in it. Papers containing citations of non-existent material or obvious factual inaccuracies will be rejected when found, and may be rejected without review.
 
 ---
 
