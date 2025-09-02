@@ -58,9 +58,14 @@ All papers and supplementary material will be published in the Eurographics Digi
 
 Anonymous submissions must be formatted according to the [Eurographics Author’s guidelines](https://www.eg.org/wp/eurographics-publications/guidelines/).
 
-Submissions will be made electronically through the [Eurographics Submission and Review Management (SRMv2) system](website link coming soon) and are subject to a review process.
+Submissions will be made electronically through the [Eurographics Submission and Review Management (SRMv2) system](https://srmv2.eg.org/COMFy/Conference/EG_2026EDU) and are subject to a review process.
 
-<!-- Submissions will be made electronically through the [Eurographics Submission and Review Management (SRMv2) system](https://srmv2.eg.org/COMFy/Conference/EG_2026EDU) and are subject to a review process. -->
+
+---
+
+### Generative AI policy
+
+Authors can utilize Generative AI tools to assist with grammar corrections while preparing their submissions. However, authors are responsible for any misrepresentation, factual inaccuracy, or plagiarism in their submission. Papers containing citations of non-existent material or obvious factual inaccuracies will be rejected when found and may be rejected without review.
 
 ---
 
