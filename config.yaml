@@ -442,7 +442,7 @@ Params:
           affiliation: "University of Waterloo"
 
         - name: "Mojtaba Bemana"
-          affiliation: "Max Planck Institute for Informatics"
+          affiliation: "SpAItialAI Gmbh"
 
         - name: "Amit Bermano"
           affiliation: "Tel Aviv University"
@@ -711,7 +711,7 @@ Params:
         - name: "Tim Weyrich"
           affiliation: "Friedrich-Alexander University of Erlangen-Nuremberg"
 
-        - name: "Tsien Tsin Wong"
+        - name: "Tien-Tsin Wong"
           affiliation: "Monash University"
 
         - name: "Hongzhi Wu"

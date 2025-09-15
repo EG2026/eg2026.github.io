@@ -16,7 +16,7 @@ In addition to novel methodologies and algorithms for Computer Graphics, EUROGRA
 All following deadlines are at **23:59 UTC**:
 
 ``` 
-[Mon] Sep. 22, 2025: Abstract and submission form deadline
+[Mon] Sep. 22, 2025: Abstract and submission form deadline (**REQUIRED**)
 [Fri] Sep. 26, 2025: Full paper deadline
 [Wed] Nov. 19, 2025: Reviews released
 [Wed] Nov. 26, 2025: Rebuttal due
