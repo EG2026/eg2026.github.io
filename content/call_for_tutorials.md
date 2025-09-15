@@ -1,7 +1,7 @@
 ---
 title: "Call for Tutorials"
-type:  "page"               # or whatever your theme expects
-layout: "call_for_tutorials"  # this tells Hugo to use layouts/page/call_for_full_papers.html
+type:  "page"
+layout: "call_for_tutorials"
 ---
 
 The Eurographics 2026 Tutorials Committee invites you to propose high-quality presentations and materials on the technical background of a given subject or demonstrating its potential creative applications. Tutorials are intended to show what can be done, but even more importantly, how this is done and what kind of tools can be used to do it. In a proposal for a tutorial, you should consider that tutorial attendees come from diverse backgrounds, ranging from research and development to education and application.

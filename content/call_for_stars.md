@@ -1,7 +1,7 @@
 ---
 title: "Call for STARs"
-type:  "page"               # or whatever your theme expects
-layout: "call_for_stars"  # this tells Hugo to use layouts/page/call_for_full_papers.html
+type:  "page"
+layout: "call_for_stars"
 ---
 
 The State-of-the-Art Reports (STARs) track at the Eurographics conference is a prestigious and integral component of the event, dedicated to providing comprehensive surveys on current and emerging topics in computer graphics. These reports synthesize recent advancements, significant research findings, and future directions in various subfields. STARs reports have a significant impact on the community, as evidenced by their high number of citations.

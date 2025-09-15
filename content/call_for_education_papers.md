@@ -1,7 +1,7 @@
 ---
 title: "Call for Education Papers"
-type:  "page"               # or whatever your theme expects
-layout: "call_for_education_papers"  # this tells Hugo to use layouts/page/call_for_full_papers.html
+type:  "page"
+layout: "call_for_education_papers"
 ---
 
 The scope of the track includes topics in education concerned with computer graphics and related areas, relevant teaching/classroom experience, as well as assignments for use in these subject areas. We invite authors to submit papers, panels and outstanding student projects specifically related but not limited to the following topics:

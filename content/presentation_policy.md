@@ -1,7 +1,7 @@
 ---
 title: "In-Person Presentation Policy"
-type:  "page"               # or whatever your theme expects
-layout: "presentation_policy"  # this tells Hugo to use layouts/page/call_for_full_papers.html
+type:  "page"
+layout: "presentation_policy"
 ---
 
  Physical attendance in combination with appropriate presentation of accepted work is at the very heart of a scientific conference. This year, at EG26, we would like to make explicit what this entails, so that both authors and audience get the best experience and the integrity of scientific discussion is maintained. Hence,

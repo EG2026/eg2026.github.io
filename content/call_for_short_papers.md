@@ -1,7 +1,7 @@
 ---
 title: "Call for Short Papers"
-type:  "page"               # or whatever your theme expects
-layout: "call_for_short_papers"  # this tells Hugo to use layouts/page/call_for_full_papers.html
+type:  "page"
+layout: "call_for_short_papers"
 ---
 
 Authors are invited to submit short papers [4 pages max] that present self-contained, complete, compact works on all areas related to computer graphics, such as rendering, modeling, visualization, animation, simulation, virtual reality, computer vision, computer-aided design, digital fabrication, imaging and computational photography. We particularly invite submissions which present tangible and practically useful improvements to the state of the art, but which are not thematically wide enough to justify an entire full paper. What we would like to see as short papers are individual smart ideas and intriguing findings that might otherwise remain unpublished, due to them standing in isolation – as opposed to falling within the context of some larger scientific endeavour, where they can be easily mentioned in the corresponding publication.

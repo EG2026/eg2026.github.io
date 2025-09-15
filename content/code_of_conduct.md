@@ -1,7 +1,7 @@
 ---
 title: "Code of Conduct"
-type:  "page"               # or whatever your theme expects
-layout: "code_of_conduct"  # this tells Hugo to use layouts/page/call_for_full_papers.html
+type:  "page"
+layout: "code_of_conduct"
 ---
 
 
