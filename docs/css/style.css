@@ -1029,3 +1029,17 @@ td.teaserColumn
   }
   .speakers-section .speaker-photo { width: 160px; height: 160px; }
 } */
+
+.map-container {
+  width: 100%;
+  aspect-ratio: 4 / 2.5;   /* or 16 / 9 if you prefer */
+}
+.map-container iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+  display: block;
+}
+
+
+

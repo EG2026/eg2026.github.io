@@ -2,13 +2,22 @@
 
 
 <h2 id=accommodation>{{T "accommodation" }}</h2>
+
+<h3 id=accommodation>{{"Official Hotels near EG2026 Venue" }}</h3>
+
+{{/*  <iframe src="https://www.google.com/maps/d/u/0/embed?mid=1IbGKMyZ-iShkBG-ztw8P9gzicUTe5-4&ehbc=2E312F&noprof=1" width="500" height="500"></iframe>  */}}
+
+<div class="map-container">
+  <iframe
+    src="https://www.google.com/maps/d/u/0/embed?mid=1IbGKMyZ-iShkBG-ztw8P9gzicUTe5-4&ehbc=2E312F&noprof=1"
+    loading="lazy"
+    referrerpolicy="no-referrer-when-downgrade"
+    allowfullscreen>
+  </iframe>
+</div>
+
 <div id=simple-static></div>
 {{ .Content }}
-
-
-<!-- <div id=simple-static>
-{{ .Content }} -->
-
 
 {{ end }}
 
