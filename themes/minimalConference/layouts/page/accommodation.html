@@ -3,10 +3,14 @@
   <div id="simple-static"></div>
 
   <div class="map-consent" data-map-src="https://www.google.com/maps/d/u/0/embed?mid=1IbGKMyZ-iShkBG-ztw8P9gzicUTe5-4&ehbc=2E312F&noprof=1">
-    <p>
-      To display the map, we need to load content from Google Maps. This may transmit your IP address and set cookies.
-      {{/*  See our <a href="/privacy" target="_blank" rel="noopener">privacy policy</a> for details.  */}}
+
+
+    <p class="map-consent__notice">
+        To display the map, we need to load content from Google Maps. This may transmit your IP address and set cookies.
+        {{/*  See our <a href="/privacy" target="_blank" rel="noopener">privacy policy</a> for details.  */}}
     </p>
+
+
     <button type="button" class="map-consent__btn">Load Google Map</button>
     <p class="map-consent__alt">
       {{/*  Prefer not to? You can open the location directly in a new tab:
