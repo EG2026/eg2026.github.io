@@ -53,6 +53,12 @@ Course notes, although not required in the submission, are highly encouraged to 
 
 ---
 
+### Generative AI policy
+
+Authors can utilize Generative AI tools to assist with grammar corrections while preparing their submissions. However, authors are responsible for any misrepresentation, factual inaccuracy, or plagiarism in their submission. Papers containing citations of non-existent material or obvious factual inaccuracies will be rejected when found, and may be rejected without review.
+
+---
+
 ### In-Person Presentation Policy
 
 Please consider our new [in-person presentation policy](https://eg2026.github.io/presentation_policy/#presentation_policy).
