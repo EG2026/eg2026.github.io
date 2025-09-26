@@ -209,25 +209,59 @@ ___ " />
 
 <div id="content-wrap">
             <div id="content">
+  <h2 id="accommodation">Accommodation</h2>
+  <div id="simple-static"></div>
 
+  <div class="map-consent" data-map-src="https://www.google.com/maps/d/u/0/embed?mid=1IbGKMyZ-iShkBG-ztw8P9gzicUTe5-4&ehbc=2E312F&noprof=1">
+    <p>
+      To display the map, we need to load content from Google Maps. This may transmit your IP address and set cookies.
+      
+    </p>
+    <button type="button" class="map-consent__btn">Load Google Map</button>
+    <p class="map-consent__alt">
+      
+    </p>
+  </div>
 
-<h2 id=accommodation>Accommodation</h2>
+  
+  <script>
+    (function () {
+      var box = document.querySelector('.map-consent');
+      if (!box) return;
 
-<h3 id=accommodation>Official Hotels near EG2026 Venue</h3>
+      var MAP_KEY = 'eg2026_map_consent';
+      var saved = (function(){ try { return localStorage.getItem(MAP_KEY) === '1'; } catch(e) { return false; } })();
+      var src = box.getAttribute('data-map-src');
 
+      function injectMap() {
+        
+        var wrap = document.createElement('div');
+        wrap.className = 'map-container';
+        var iframe = document.createElement('iframe');
+        iframe.setAttribute('loading', 'lazy');
+        iframe.setAttribute('referrerpolicy', 'no-referrer-when-downgrade');
+        iframe.setAttribute('allowfullscreen', '');
+        iframe.src = src;
+        wrap.appendChild(iframe);
+        box.replaceWith(wrap);
+      }
 
+      if (saved) {
+        injectMap();
+        return;
+      }
 
-<div class="map-container">
-  <iframe
-    src="https://www.google.com/maps/d/u/0/embed?mid=1IbGKMyZ-iShkBG-ztw8P9gzicUTe5-4&ehbc=2E312F&noprof=1"
-    loading="lazy"
-    referrerpolicy="no-referrer-when-downgrade"
-    allowfullscreen>
-  </iframe>
-</div>
+      var btn = box.querySelector('.map-consent__btn');
+      if (btn) {
+        btn.addEventListener('click', function () {
+          try { localStorage.setItem(MAP_KEY, '1'); } catch(e) {}
+          injectMap();
+        });
+      }
+    })();
+  </script>
 
-<div id=simple-static></div>
-<!-- raw HTML omitted -->
+    <!-- raw HTML omitted -->
 <hr>
 <h4 id="novotel-aachen-city"><strong>Novotel Aachen City</strong></h4>
 <ul>
@@ -282,6 +316,7 @@ ___ " />
 <li>Price Single room (inl. Breakfast): 164 € per night</li>
 </ul>
 <hr>
+
 
 
 
