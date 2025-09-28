@@ -543,6 +543,9 @@ Params:
         - name: "Toshiya Hachisuka"
           affiliation: "University of Waterloo"
 
+        - name: "Felix Hähnlein"
+          affiliation: "University of Washington"
+
         - name: "Johannes Hanika"
           affiliation: "Karlsruhe Institute of Technology"
 
@@ -566,6 +569,9 @@ Params:
 
         - name: "Yoshihiro Kanamori"
           affiliation: "University of Tsukuba"
+
+        - name: "Marilyn Keller"
+          affiliation: "ETH Zurich"
 
         - name: "Petr Kellnhofer"
           affiliation: "Delft University of Technology"
@@ -627,6 +633,9 @@ Params:
         - name: "Nico Pietroni"
           affiliation: "University of Technology Sydney"
 
+        - name: "Ruggero Pintus"
+          affiliation: "CRS4"
+
         - name: "Anran Qi"
           affiliation: "Inria"
 
@@ -638,6 +647,12 @@ Params:
 
         - name: "Christian Richardt"
           affiliation: "Meta Reality Labs"
+
+        - name: "Carlos Rodriguez-Pardo"
+          affiliation: "Politecnico di Milano"
+
+        - name: "Christian Roessl"
+          affiliation: "University of Magdeburg"
 
         - name: "Damien Rohmer"
           affiliation: "Ecole Polytechnique"
@@ -711,6 +726,9 @@ Params:
         - name: "Tim Weyrich"
           affiliation: "Friedrich-Alexander University of Erlangen-Nuremberg"
 
+        - name: "Ruben Wiersma"
+          affiliation: "ETH Zurich"
+
         - name: "Tien-Tsin Wong"
           affiliation: "Monash University"
 
@@ -723,14 +741,23 @@ Params:
         - name: "Chris Wyman"
           affiliation: "NVIDIA"
 
+        - name: "Mengqi Xia"
+          affiliation: "Yale University"
+
         - name: "Xin Yang"
           affiliation: "Dalian University of Technology"
+
+        - name: "Emilie Yu"
+          affiliation: "University of California Santa Barbara"
 
         - name: "Ran Yi"
           affiliation: "Shanghai Jiao Tong University"
 
         - name: "Biao Zhang"
           affiliation: "KAUST"
+
+        - name: "Tong Zhang"
+          affiliation: "University of Chinese Academy of Sciences"
 
         - name: "Junqiu Zhu"
           affiliation: "Shandong University"
