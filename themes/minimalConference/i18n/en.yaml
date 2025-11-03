@@ -71,9 +71,9 @@
 - id: education_papers_chairs
   translation: "Education Papers Chairs"
 - id: doctoral_cons_chairs
-  translation: "Doctoral Consortium Chairs"
+  translation: "Doctoral Consortium Chair"
 - id: diversity_chairs
-  translation: "Diversity Chairs"
+  translation: "Diversity Chair"
 - id: sustainability_chair
   translation: "Sustainability Chair"
 - id: technical_papers_committee

@@ -335,23 +335,17 @@ Params:
         email: "avaxman@inf.ed.ac.uk "
         affiliation: "The University of Edinburgh"
 
-  # - id: doctoral_cons_chairs
-  #   items: 
-  #     - name: ""
-  #       email: ""
-  #       affiliation: ""
-  #     - name: ""
-  #       email: ""
-  #       affiliation: ""
+  - id: doctoral_cons_chairs
+    items: 
+      - name: "Thomas Leimkühler"
+        email: "thomas.leimkuehler@mpi-inf.mpg.de"
+        affiliation: "Max Planck Institute for Informatics"
 
-  # - id: diversity_chairs
-  #   items: 
-  #     - name: ""
-  #       email: ""
-  #       affiliation: ""
-  #     - name: ""
-  #       email: ""
-  #       affiliation: ""
+  - id: diversity_chairs
+    items: 
+      - name: "Zahra Montazeri"
+        email: "zahra.montazeri@manchester.ac.uk "
+        affiliation: "University of Manchester"
 
   - id: sustainability_chair
     items: 
