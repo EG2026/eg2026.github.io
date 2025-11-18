@@ -140,6 +140,27 @@ Authors who are willing to go one step further toward replicability of their con
 
 ---
 
+### About the Rebuttal
+
+##### *Allowed:*
+
+1. · Clarifications of methods, results, or claims already in the paper.
+2. · Responses to reviewer questions, especially if they misunderstood something.
+3. · Pointing out factual errors in the reviews.
+4. · Rephrasing or emphasizing existing content to improve understanding.
+
+##### *Not allowed:*
+
+1. · New experiments or results, even if they strengthen your claims.
+2. · Major revisions or additions to the methodology.
+3. · Extending the scope of the paper beyond what was originally submitted.
+
+These restrictions exist to keep the review process fair and manageable. Reviewers base their decisions on the original submission, and allowing new results during rebuttal would give unfair advantage to authors who can rapidly produce additional experiments
+
+If you believe new results are essential to clarify a misunderstanding, you can briefly mention that such results exist and could be included in a future revision, but you must not present them in detail or rely on them to change the reviewers’ minds.
+
+---
+
 ### Contact
 For any questions concerning full paper submissions, please do not hesitate to contact the papers program co-chairs:
 
