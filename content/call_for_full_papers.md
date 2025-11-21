@@ -151,13 +151,15 @@ Authors who are willing to go one step further toward replicability of their con
 
 ##### *Not allowed:*
 
-1. · New experiments or results, even if they strengthen your claims.
+1. · New results, even if they strengthen your claims.
 2. · Major revisions or additions to the methodology.
 3. · Extending the scope of the paper beyond what was originally submitted.
 
-These restrictions exist to keep the review process fair and manageable. Reviewers base their decisions on the original submission, and allowing new results during rebuttal would give unfair advantage to authors who can rapidly produce additional experiments
+These restrictions exist to keep the review process fair and manageable. Reviewers base their decisions on the original submission, and allowing new results during rebuttal would give unfair advantage to authors who can rapidly produce them.
 
 If you believe new results are essential to clarify a misunderstanding, you can briefly mention that such results exist and could be included in a future revision, but you must not present them in detail or rely on them to change the reviewers’ minds.
+
+Note: The score range used in the "Overal Recommendation" field of the reviews is as follows: "1 - very poor; 2 - poor; 3 - clearly below EG standard; 4 - dubious - not quite acceptable; 5 - marginal - only just acceptable; 6 - acceptable; 7 - good; 8 - very good; 9 - excellent". Please also note that the textual descriptions are merely orientative.
 
 ---
 
