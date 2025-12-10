@@ -346,6 +346,9 @@ Params:
       - name: "Zahra Montazeri"
         email: "zahra.montazeri@manchester.ac.uk "
         affiliation: "University of Manchester"
+      - name: "Junqiu Zhu"
+        email: "junqiuzhu27@gmail.com"
+        affiliation: "Shandong University"
 
   - id: sustainability_chair
     items: 

@@ -29,4 +29,8 @@ For any questions concerning diversity panel, please do not hesitate to contact 
 
 · **Zahra Montazeri**, University of Manchester
 
-Email: zahra.montazeri@manchester.ac.uk 
+  Email: zahra.montazeri@manchester.ac.uk 
+
+· **Junqiu Zhu**, Shandong University
+
+  Email: junqiuzhu27@gmail.com
