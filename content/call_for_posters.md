@@ -27,7 +27,7 @@ Submissions shall be anonymous and made through the [Eurographics Submission and
 
 The authors of accepted posters are expected to provide:
 
-1. · a poster in A0 portrait format (download the EG2026 poster template [here](https://srmv2.eg.org/COMFy/Conference/EG_2026P/GetConferenceFile?fileID=18393)), with a resolution of at least 9933 x 14043 pixels
+1. · a poster in A0 portrait format (download the EG2026 poster template [here](https://srmv2.eg.org/COMFy/Conference/EG_2026P/GetConferenceFile?fileID=18435)), with a resolution of at least 9933 x 14043 pixels
 2. · a final 2-page paper describing the poster content
 
 Both a PDF version of the poster and the extended abstract will be included in the EG digital library with a DOI. The material in a poster/sketch can later be reused by the original authors for a more extensive publication (e.g., a full paper) with more detailed content and mature results, without being considered self-plagiarism.
