@@ -15,7 +15,10 @@ All following deadlines are at **23:59 UTC**:
 ``` 
 [Mon] Oct.  6, 2025: STAR abstract submission deadline
 [Fri] Oct. 10, 2025: Full STAR submission deadline
-[Fri] Dec. 19, 2025: First review notification
+``` 
+~~[Fri] Dec. 19, 2025: First review notification~~
+``` 
+[Tue] Dec. 23, 2025: First review notification
 [Fri] Feb.  6, 2026: Revised STAR submission
 [Fri] Feb. 20, 2026: Second review notification
 [Fri] Feb. 20, 2026: Camera-ready submission due
