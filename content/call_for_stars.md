@@ -21,7 +21,7 @@ All following deadlines are at **23:59 UTC**:
 [Tue] Dec. 23, 2025: First review notification
 [Fri] Feb.  6, 2026: Revised STAR submission
 [Fri] Feb. 20, 2026: Second review notification
-[Fri] Feb. 20, 2026: Camera-ready submission due
+[Fri] Mar. 20, 2026: Camera-ready submission due
 [Fri] Apr.  3, 2026: Registration for at least one paper author
 [Mon] May   4, 2026: Conference begins!
 ```
