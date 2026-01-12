@@ -8,6 +8,16 @@ layout: "accommodation"
 
 <!-- ### Official Hotels near EG2026 Venue -->
 
+\
+**Important Locations:**
+
+
+***Venue:*** [Cineplex Kinopark Aachen, Borngasse 30, 52064 Aachen](https://maps.app.goo.gl/fdLhEaw57nfRibuEA) (red star on the map)
+
+***Social Event:*** [City Hall Aachen, Markt, 52062 Aachen](https://maps.app.goo.gl/jqauDk3YdjYL7V9x8) (green star on the map)
+
+***Public Event:*** [Aula 1, RWTH Main Building, Templergraben 55, 52062 Aachen](https://maps.app.goo.gl/TtYnDQBh4JTpuHqv9) (blue star on the map)
+
 ---
 
 #### **Novotel Aachen City**
