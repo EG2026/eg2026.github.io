@@ -424,7 +424,7 @@ Params:
         - name: "Beibei Wang"
           affiliation: "Nanjing University"
 
-    - id: ipc_members
+    - id: ipc_members_full_papers
       items:
         - name: "Marc Alexa"
           affiliation: "Technical University of Berlin"
@@ -767,6 +767,110 @@ Params:
 
         - name: "Gaspard Zoss"
           affiliation: "Google"
+
+    - id: ipc_members_short_papers
+      items:
+        - name: "Tushar Athawale"
+          affiliation: "Oak Ridge National Laboratory"
+
+        - name: "Francesco Banterle"
+          affiliation: "ISTI-CNR"
+
+        - name: "Michael Birsak"
+          affiliation: "King Abdullah University of Science and Technology (KAUST)"
+
+        - name: "Jiří Bittner"
+          affiliation: "Czech Technical University in Prague"
+
+        - name: "Hendrik Brückler"
+          affiliation: "Paderborn University"
+
+        - name: "Xavier Chermain"
+          affiliation: "Inria"
+
+        - name: "Suyeon Choi"
+          affiliation: "Stanford University"
+
+        - name: "Akshat Dave"
+          affiliation: "Stony Brook University"
+
+        - name: "Dongyu Du"
+          affiliation: "University of Toronto"
+
+        - name: "David Hahn"
+          affiliation: "TU Wien"
+
+        - name: "R. Kenny Jones"
+          affiliation: "Stanford University"
+
+        - name: "Mackenzie Leake"
+          affiliation: "Adobe Research"
+
+        - name: "Patrick Marais"
+          affiliation: "University of Cape Town"
+
+        - name: "Nicolas Mellado"
+          affiliation: "CNRS"
+
+        - name: "Sanjeev Muralikrishnan"
+          affiliation: "Dolby Laboratories"
+
+        - name: "Marcel Padilla"
+          affiliation: "ETH Zurich"
+
+        - name: "Hao Pan"
+          affiliation: "Tsinghua University"
+
+        - name: "George Papagiannakis"
+          affiliation: "University of Crete & FORTH"
+
+        - name: "Adithya Pediredla"
+          affiliation: "Dartmouth College"
+
+        - name: "Chi-Han Peng"
+          affiliation: "National Yang Ming Chiao Tung University"
+
+        - name: "Ruggero Pintus"
+          affiliation: "CRS4"
+
+        - name: "Joanna Porter-Sobieraj"
+          affiliation: "Warsaw University of Technology"
+
+        - name: "Marzia Riso"
+          affiliation: "Inria"
+
+        - name: "Leonardo Sacht"
+          affiliation: "Universidade Federal de Santa Catarina"
+
+        - name: "Camille Schreck"
+          affiliation: "Inria"
+
+        - name: "Markus Schütz"
+          affiliation: "TU Wien"
+
+        - name: "Ana Serrano"
+          affiliation: "Universidad de Zaragoza"
+
+        - name: "Andrei Sharf"
+          affiliation: "Ben Gurion University"
+
+        - name: "I-Chao Shen"
+          affiliation: "The University of Tokyo"
+
+        - name: "Xiangjun Tang"
+          affiliation: "Zhejiang University"
+
+        - name: "Arran Wang"
+          affiliation: "University of North Carolina"
+
+        - name: "Kai Wang"
+          affiliation: "Simon Fraser University"
+
+        - name: "Tomer Weiss"
+          affiliation: "New Jersey Institute of Technology"
+
+        - name: "Lei Zhong"
+          affiliation: "Nankai University"
 
   
   committees:

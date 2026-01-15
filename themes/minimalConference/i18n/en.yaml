@@ -108,8 +108,10 @@
   translation: "IPC Advisory Board"
 - id: sorting_committee
   translation: "Sorting Committee"
-- id: ipc_members
-  translation: "IPC Members"
+- id: ipc_members_full_papers
+  translation: "IPC Members (Full Papers)"
+- id: ipc_members_short_papers
+  translation: "IPC Members (Short Papers)"
 - id: call_for_papers
   translation: "Call for Full Papers"
 - id: call_for_short_papers
