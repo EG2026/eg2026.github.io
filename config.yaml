@@ -777,7 +777,7 @@ Params:
           affiliation: "ISTI-CNR"
 
         - name: "Michael Birsak"
-          affiliation: "King Abdullah University of Science and Technology (KAUST)"
+          affiliation: "KAUST"
 
         - name: "Jiří Bittner"
           affiliation: "Czech Technical University in Prague"
@@ -804,7 +804,7 @@ Params:
           affiliation: "Stanford University"
 
         - name: "Mackenzie Leake"
-          affiliation: "Adobe Research"
+          affiliation: "Adobe"
 
         - name: "Patrick Marais"
           affiliation: "University of Cape Town"
@@ -822,7 +822,7 @@ Params:
           affiliation: "Tsinghua University"
 
         - name: "George Papagiannakis"
-          affiliation: "University of Crete & FORTH"
+          affiliation: "University of Crete / FORTH"
 
         - name: "Adithya Pediredla"
           affiliation: "Dartmouth College"
