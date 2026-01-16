@@ -52,6 +52,8 @@
   translation: "Keynotes"
 - id: keynote_speakers
   translation: "Keynote Speakers"
+- id: location
+  translation: "Location"
 - id: stay_tuned_for_talk_information
   translation: "stay tuned for talk information"
 - id: organizational_team
