@@ -16,7 +16,10 @@ Digital support materials of accepted tutorials will be made available to every 
 
 ``` 
 [Tue] Dec.  2, 2025: Submission of full tutorial proposals
-[Tue] Jan.  6, 2026: Acceptance/rejection notification
+``` 
+~~[Tue] Jan.  6, 2026: Acceptance/rejection notification~~
+``` 
+[Tue] Jan. 23, 2026: Acceptance/rejection notification
 [Mon] Mar. 23, 2026: Submission of final material 
 [Mon] May   4, 2026: Conference begins!
 ```
