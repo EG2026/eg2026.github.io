@@ -14,14 +14,14 @@ To purchase your registration, please first read the EG26 [Code of Conduct](http
 ### Registration Fees
 
 
-| Category | Early (until 24th March) | Regular | Late
+| Category | Early (until 23rd March) | Regular (until 20th April) | Late |
 | :--- | --- | --- | --- |
-| *Student EG Member* | *450 €* | *TBA* | *TBA* | 
-| *Student Non-Member* | *563 €* | *TBA* | *TBA* |
-| *Non-Student EG Member* | *750 €* | *TBA* | *TBA* |
-| *Non-Student Non-Member* | *938 €* | *TBA* | *TBA* |
-| *Big Buddy EG Member* | *1425 €* | *TBA* | *TBA* |
-| *Big Buddy Non-Member* | *1781 €* | *TBA* | *TBA* |
+| *Student EG Member* | *450 €* | *550 €* | *650 €* | 
+| *Student Non-Member* | *563 €* | *688 €* | *813 €* |
+| *Non-Student EG Member* | *750 €* | *950 €* | *1050 €* |
+| *Non-Student Non-Member* | *938 €* | *1188 €* | *1313 €* |
+| *Big Buddy EG Member* | *1425 €* | *1775 €* | *2025 €* |
+| *Big Buddy Non-Member* | *1781 €* | *2219 €* | *2531 €* |
 
 ---
 
