@@ -9,6 +9,8 @@ layout: "registration"
 
 To purchase your registration, please first read the EG26 [Code of Conduct](https://eg2026.github.io/code_of_conduct/#code_of_conduct) and then proceed to the [registration page](https://events.eg.org/EG2026).
 
+Note: **Every accepted paper must have at least one non-student registration.** All Authors should register and pay by the 23rd of March 2026 in order to have their papers included in the programme. One registration covers one paper.
+
 ---
 
 ### Registration Fees
