@@ -9,7 +9,13 @@ layout: "registration"
 
 To purchase your registration, please first read the EG26 [Code of Conduct](https://eg2026.github.io/code_of_conduct/#code_of_conduct) and then proceed to the [registration page](https://events.eg.org/EG2026).
 
-Note: **Every accepted paper must have at least one non-student registration.** All Authors should register and pay by the 23rd of March 2026 in order to have their papers included in the programme. One registration covers one paper.
+**Important information**: 
+
+1. · For each presentation type (papers, tutorials, STARs, …) at least one non-student participant has to register. Otherwise the respective paper has to be eliminated from the program. The deadline for this presenter registration is April 3rd 2026.
+
+2.  · In order to widen the participation at Eurographics conferences, EG has started a scholarship program. Please refer to https://www.eg.org/wp/eg-widening-participation-scholarships/ for details on the goals, scope, and application procedures for this scholarship program.
+
+3.  · If you need a formal invitation letter in order to apply for a visa, please send an email to sekretariati8@cs.rwth-aachen.de after you have registered to the conference.
 
 ---
 
