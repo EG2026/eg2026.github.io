@@ -126,8 +126,6 @@
   translation: "Call for Posters"
 - id: call_for_education_papers
   translation: "Call for Education Papers"
-- id: call_for_video
-  translation: "Call for Stereoscopic 3D Video"
 - id: diversity_panel
   translation: "Diversity Panel"
 - id: sustainability_panel

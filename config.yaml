@@ -121,11 +121,6 @@ menu:
       url: /sustainability_panel/#sustainability_panel
       weight: 11
 
-    - identifier: call_for_video
-      parent: submit
-      name: call_for_video
-      url: /call_for_video/#call_for_video
-      weight: 12
 
     - identifier: presentation_policy
       parent: submit
