@@ -24,8 +24,10 @@ The scope of the track includes topics in education concerned with computer grap
 
 ### Timeline
 
+
+~~[Fri] Feb.  6, 2026: Submission deadline~~
 ``` 
-[Fri] Feb.  6, 2026: Submission deadline
+[Mon] Feb. 16, 2026: Submission deadline
 [Fri] Mar. 13, 2026: Notification to authors
 [Fri] Apr.  3, 2026: Camera-ready deadline
 [Mon] May   4, 2026: Conference begins!
