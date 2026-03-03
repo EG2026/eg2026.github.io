@@ -20,6 +20,10 @@ layout: "accommodation"
 
 ---
 
+#### Your hotel booking: We recommend that you make your personal hotel reservation as soon as possible. We have received feedback from the hotels that they are experiencing a high volume of bookings. 
+
+---
+
 #### **Novotel Aachen City**
 
 - [Peterstraße 66, 52062 Aachen](https://maps.app.goo.gl/b4sTWaNTcNthyd6A9)
@@ -43,8 +47,8 @@ layout: "accommodation"
 
 - [Sandkaulstraße 20, 52062 Aachen](https://maps.app.goo.gl/Yg4b3uZqov8LreGH7)
 - Booking code: **Fachkonferenz Eurographics 2026**
-- Price Double room (inl. Breakfast): 130 € per night
-  
+- Price Double room (inl. Breakfast): 155 € per night
+- Price Single room (inl. Breakfast): 130 € per night
 
 ---
 
