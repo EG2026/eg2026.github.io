@@ -992,6 +992,28 @@ td.teaserColumn
   margin-bottom: 0.2rem;
 }
 
+.timetable-keynote-info {
+  margin: 0.35rem 0 0;
+  padding: 0;
+  list-style: none;
+  text-align: center;
+}
+
+.timetable-keynote-info li {
+  margin-bottom: 0.3rem;
+}
+
+.timetable-keynote-name {
+  display: block;
+  font-weight: 600;
+}
+
+.timetable-keynote-talk {
+  display: block;
+  margin-top: 0.1rem;
+  opacity: 0.9;
+}
+
 .timetable-empty {
   margin: 0.5rem 0 0;
   font-style: italic;
@@ -1057,6 +1079,47 @@ td.teaserColumn
 
 .program-type-title {
   margin: 0;
+  text-align: center;
+}
+
+.program-type-keynote-talk-title {
+  margin: 0.2rem 0 0;
+  text-align: center;
+}
+
+.program-type-speakers {
+  margin: 0.35rem 0 0;
+  text-align: center;
+}
+
+.program-type-keynote-row + .program-type-keynote-row {
+  margin-top: 0.6rem;
+  padding-top: 0.6rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.program-type-speaker-link {
+  color: var(--turquoise);
+  text-decoration: underline;
+  text-decoration-color: rgba(255, 255, 255, 0.45);
+}
+
+.program-type-speaker-link:hover,
+.program-type-speaker-link:focus {
+  color: var(--planet-menu-bg);
+  text-decoration-color: var(--planet-menu-bg);
+}
+
+.program-type-speaker-sep {
+  opacity: 0.8;
+}
+
+#full-program-keynote .program-type-speakers {
+  text-align: center !important;
+}
+
+#full-program-keynote .program-type-speaker-link {
+  display: inline-block;
   text-align: center;
 }
 

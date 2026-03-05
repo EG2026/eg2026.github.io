@@ -17,6 +17,7 @@ Attendees, presenters, volunteers and sponsors are subject to the <a class=line
 
 {{ $page := . }}
 {{ $days := .Params.timetableDays }}
+{{ $keynoteSpeakerIndex := dict "1" 0 "2" 2 "3" 5 "4" 4 "5" 1 "6" 3 }}
 {{ if $days }}
 <h2 id=timetable>{{T "timetable" }}</h2>
 
@@ -85,6 +86,37 @@ Attendees, presenters, volunteers and sponsors are subject to the <a class=line
             {{ $entryTitle }}
           {{ end }}
         </p>
+        {{ if eq $entryTypeId "keynote" }}
+          {{ $keynoteMatches := findRE `(?i)keynote\s*[0-9]+` $entryTitle }}
+          {{ if gt (len $keynoteMatches) 0 }}
+            <ul class="timetable-keynote-info">
+              {{ range $match := $keynoteMatches }}
+                {{ $numMatch := findRE `[0-9]+` $match 1 }}
+                {{ if gt (len $numMatch) 0 }}
+                  {{ $number := index $numMatch 0 }}
+                  {{ $speakerName := "" }}
+                  {{ $speakerTitle := "" }}
+                  {{ if isset $keynoteSpeakerIndex $number }}
+                    {{ $speakerIdx := index $keynoteSpeakerIndex $number }}
+                    {{ if and (ge $speakerIdx 0) (lt $speakerIdx (len $page.Params.speakers)) }}
+                      {{ $speaker := index $page.Params.speakers $speakerIdx }}
+                      {{ $speakerName = $speaker.name }}
+                      {{ $speakerTitle = default "" $speaker.title }}
+                    {{ end }}
+                  {{ end }}
+                  {{ if ne $speakerName "" }}
+                    <li>
+                      <span class="timetable-keynote-name">{{ $speakerName }}</span>
+                      {{ if ne $speakerTitle "" }}
+                        <span class="timetable-keynote-talk">{{ $speakerTitle }}</span>
+                      {{ end }}
+                    </li>
+                  {{ end }}
+                {{ end }}
+              {{ end }}
+            </ul>
+          {{ end }}
+        {{ end }}
         {{ end }}
         {{ $details := default (slice) $entry.details }}
         {{ if gt (len $details) 0 }}
@@ -178,7 +210,52 @@ Attendees, presenters, volunteers and sponsors are subject to the <a class=line
     {{ range $day := $days }}
       {{ $entries := default (slice) $day.entries }}
       {{ range $entry := $entries }}
-        {{ if eq $type.source "detail" }}
+        {{ if eq $type.id "keynote" }}
+          {{ $entryTitle := default "" $entry.title }}
+          {{ if and (ne $entryTitle "") (gt (len (findRE $pattern $entryTitle)) 0) }}
+            {{ $scratch.Set "hasItems" true }}
+            {{ $itemAnchor := printf "full-program-item-%s-%s-%s-%s" $type.id $day.id ($entry.time | anchorize) ($entryTitle | anchorize) }}
+            <div id="{{ $itemAnchor }}" class="program-type-item">
+              <p class="program-type-meta">{{ $day.label }} · {{ $entry.time }}</p>
+              {{ $keynoteRows := slice }}
+              {{ $keynoteMatches := findRE `(?i)keynote\s*[0-9]+` $entryTitle }}
+              {{ range $match := $keynoteMatches }}
+                {{ $numMatch := findRE `[0-9]+` $match 1 }}
+                {{ if gt (len $numMatch) 0 }}
+                  {{ $number := index $numMatch 0 }}
+                  {{ $keynoteLabel := printf "Keynote %s" $number }}
+                  {{ $row := dict "label" $keynoteLabel "talkTitle" "" "speakerName" "" "speakerAnchor" "" }}
+                  {{ if isset $keynoteSpeakerIndex $number }}
+                    {{ $speakerIdx := index $keynoteSpeakerIndex $number }}
+                    {{ if and (ge $speakerIdx 0) (lt $speakerIdx (len $page.Params.speakers)) }}
+                      {{ $speaker := index $page.Params.speakers $speakerIdx }}
+                      {{ $speakerTitle := default "" $speaker.title }}
+                      {{ $row = dict "label" $keynoteLabel "talkTitle" $speakerTitle "speakerName" $speaker.name "speakerAnchor" (printf "%s#keynote-speaker-%d" $page.RelPermalink (add $speakerIdx 1)) }}
+                    {{ end }}
+                  {{ end }}
+                  {{ $keynoteRows = $keynoteRows | append $row }}
+                {{ end }}
+              {{ end }}
+              {{ if gt (len $keynoteRows) 0 }}
+                {{ range $i, $row := $keynoteRows }}
+                  <div class="program-type-keynote-row{{ if gt $i 0 }} program-type-keynote-row-split{{ end }}">
+                    <p class="program-type-title">{{ $row.label }}</p>
+                    {{ if ne $row.talkTitle "" }}
+                      <p class="program-type-keynote-talk-title">{{ $row.talkTitle }}</p>
+                    {{ end }}
+                    {{ if ne $row.speakerName "" }}
+                      <p class="program-type-speakers">
+                        <a class="program-type-speaker-link" href="{{ $row.speakerAnchor }}">{{ $row.speakerName }}</a>
+                      </p>
+                    {{ end }}
+                  </div>
+                {{ end }}
+              {{ else }}
+                <p class="program-type-title">{{ $entryTitle }}</p>
+              {{ end }}
+            </div>
+          {{ end }}
+        {{ else if eq $type.source "detail" }}
           {{ $details := default (slice) $entry.details }}
           {{ range $detail := $details }}
             {{ if gt (len (findRE $pattern $detail)) 0 }}
@@ -255,35 +332,35 @@ Attendees, presenters, volunteers and sponsors are subject to the <a class=line
 
     
 <h2 id=keynotes>{{T "keynotes" }}</h2>
-{{range .Params.speakers }}
-<div class=keynote-container>
-    <img src={{ .portrait }} class=keynote-portrait>
+{{ range $i, $speaker := .Params.speakers }}
+<div id="keynote-speaker-{{ add $i 1 }}" class=keynote-container>
+    <img src={{ $speaker.portrait }} class=keynote-portrait>
     <div class=keynote-text-container>
     <h3>
-      <span class=keynote-name><a href={{.url}}>{{ .name }}</a></span>
+      <span class=keynote-name><a href={{ $speaker.url }}>{{ $speaker.name }}</a></span>
     <br>
-    <span class=keynote-affiliation>{{ .affiliation}}</span>
+    <span class=keynote-affiliation>{{ $speaker.affiliation }}</span>
     </h3>
     <p>
-    {{ if (not (isset . "title")) | or (eq .title "") }}
+    {{ if (not (isset $speaker "title")) | or (eq $speaker.title "") }}
     ({{T "stay_tuned_for_talk_information"}})
     {{"<!--  Posticon. Otherwise show defined icon //-->" | safeHTML}}
     {{ else }}
-    <h3><span class=keynote-title>{{.title}}</span></h3>
+    <h3><span class=keynote-title>{{ $speaker.title }}</span></h3>
     <p>
-      {{ .abstract }}
+      {{ $speaker.abstract }}
     </p>
     {{ end }}
     </p>
-    {{ if (isset . "youtube") }}
-      <iframe class=keynote-embedded-video src={{.youtube}} title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    {{ if (isset $speaker "youtube") }}
+      <iframe class=keynote-embedded-video src={{ $speaker.youtube }} title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     {{end}}
     <p class=keynote-bio>
-    {{ if (not (isset . "bio")) | or (eq .bio "") }}
+    {{ if (not (isset $speaker "bio")) | or (eq $speaker.bio "") }}
     <!-- just keep it empty -->
     {{"<!--  Posticon. Otherwise show defined icon //-->" | safeHTML}}
     {{ else }}
-    {{.bio}}
+    {{ $speaker.bio }}
     {{ end }}
     </p>
     </div>

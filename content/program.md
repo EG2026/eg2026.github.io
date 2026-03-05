@@ -141,7 +141,7 @@ timetableDays:
         details: []
       - time: "19:30-21:30"
 
-        title: "Public Lecture / Keynote 3 / Keynote 4"
+        title: "Public Lecture: Keynote 3 & Keynote 4"
         details: []
 
   - id: thursday
@@ -219,18 +219,22 @@ speakers:
   - name: George Drettakis
     url: https://www-sop.inria.fr/members/George.Drettakis/
     affiliation: Inria Université Côte d’Azur
-    title: ""
-    abstract: ""
+    title: "The Quest for Easy Creation, Editing and Real-Time Rendering of Realistic 3D Scenes"
+    abstract: "In this talk we will present over 25 years of research motivated by the goal of providing solutions to easily create realistic 3D scenes by capturing real content, allowing subsequent editing -- most importantly re-lighting – and allowing real-time rendering of the resulting scenes. We look back at several early projects, and how they allowed us to advance our understanding of the fundamental difficulties of developing algorithms to achieve our goals by building on physics-based rendering and traditional graphics solutions. We will then stress the importance of being open to new tools and methodologies, most importantly deep learning. We will illustrate how adopting such techniques and methodologies early provided a significant advantage, both in relighting and real-time rendering for novel view synthesis, in part by building on our expertise in realistic rendering for training data generation. We will discuss the importance of efficiency and optimization even in early stages of these research projects, and finally discuss how the power of recent generative models provides exciting new possibilities, opening the way to powerful solutions to our overarching goals of easily creating, editing and rendering realistic 3D content."
     portrait: /images/george_grettakis.png
+    bio: "George Drettakis graduated in Computer Science (CS) in Crete, Greece, obtained an M.Sc.and a Ph.D., (1994) in CS at the University of Toronto, Canada, under the supervision of Eugene Fiume, followed by an ERCIM postdoc in Grenoble, Barcelona and Bonn (94-95). He obtained an Inria researcher position in the iMAGIS group in Grenoble (1995), and the degree of \"Habilitation\" at the University of Grenoble (1999). In 2000 he founded the REVES research group at INRIA Sophia-Antipolis (2002-2015), followed by the current GRAPHDECO group. He has received several awards: the Eurographics (EG) Outstanding Technical Contributions award in 2007, EG Distinguished Career Award (2024), Inria-French Academy of Sciences Grand Prix (2024), the ACM SIGGRAPH Computer Graphics Achievement Award (2025), and was named EG (2007) and ACM Fellow (2026). He was papers co-chair of the EG Rendering Workshop in 1998, EG conference in 2002 and 2008, technical papers chair of SIGGRAPH Asia 2010,  associate editor for major graphics journals, and chairs the EG working group on Rendering. His research spans many topics in computer graphics, with an emphasis on rendering. He initially concentrated on lighting and shadow computation and subsequently worked on 3D audio, perceptually-driven algorithms, virtual reality and 3D interaction. In recent years he has focused more on learning-based appearance capture, relighting and novel view synthesis (previously known as image-based rendering), culminating in the development of 3D Gaussian Splatting."
 
   - name: Jaakko Lehtinen
     url: https://users.aalto.fi/~lehtinj7/
     affiliation: Aalto University / NVIDIA Research
-    title: ""
-    abstract: ""
+    title: "Graphics' Final Frontier"
+    abstract: " Computer graphics has undergone an incredible journey from its (visually) humble beginnings into our current ability to simulate the appearance and motion of complex scenes to a degree often difficult to distinguish from reality. Yet closing the final gap to the look and feel of live action footage remains elusive. At the same time, modern purely data-driven methods routinely surpass the realism of traditional first-principles graphics approaches, but come with only coarse controls.In this talk, I'll draw on my experience of working with both classic and data-driven image generation techniques and attempt to outline a vision for the \"endgame\" of computer graphics that synthesizes the classic first-principles approaches with the power of data."
     portrait: /images/jaakko_lehtinen_.png
+    bio: "Jaakko is an associate professor at Aalto University and a distinguished research scientist at NVIDIA Research in Helsinki, Finland. He works on computer graphics and machine learning, with particular interests in generative modelling, realistic image synthesis, and appearance acquisition and reproduction. Overall, he's fascinated by the combination of machine learning techniques with physical simulators in the search for robust, interpretable AI. Prior to his current positions, Jaakko spent 2007-10 as a postdoc with Frédo Durand at MIT. Before his research career, he worked for the game developer Remedy Entertainment in 1996-2005 as a graphics programmer, and contributed significantly to the graphics technology behind the worldwide blockbuster hit games Max Payne (2001), Max Payne 2 (2003), and Alan Wake (2009)."
 
-  - name: Lourdes Agapito
+
+
+  - name: Lourdes De Agapito Vicente
     url: https://profiles.ucl.ac.uk/40331-lourdes-de-agapito-vicente
     affiliation: University College London / Synthesia Technologies
     title: ""
@@ -247,9 +251,10 @@ speakers:
   - name: Anatole Lécuyer
     url: https://people.rennes.inria.fr/Anatole.Lecuyer/
     affiliation: Inria Rennes/IRISA 
-    title: ""
-    abstract: ""
+    title: "Shaping the future of our 3D immersion in digital worlds"
+    abstract: "Virtual reality (VR) naturally evokes a set of advanced technologies designed to immerse users in synthetic 3D worlds simulated in real-time by a computer. Through dedicated interfaces such as head‑mounted displays, VR applications enable powerful experiences, transporting users to imaginary places or allowing them to interact with virtual characters and remote people. The first VR systems date back to the 1960s, but today we are living through a pivotal moment for the field, as it steadily moves toward widespread, mass‑market adoption. In this talk, we will explore the next steps for VR technologies. We will first argue that VR is progressively introducing greater physical engagement into 3D human-computer interaction, for example through haptic technologies (tactile or force feedback) or through virtual embodiment via self‑avatars (anthropomorphic representations of the user within a virtual environment). We will also examine the ongoing convergence of VR with physiological and neural interfaces, pointing toward future interactive systems that directly leverage users’ cognitive states and open the door to even more compelling and holistic experiences. The talk will be illustrated with some of our latest scientific results, offering a glimpse of what could become.. the future of our 3D immersion in digital worlds."
     portrait: /images/anatole_lecuyer.jpg
+    bio: " Anatole Lécuyer is Director of Research, at Inria, the French National Institute for Research in Digital Science and Technology, based in Rennes. For more than 20 years, he has been conducting research in the field of virtual reality, exploring new ways of interacting with virtual worlds, such as haptic or neural interfaces. He is the co‑author of over 250 scientific publications and 15 patents. He serves as an expert for numerous organizations, including the French National Research Agency and the European Commission. He served as Associate Editor of IEEE Transactions on Visualization and Computer Graphics, and Presence journal. He was General Chair of the IEEE Virtual Reality Conference (2025), Program Chair of IEEE Virtual Reality Conference (2015-2016) and General Chair of IEEE Symposium on Mixed and Augmented Reality (2017). Anatole Lécuyer received the Inria–Académie des Sciences Young Researcher in Digital Science Award in 2013, the IEEE VGTC Technical Achievement Award in Virtual/Augmented Reality in 2019, and was inducted into the IEEE Virtual Reality Academy in 2022."
 
   - name: Björn Ommer
     url: https://ommer-lab.com/people/ommer/
