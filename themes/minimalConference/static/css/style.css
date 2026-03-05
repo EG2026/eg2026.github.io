@@ -502,6 +502,20 @@ li
   list-style-type: none;
 }
 
+.news-banner ul
+{
+  margin: 0 0 1rem 1.25rem;
+  padding-left: 1rem;
+  column-width: auto;
+  column-count: 1;
+}
+
+.news-banner ul li
+{
+  list-style-type: disc;
+  margin-bottom: 0.35rem;
+}
+
 h2:nth-of-type(3n+1)
 {
   border-bottom: 6px solid var(--planet-line-section-1);

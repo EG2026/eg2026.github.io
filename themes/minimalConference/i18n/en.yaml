@@ -48,6 +48,8 @@
   translation: "Poster"
 - id: twitter_feed
   translation: "Twitter Feed"
+- id: news
+  translation: "News"
 - id: keynotes
   translation: "Keynotes"
 - id: keynote_speakers
