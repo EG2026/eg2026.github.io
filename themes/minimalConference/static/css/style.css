@@ -1098,6 +1098,48 @@ td.teaserColumn
   border-top: 1px solid rgba(255, 255, 255, 0.18);
 }
 
+.program-type-star-slot-note {
+  margin: 0 0 0.5rem;
+  text-align: center;
+  font-style: italic;
+  opacity: 0.9;
+}
+
+.program-type-star-row + .program-type-star-row {
+  margin-top: 0.6rem;
+  padding-top: 0.6rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.program-type-star-paper {
+  margin: 0.2rem 0 0;
+  text-align: center;
+  text-decoration: underline;
+  text-decoration-color: rgba(255, 255, 255, 0.5);
+  font-weight: 700;
+}
+
+.program-type-star-doi {
+  margin: 0.2rem 0 0;
+  text-align: center;
+}
+
+.program-type-star-doi a {
+  color: var(--turquoise);
+}
+
+.program-type-star-doi a:hover,
+.program-type-star-doi a:focus {
+  color: var(--planet-menu-bg);
+}
+
+.program-type-star-authors {
+  margin: 0.25rem 0 0;
+  text-align: center;
+  opacity: 0.95;
+  font-style: italic;
+}
+
 .program-type-speaker-link {
   color: var(--turquoise);
   text-decoration: underline;

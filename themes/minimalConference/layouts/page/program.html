@@ -18,6 +18,16 @@ Attendees, presenters, volunteers and sponsors are subject to the <a class=line
 {{ $page := . }}
 {{ $days := .Params.timetableDays }}
 {{ $keynoteSpeakerIndex := dict "1" 0 "2" 2 "3" 5 "4" 4 "5" 1 "6" 3 }}
+{{ $starProgramDetails := default (slice) .Params.starProgramDetails }}
+{{ $starLookup := dict }}
+{{ range $item := $starProgramDetails }}
+  {{ $starLookup = merge $starLookup (dict (printf "%v" $item.number) $item) }}
+{{ end }}
+{{ $tutorialProgramDetails := default (slice) .Params.tutorialProgramDetails }}
+{{ $tutorialLookup := dict }}
+{{ range $item := $tutorialProgramDetails }}
+  {{ $tutorialLookup = merge $tutorialLookup (dict (printf "%v" $item.number) $item) }}
+{{ end }}
 {{ if $days }}
 <h2 id=timetable>{{T "timetable" }}</h2>
 
@@ -149,6 +159,12 @@ Attendees, presenters, volunteers and sponsors are subject to the <a class=line
           <li>
             {{ if ne $detailTypeId "" }}
               {{ $detailAnchor := printf "full-program-item-%s-%s-%s-%s" $detailTypeId $day.id ($entry.time | anchorize) ($detail | anchorize) }}
+              {{ if eq $detailTypeId "tutorial" }}
+                {{ $tutorialNumMatch := findRE `[0-9]+` $detail 1 }}
+                {{ if gt (len $tutorialNumMatch) 0 }}
+                  {{ $detailAnchor = printf "full-program-item-tutorial-%s" (index $tutorialNumMatch 0) }}
+                {{ end }}
+              {{ end }}
               <a class="timetable-item-link" href="{{ printf "%s?type=%s#%s" $page.RelPermalink ($detailTypeQuery | urlquery) $detailAnchor }}">{{ $detail }}</a>
             {{ else }}
               {{ $detail }}
@@ -206,6 +222,7 @@ Attendees, presenters, volunteers and sponsors are subject to the <a class=line
     {{ $scratch := newScratch }}
     {{ $scratch.Set "hasItems" false }}
     {{ $pattern := printf "(?i)%s" (replace $type.label " " "\\s+") }}
+    {{ $seenTutorialNumbers := dict }}
 
     {{ range $day := $days }}
       {{ $entries := default (slice) $day.entries }}
@@ -259,12 +276,76 @@ Attendees, presenters, volunteers and sponsors are subject to the <a class=line
           {{ $details := default (slice) $entry.details }}
           {{ range $detail := $details }}
             {{ if gt (len (findRE $pattern $detail)) 0 }}
-              {{ $scratch.Set "hasItems" true }}
-              {{ $itemAnchor := printf "full-program-item-%s-%s-%s-%s" $type.id $day.id ($entry.time | anchorize) ($detail | anchorize) }}
-              <div id="{{ $itemAnchor }}" class="program-type-item">
-                <p class="program-type-meta">{{ $day.label }} · {{ $entry.time }}</p>
-                <p class="program-type-title">{{ $detail }}</p>
-              </div>
+              {{ if eq $type.id "tutorial" }}
+                {{ $tutorialNumbers := findRE `[0-9]+` $detail }}
+                {{ if gt (len $tutorialNumbers) 0 }}
+                  {{ range $tutorialNum := $tutorialNumbers }}
+                    {{ if not (isset $seenTutorialNumbers $tutorialNum) }}
+                      {{ $seenTutorialNumbers = merge $seenTutorialNumbers (dict $tutorialNum true) }}
+                      {{ $scratch.Set "hasItems" true }}
+                      {{ $tutorialAnchor := printf "full-program-item-tutorial-%s" $tutorialNum }}
+                      <div id="{{ $tutorialAnchor }}" class="program-type-item">
+                        <p class="program-type-meta">{{ $day.label }} · {{ $entry.time }}</p>
+                        <div class="program-type-star-row">
+                          <p class="program-type-title">{{ printf "Tutorial %s" $tutorialNum }}</p>
+                          {{ if isset $tutorialLookup $tutorialNum }}
+                            {{ $tutorialItem := index $tutorialLookup $tutorialNum }}
+                            {{ if and (isset $tutorialItem "title") (ne $tutorialItem.title "") }}
+                              <p class="program-type-star-paper">{{ $tutorialItem.title }}</p>
+                            {{ end }}
+                            {{ if and (isset $tutorialItem "authors") (ne $tutorialItem.authors "") }}
+                              <p class="program-type-star-authors">{{ $tutorialItem.authors }}</p>
+                            {{ end }}
+                          {{ else }}
+                            <p class="program-type-star-paper">{{ $detail }}</p>
+                          {{ end }}
+                        </div>
+                      </div>
+                    {{ end }}
+                  {{ end }}
+                {{ end }}
+              {{ else }}
+                {{ $scratch.Set "hasItems" true }}
+                {{ $itemAnchor := printf "full-program-item-%s-%s-%s-%s" $type.id $day.id ($entry.time | anchorize) ($detail | anchorize) }}
+                <div id="{{ $itemAnchor }}" class="program-type-item">
+                  <p class="program-type-meta">{{ $day.label }} · {{ $entry.time }}</p>
+                  {{ if eq $type.id "star" }}
+                    {{ $starNumbers := findRE `[0-9]+` $detail }}
+                    {{ $starRows := newScratch }}
+                    {{ $starRows.Set "hasRows" false }}
+                    {{ if and (in $starNumbers "7") (isset $starLookup "7") }}
+                      {{ $star7 := index $starLookup "7" }}
+                      {{ if and (isset $star7 "slotNote") (ne $star7.slotNote "") }}
+                        <p class="program-type-star-slot-note">{{ $star7.slotNote }}</p>
+                      {{ end }}
+                    {{ end }}
+                    {{ range $starIdx, $starNum := $starNumbers }}
+                      {{ if isset $starLookup $starNum }}
+                        {{ $starRows.Set "hasRows" true }}
+                        {{ $starItem := index $starLookup $starNum }}
+                        <div class="program-type-star-row{{ if gt $starIdx 0 }} program-type-star-row-split{{ end }}">
+                          <p class="program-type-title">{{ printf "STAR %s" $starNum }}</p>
+                          {{ if and (isset $starItem "title") (ne $starItem.title "") }}
+                            {{ $starDisplayTitle := replaceRE `(?i)\s*\(STAR[0-9]+\)` "" $starItem.title }}
+                            <p class="program-type-star-paper">{{ $starDisplayTitle }}</p>
+                          {{ end }}
+                          {{ if and (isset $starItem "doi") (ne $starItem.doi "") }}
+                            <p class="program-type-star-doi"><a href="{{ $starItem.doi }}">{{ $starItem.doi }}</a></p>
+                          {{ end }}
+                          {{ if and (isset $starItem "authors") (ne $starItem.authors "") }}
+                            <p class="program-type-star-authors">{{ $starItem.authors }}</p>
+                          {{ end }}
+                        </div>
+                      {{ end }}
+                    {{ end }}
+                    {{ if not ($starRows.Get "hasRows") }}
+                      <p class="program-type-title">{{ $detail }}</p>
+                    {{ end }}
+                  {{ else }}
+                    <p class="program-type-title">{{ $detail }}</p>
+                  {{ end }}
+                </div>
+              {{ end }}
             {{ end }}
           {{ end }}
         {{ else }}
