@@ -985,6 +985,10 @@ td.teaserColumn
   color: var(--turquoise);
 }
 
+.timetable-entry-title-single {
+  text-align: center;
+}
+
 .timetable-item-link {
   color: inherit;
   text-decoration: underline;
@@ -1006,20 +1010,52 @@ td.teaserColumn
   margin-bottom: 0.2rem;
 }
 
+.timetable-entry-details-parallel-4 {
+  margin: 0.55rem 0 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 0.45rem;
+}
+
+.timetable-entry-details-parallel-4 li {
+  margin: 0;
+  list-style: none;
+  text-align: center;
+  padding: 0.35rem 0.3rem;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background-color: rgba(255, 255, 255, 0.04);
+}
+
 .timetable-keynote-info {
   margin: 0.35rem 0 0;
   padding: 0;
   list-style: none;
   text-align: center;
+  column-width: auto;
+  column-count: 1;
 }
 
 .timetable-keynote-info li {
   margin-bottom: 0.3rem;
+  list-style: none;
+  text-align: center;
+  padding: 0.35rem 0.3rem;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background-color: rgba(255, 255, 255, 0.04);
 }
 
 .timetable-keynote-name {
   display: block;
   font-weight: 600;
+}
+
+.timetable-keynote-start-time {
+  display: block;
+  font-weight: 700;
+  color: var(--planet-menu-bg);
+  margin-bottom: 0.12rem;
 }
 
 .timetable-keynote-name-link {
@@ -1215,6 +1251,10 @@ td.teaserColumn
 
   .timetable-entry {
     padding: 0.75rem;
+  }
+
+  .timetable-entry-details-parallel-4 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
   .program-type-tabs {

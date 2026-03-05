@@ -62,6 +62,7 @@ Attendees, presenters, volunteers and sponsors are subject to the <a class=line
       {{ range $entry := $entries }}
       <div class="timetable-entry">
         <p class="timetable-entry-time">{{ $entry.time }}</p>
+        {{ $details := default (slice) $entry.details }}
         {{ if and (isset $entry "title") (ne $entry.title "") }}
         {{ $entryTitle := $entry.title }}
         {{ $entryTypeId := "" }}
@@ -88,7 +89,7 @@ Attendees, presenters, volunteers and sponsors are subject to the <a class=line
           {{ $entryTypeId = "poster" }}
           {{ $entryTypeQuery = "Poster" }}
         {{ end }}
-        <p class="timetable-entry-title">
+        <p class="timetable-entry-title{{ if eq (len $details) 0 }} timetable-entry-title-single{{ end }}">
           {{ if ne $entryTypeId "" }}
             {{ if eq $entryTypeId "keynote" }}
               {{ $entryTitle }}
@@ -104,9 +105,10 @@ Attendees, presenters, volunteers and sponsors are subject to the <a class=line
         </p>
         {{ if eq $entryTypeId "keynote" }}
           {{ $keynoteMatches := findRE `(?i)keynote\s*[0-9]+` $entryTitle }}
+          {{ $keynoteTalkTimes := default (slice) $entry.keynoteTalkTimes }}
           {{ if gt (len $keynoteMatches) 0 }}
             <ul class="timetable-keynote-info">
-              {{ range $match := $keynoteMatches }}
+              {{ range $idx, $match := $keynoteMatches }}
                 {{ $numMatch := findRE `[0-9]+` $match 1 }}
                 {{ if gt (len $numMatch) 0 }}
                   {{ $number := index $numMatch 0 }}
@@ -124,6 +126,9 @@ Attendees, presenters, volunteers and sponsors are subject to the <a class=line
                   {{ end }}
                   {{ if ne $speakerName "" }}
                     <li>
+                      {{ if gt (len $keynoteTalkTimes) $idx }}
+                        <span class="timetable-keynote-start-time">{{ index $keynoteTalkTimes $idx }}</span>
+                      {{ end }}
                       {{ if ne $speakerAnchor "" }}
                         <a class="timetable-keynote-name-link" href="{{ $speakerAnchor }}">{{ $speakerName }}</a>
                       {{ else }}
@@ -140,9 +145,8 @@ Attendees, presenters, volunteers and sponsors are subject to the <a class=line
           {{ end }}
         {{ end }}
         {{ end }}
-        {{ $details := default (slice) $entry.details }}
         {{ if gt (len $details) 0 }}
-        <ul class="timetable-entry-details">
+        <ul class="timetable-entry-details{{ if eq (len $details) 4 }} timetable-entry-details-parallel-4{{ end }}">
           {{ range $detail := $details }}
           {{ $detailTypeId := "" }}
           {{ $detailTypeQuery := "" }}
