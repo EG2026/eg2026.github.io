@@ -15,6 +15,7 @@ Attendees, presenters, volunteers and sponsors are subject to the <a class=line
   href=https://eg25.cs.ucl.ac.uk/main/codeofconduct.html/>Eurographics
   2026 Code of Conduct</a>.</p>  */}}
 
+{{ $page := . }}
 {{ $days := .Params.timetableDays }}
 {{ if $days }}
 <h2 id=timetable>{{T "timetable" }}</h2>
@@ -51,13 +52,76 @@ Attendees, presenters, volunteers and sponsors are subject to the <a class=line
       <div class="timetable-entry">
         <p class="timetable-entry-time">{{ $entry.time }}</p>
         {{ if and (isset $entry "title") (ne $entry.title "") }}
-        <p class="timetable-entry-title">{{ $entry.title }}</p>
+        {{ $entryTitle := $entry.title }}
+        {{ $entryTypeId := "" }}
+        {{ $entryTypeQuery := "" }}
+        {{ if gt (len (findRE `(?i)full paper` $entryTitle)) 0 }}
+          {{ $entryTypeId = "full-paper" }}
+          {{ $entryTypeQuery = "Full Paper" }}
+        {{ else if gt (len (findRE `(?i)short paper` $entryTitle)) 0 }}
+          {{ $entryTypeId = "short-paper" }}
+          {{ $entryTypeQuery = "Short Paper" }}
+        {{ else if gt (len (findRE `(?i)tutorial` $entryTitle)) 0 }}
+          {{ $entryTypeId = "tutorial" }}
+          {{ $entryTypeQuery = "Tutorial" }}
+        {{ else if gt (len (findRE `(?i)star` $entryTitle)) 0 }}
+          {{ $entryTypeId = "star" }}
+          {{ $entryTypeQuery = "STAR" }}
+        {{ else if gt (len (findRE `(?i)education` $entryTitle)) 0 }}
+          {{ $entryTypeId = "education" }}
+          {{ $entryTypeQuery = "Education" }}
+        {{ else if gt (len (findRE `(?i)keynote` $entryTitle)) 0 }}
+          {{ $entryTypeId = "keynote" }}
+          {{ $entryTypeQuery = "Keynote" }}
+        {{ else if gt (len (findRE `(?i)poster` $entryTitle)) 0 }}
+          {{ $entryTypeId = "poster" }}
+          {{ $entryTypeQuery = "Poster" }}
+        {{ end }}
+        <p class="timetable-entry-title">
+          {{ if ne $entryTypeId "" }}
+            {{ $entryAnchor := printf "full-program-item-%s-%s-%s-%s" $entryTypeId $day.id ($entry.time | anchorize) ($entryTitle | anchorize) }}
+            <a class="timetable-item-link" href="{{ printf "%s?type=%s#%s" $page.RelPermalink ($entryTypeQuery | urlquery) $entryAnchor }}">{{ $entryTitle }}</a>
+          {{ else }}
+            {{ $entryTitle }}
+          {{ end }}
+        </p>
         {{ end }}
         {{ $details := default (slice) $entry.details }}
         {{ if gt (len $details) 0 }}
         <ul class="timetable-entry-details">
           {{ range $detail := $details }}
-          <li>{{ $detail }}</li>
+          {{ $detailTypeId := "" }}
+          {{ $detailTypeQuery := "" }}
+          {{ if gt (len (findRE `(?i)full paper` $detail)) 0 }}
+            {{ $detailTypeId = "full-paper" }}
+            {{ $detailTypeQuery = "Full Paper" }}
+          {{ else if gt (len (findRE `(?i)short paper` $detail)) 0 }}
+            {{ $detailTypeId = "short-paper" }}
+            {{ $detailTypeQuery = "Short Paper" }}
+          {{ else if gt (len (findRE `(?i)tutorial` $detail)) 0 }}
+            {{ $detailTypeId = "tutorial" }}
+            {{ $detailTypeQuery = "Tutorial" }}
+          {{ else if gt (len (findRE `(?i)star` $detail)) 0 }}
+            {{ $detailTypeId = "star" }}
+            {{ $detailTypeQuery = "STAR" }}
+          {{ else if gt (len (findRE `(?i)education` $detail)) 0 }}
+            {{ $detailTypeId = "education" }}
+            {{ $detailTypeQuery = "Education" }}
+          {{ else if gt (len (findRE `(?i)keynote` $detail)) 0 }}
+            {{ $detailTypeId = "keynote" }}
+            {{ $detailTypeQuery = "Keynote" }}
+          {{ else if gt (len (findRE `(?i)poster` $detail)) 0 }}
+            {{ $detailTypeId = "poster" }}
+            {{ $detailTypeQuery = "Poster" }}
+          {{ end }}
+          <li>
+            {{ if ne $detailTypeId "" }}
+              {{ $detailAnchor := printf "full-program-item-%s-%s-%s-%s" $detailTypeId $day.id ($entry.time | anchorize) ($detail | anchorize) }}
+              <a class="timetable-item-link" href="{{ printf "%s?type=%s#%s" $page.RelPermalink ($detailTypeQuery | urlquery) $detailAnchor }}">{{ $detail }}</a>
+            {{ else }}
+              {{ $detail }}
+            {{ end }}
+          </li>
           {{ end }}
         </ul>
         {{ end }}
@@ -73,7 +137,120 @@ Attendees, presenters, volunteers and sponsors are subject to the <a class=line
 
 <h2 id=full_programm>{{T "full_programm" }}</h2>
 
+{{ if $days }}
+{{ $fullProgramTypes := slice
+  (dict "id" "full-paper" "label" "Full Paper" "source" "detail")
+  (dict "id" "short-paper" "label" "Short Paper" "source" "detail")
+  (dict "id" "tutorial" "label" "Tutorial" "source" "detail")
+  (dict "id" "star" "label" "STAR" "source" "detail")
+  (dict "id" "education" "label" "Education" "source" "detail")
+  (dict "id" "keynote" "label" "Keynote" "source" "title")
+  (dict "id" "poster" "label" "Poster" "source" "title")
+}}
+<ul class="nav nav-tabs program-type-tabs" id="full-program-type-tabs" role="tablist">
+  {{ range $i, $type := $fullProgramTypes }}
+  <li class="nav-item" role="presentation">
+    <button class="nav-link{{ if eq $i 0 }} active{{ end }}"
+            id="full-program-{{ $type.id }}-tab"
+            data-bs-toggle="tab"
+            data-bs-target="#full-program-{{ $type.id }}"
+            type="button"
+            role="tab"
+            aria-controls="full-program-{{ $type.id }}"
+            aria-selected="{{ if eq $i 0 }}true{{ else }}false{{ end }}">
+      {{ $type.label }}
+    </button>
+  </li>
+  {{ end }}
+</ul>
+
+<div class="tab-content program-type-content" id="full-program-type-content">
+  {{ range $i, $type := $fullProgramTypes }}
+  <div class="tab-pane fade{{ if eq $i 0 }} show active{{ end }}"
+       id="full-program-{{ $type.id }}"
+       role="tabpanel"
+       aria-labelledby="full-program-{{ $type.id }}-tab"
+       tabindex="0">
+    {{ $scratch := newScratch }}
+    {{ $scratch.Set "hasItems" false }}
+    {{ $pattern := printf "(?i)%s" (replace $type.label " " "\\s+") }}
+
+    {{ range $day := $days }}
+      {{ $entries := default (slice) $day.entries }}
+      {{ range $entry := $entries }}
+        {{ if eq $type.source "detail" }}
+          {{ $details := default (slice) $entry.details }}
+          {{ range $detail := $details }}
+            {{ if gt (len (findRE $pattern $detail)) 0 }}
+              {{ $scratch.Set "hasItems" true }}
+              {{ $itemAnchor := printf "full-program-item-%s-%s-%s-%s" $type.id $day.id ($entry.time | anchorize) ($detail | anchorize) }}
+              <div id="{{ $itemAnchor }}" class="program-type-item">
+                <p class="program-type-meta">{{ $day.label }} · {{ $entry.time }}</p>
+                <p class="program-type-title">{{ $detail }}</p>
+              </div>
+            {{ end }}
+          {{ end }}
+        {{ else }}
+          {{ $entryTitle := default "" $entry.title }}
+          {{ if and (ne $entryTitle "") (gt (len (findRE $pattern $entryTitle)) 0) }}
+            {{ $scratch.Set "hasItems" true }}
+            {{ $itemAnchor := printf "full-program-item-%s-%s-%s-%s" $type.id $day.id ($entry.time | anchorize) ($entryTitle | anchorize) }}
+            <div id="{{ $itemAnchor }}" class="program-type-item">
+              <p class="program-type-meta">{{ $day.label }} · {{ $entry.time }}</p>
+              <p class="program-type-title">{{ $entryTitle }}</p>
+            </div>
+          {{ end }}
+        {{ end }}
+      {{ end }}
+    {{ end }}
+
+    {{ if not ($scratch.Get "hasItems") }}
+      <p class="program-type-empty">TBA</p>
+    {{ end }}
+  </div>
+  {{ end }}
+</div>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const tabButtons = document.querySelectorAll("#full-program-type-tabs button[data-bs-toggle='tab']");
+    if (!tabButtons.length) return;
+
+    const params = new URLSearchParams(window.location.search);
+    const requestedType = params.get("type");
+    const hashId = window.location.hash ? decodeURIComponent(window.location.hash.slice(1)) : "";
+    const scrollToHashTarget = function () {
+      if (!hashId) return;
+      const targetEl = document.getElementById(hashId);
+      if (!targetEl) return;
+      targetEl.scrollIntoView({ block: "center" });
+    };
+
+    if (requestedType && window.bootstrap && bootstrap.Tab) {
+      const tabId = "full-program-" + requestedType.trim().toLowerCase().replace(/\s+/g, "-") + "-tab";
+      const target = document.getElementById(tabId);
+      if (target) {
+        target.addEventListener("shown.bs.tab", scrollToHashTarget, { once: true });
+        bootstrap.Tab.getOrCreateInstance(target).show();
+      }
+    } else {
+      scrollToHashTarget();
+    }
+
+    tabButtons.forEach((btn) => {
+      btn.addEventListener("shown.bs.tab", function () {
+        const text = (btn.textContent || "").trim();
+        if (!text) return;
+        const nextParams = new URLSearchParams(window.location.search);
+        nextParams.set("type", text);
+        const nextUrl = window.location.pathname + "?" + nextParams.toString() + window.location.hash;
+        history.replaceState({}, "", nextUrl);
+      });
+    });
+  });
+</script>
+{{ else }}
 <h4 class=line>{{"TBA"}}</h4>
+{{ end }}
 
 
     

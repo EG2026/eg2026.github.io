@@ -962,12 +962,25 @@ td.teaserColumn
   margin: 0 0 0.25rem;
   font-weight: bold;
   color: var(--planet-menu-bg);
+  text-align: center;
 }
 
 .timetable-entry-title {
   margin: 0;
   font-size: 1.05em;
   color: var(--turquoise);
+}
+
+.timetable-item-link {
+  color: inherit;
+  text-decoration: underline;
+  text-decoration-color: rgba(255, 255, 255, 0.45);
+}
+
+.timetable-item-link:hover,
+.timetable-item-link:focus {
+  color: var(--planet-menu-bg);
+  text-decoration-color: var(--planet-menu-bg);
 }
 
 .timetable-entry-details {
@@ -980,6 +993,74 @@ td.teaserColumn
 }
 
 .timetable-empty {
+  margin: 0.5rem 0 0;
+  font-style: italic;
+  color: var(--turquoise);
+  opacity: 0.85;
+}
+
+/* full program type filters */
+
+.program-type-tabs {
+  margin: 1.25rem 0 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.35);
+  display: flex;
+  justify-content: center;
+  gap: 0.35rem;
+  flex-wrap: wrap;
+}
+
+.program-type-tabs .nav-link {
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  border-bottom: none;
+  color: var(--turquoise);
+  background-color: rgba(255, 255, 255, 0.06);
+  font-family: var(--headerfont);
+  padding: 0.5rem 0.85rem;
+}
+
+.program-type-tabs .nav-link:hover,
+.program-type-tabs .nav-link:focus {
+  color: var(--turquoise);
+  border-color: rgba(255, 255, 255, 0.6);
+  background-color: rgba(255, 255, 255, 0.14);
+}
+
+.program-type-tabs .nav-link.active,
+.program-type-tabs .nav-link.active:hover,
+.program-type-tabs .nav-link.active:focus {
+  color: #000000;
+  background-color: var(--planet-menu-bg);
+  border-color: var(--planet-menu-bg);
+}
+
+.program-type-content {
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  border-top: none;
+  padding: 1.25rem;
+  margin-bottom: 2rem;
+}
+
+.program-type-item {
+  padding: 0.75rem 0.9rem;
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  background-color: rgba(255, 255, 255, 0.04);
+  margin-bottom: 0.65rem;
+}
+
+.program-type-meta {
+  margin: 0 0 0.2rem;
+  color: var(--planet-menu-bg);
+  font-weight: bold;
+  text-align: center;
+}
+
+.program-type-title {
+  margin: 0;
+  text-align: center;
+}
+
+.program-type-empty {
   margin: 0.5rem 0 0;
   font-style: italic;
   color: var(--turquoise);
@@ -1002,6 +1083,23 @@ td.teaserColumn
 
   .timetable-entry {
     padding: 0.75rem;
+  }
+
+  .program-type-tabs {
+    justify-content: flex-start;
+  }
+
+  .program-type-tabs .nav-link {
+    padding: 0.45rem 0.6rem;
+    font-size: 0.95em;
+  }
+
+  .program-type-content {
+    padding: 1rem;
+  }
+
+  .program-type-item {
+    padding: 0.65rem 0.75rem;
   }
 }
 
