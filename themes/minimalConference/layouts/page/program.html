@@ -90,8 +90,14 @@ Attendees, presenters, volunteers and sponsors are subject to the <a class=line
         {{ end }}
         <p class="timetable-entry-title">
           {{ if ne $entryTypeId "" }}
-            {{ $entryAnchor := printf "full-program-item-%s-%s-%s-%s" $entryTypeId $day.id ($entry.time | anchorize) ($entryTitle | anchorize) }}
-            <a class="timetable-item-link" href="{{ printf "%s?type=%s#%s" $page.RelPermalink ($entryTypeQuery | urlquery) $entryAnchor }}">{{ $entryTitle }}</a>
+            {{ if eq $entryTypeId "keynote" }}
+              {{ $entryTitle }}
+            {{ else }}
+              {{ $entryHref := "" }}
+              {{ $entryAnchor := printf "full-program-item-%s-%s-%s-%s" $entryTypeId $day.id ($entry.time | anchorize) ($entryTitle | anchorize) }}
+              {{ $entryHref = printf "%s?type=%s#%s" $page.RelPermalink ($entryTypeQuery | urlquery) $entryAnchor }}
+              <a class="timetable-item-link" href="{{ $entryHref }}">{{ $entryTitle }}</a>
+            {{ end }}
           {{ else }}
             {{ $entryTitle }}
           {{ end }}
@@ -106,17 +112,23 @@ Attendees, presenters, volunteers and sponsors are subject to the <a class=line
                   {{ $number := index $numMatch 0 }}
                   {{ $speakerName := "" }}
                   {{ $speakerTitle := "" }}
+                  {{ $speakerAnchor := "" }}
                   {{ if isset $keynoteSpeakerIndex $number }}
                     {{ $speakerIdx := index $keynoteSpeakerIndex $number }}
                     {{ if and (ge $speakerIdx 0) (lt $speakerIdx (len $page.Params.speakers)) }}
                       {{ $speaker := index $page.Params.speakers $speakerIdx }}
                       {{ $speakerName = $speaker.name }}
                       {{ $speakerTitle = default "" $speaker.title }}
+                      {{ $speakerAnchor = printf "%s#keynote-speaker-%d" $page.RelPermalink (add $speakerIdx 1) }}
                     {{ end }}
                   {{ end }}
                   {{ if ne $speakerName "" }}
                     <li>
-                      <span class="timetable-keynote-name">{{ $speakerName }}</span>
+                      {{ if ne $speakerAnchor "" }}
+                        <a class="timetable-keynote-name-link" href="{{ $speakerAnchor }}">{{ $speakerName }}</a>
+                      {{ else }}
+                        <span class="timetable-keynote-name">{{ $speakerName }}</span>
+                      {{ end }}
                       {{ if ne $speakerTitle "" }}
                         <span class="timetable-keynote-talk">{{ $speakerTitle }}</span>
                       {{ end }}
@@ -158,14 +170,22 @@ Attendees, presenters, volunteers and sponsors are subject to the <a class=line
           {{ end }}
           <li>
             {{ if ne $detailTypeId "" }}
-              {{ $detailAnchor := printf "full-program-item-%s-%s-%s-%s" $detailTypeId $day.id ($entry.time | anchorize) ($detail | anchorize) }}
-              {{ if eq $detailTypeId "tutorial" }}
-                {{ $tutorialNumMatch := findRE `[0-9]+` $detail 1 }}
-                {{ if gt (len $tutorialNumMatch) 0 }}
-                  {{ $detailAnchor = printf "full-program-item-tutorial-%s" (index $tutorialNumMatch 0) }}
+              {{ if eq $detailTypeId "keynote" }}
+                {{ $detail }}
+              {{ else }}
+                {{ $detailHref := "" }}
+                {{ if eq $detailTypeId "tutorial" }}
+                  {{ $tutorialNumMatch := findRE `[0-9]+` $detail 1 }}
+                  {{ if gt (len $tutorialNumMatch) 0 }}
+                    {{ $detailHref = printf "%s?type=Tutorial#full-program-item-tutorial-%s" $page.RelPermalink (index $tutorialNumMatch 0) }}
+                  {{ end }}
                 {{ end }}
+                {{ if eq $detailHref "" }}
+                  {{ $detailAnchor := printf "full-program-item-%s-%s-%s-%s" $detailTypeId $day.id ($entry.time | anchorize) ($detail | anchorize) }}
+                  {{ $detailHref = printf "%s?type=%s#%s" $page.RelPermalink ($detailTypeQuery | urlquery) $detailAnchor }}
+                {{ end }}
+                <a class="timetable-item-link" href="{{ $detailHref }}">{{ $detail }}</a>
               {{ end }}
-              <a class="timetable-item-link" href="{{ printf "%s?type=%s#%s" $page.RelPermalink ($detailTypeQuery | urlquery) $detailAnchor }}">{{ $detail }}</a>
             {{ else }}
               {{ $detail }}
             {{ end }}
