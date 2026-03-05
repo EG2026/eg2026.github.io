@@ -225,8 +225,8 @@ starProgramDetails:
     title: "Survey on differential estimators for 3D point clouds (STAR1001)"
     authors: "Léo Arnal--Anger, Thibault Lejemble, David Coeurjolly, Loïc Barthe, and Nicolas Mellado"
   - number: "4"
-    title: "State-of-the-art in deep learning approaches for single-panorama indoor modeling and exploration (STAR1005)"
-    authors: "Giovanni Pintore, Marco Agus, Jens Schneider, and Enrico Gobbetti"
+    title: "Establishing Shape Correspondences: A Survey (STAR1008)"
+    authors: "Alexandra Heuschling, Hannah Meinhold, and Leif Kobbelt"
   - number: "5"
     title: "How to Build Digital Humans? (STAR1009)"
     authors: "WojciechZielonka, Tobias Kirschstein, Timo Bolkart, Simon Giebenhain, Vanessa Sklyarova, Xiang Deng, Donglai Xiang, Shunsuke Saito, Yebin liuyebin, Matthias Niessner, and Justus Thies"
@@ -243,8 +243,8 @@ starProgramDetails:
     doi: "https://doi.org/10.1111/cgf.15278"
     authors: "Jan Dvořák, Filip Hácha, Gerasimos Arvanitis, David Podgorelec, Konstantinos Moustakas, and Libor Váša"
   - number: "9"
-    title: "Establishing Shape Correspondences: A Survey (STAR1008)"
-    authors: "Alexandra Heuschling, Hannah Meinhold, and Leif Kobbelt"
+    title: "State-of-the-art in deep learning approaches for single-panorama indoor modeling and exploration (STAR1005)"
+    authors: "Giovanni Pintore, Marco Agus, Jens Schneider, and Enrico Gobbetti"
 
 tutorialProgramDetails:
   - number: "1"
