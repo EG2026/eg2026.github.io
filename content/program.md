@@ -139,12 +139,12 @@ timetableDays:
 
         title: "EG General Assembly"
         details: []
-      - time: "19:00-21:30"
+      - time: "19:30-21:00"
 
         title: "Public Lecture: Keynote 3 & Keynote 4"
         keynoteTalkTimes:
-          - "19:00"
-          - "19:45"
+          - "19:30"
+          - "20:15"
         details: []
 
   - id: thursday
