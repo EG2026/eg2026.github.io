@@ -893,6 +893,118 @@ td.teaserColumn
   content: "↓";
 }
 
+/* program timetable */
+
+#timetable {
+  margin-top: 2rem;
+}
+
+.timetable-tabs {
+  margin: 1.25rem 0 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.35);
+  display: flex;
+  justify-content: center;
+  gap: 0.35rem;
+  flex-wrap: wrap;
+}
+
+.timetable-tabs .nav-link {
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  border-bottom: none;
+  color: var(--turquoise);
+  background-color: rgba(255, 255, 255, 0.06);
+  font-family: var(--headerfont);
+  padding: 0.5rem 0.9rem;
+}
+
+.timetable-tabs .nav-link:hover,
+.timetable-tabs .nav-link:focus {
+  color: var(--turquoise);
+  border-color: rgba(255, 255, 255, 0.6);
+  background-color: rgba(255, 255, 255, 0.14);
+}
+
+.timetable-tabs .nav-link.active,
+.timetable-tabs .nav-link.active:hover,
+.timetable-tabs .nav-link.active:focus {
+  color: #000000;
+  background-color: var(--planet-menu-bg);
+  border-color: var(--planet-menu-bg);
+}
+
+.timetable-content {
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  border-top: none;
+  padding: 1.25rem;
+  margin-bottom: 2rem;
+}
+
+.timetable-day-heading {
+  text-align: left;
+  margin: 0 0 1rem;
+  font-size: 1.35em;
+}
+
+.timetable-day-date {
+  font-size: 0.85em;
+  opacity: 0.85;
+  font-weight: normal;
+}
+
+.timetable-entry {
+  padding: 0.9rem 1rem;
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  background-color: rgba(255, 255, 255, 0.04);
+  margin-bottom: 0.8rem;
+}
+
+.timetable-entry-time {
+  margin: 0 0 0.25rem;
+  font-weight: bold;
+  color: var(--planet-menu-bg);
+}
+
+.timetable-entry-title {
+  margin: 0;
+  font-size: 1.05em;
+  color: var(--turquoise);
+}
+
+.timetable-entry-details {
+  margin: 0.5rem 0 0 1.15rem;
+  padding: 0;
+}
+
+.timetable-entry-details li {
+  margin-bottom: 0.2rem;
+}
+
+.timetable-empty {
+  margin: 0.5rem 0 0;
+  font-style: italic;
+  color: var(--turquoise);
+  opacity: 0.85;
+}
+
+@media (max-width: 768px) {
+  .timetable-tabs {
+    justify-content: flex-start;
+  }
+
+  .timetable-tabs .nav-link {
+    padding: 0.45rem 0.65rem;
+    font-size: 0.95em;
+  }
+
+  .timetable-content {
+    padding: 1rem;
+  }
+
+  .timetable-entry {
+    padding: 0.75rem;
+  }
+}
+
 .sessionChair
 {
   font-size: 0.6em;
@@ -1075,4 +1187,3 @@ td.teaserColumn
 }
 
 .map-consent__notice { color: #000 !important; }
-

@@ -4,6 +4,216 @@ layout: "program"
 type: "page"
 menu: program
 
+timetableDays:
+  - id: monday
+    label: Monday
+    date: ""
+    entries:
+      - time: "09:00-10:30"
+
+        title: ""
+        details:
+          - "Tutorial 1"
+          - "Tutorial 2"
+          - "STAR 1"
+          - "STAR 2"
+      - time: "10:45-12:15"
+
+        title: ""
+        details:
+          - "Tutorial 1"
+          - "Tutorial 2"
+          - "STAR 3"
+          - "STAR 4"
+      - time: "13:15-14:45"
+
+        title: ""
+        details:
+          - "Tutorial 3"
+          - "Tutorial 4"
+          - "STAR 5"
+          - "Education 1"
+      - time: "15:00-16:30"
+
+        title: ""
+        details:
+          - "Tutorial 3"
+          - "Tutorial 4"
+          - "STAR 6"
+          - "Education 2"
+      - time: "17:00-18:00"
+
+        title: "Opening Session"
+        details: []
+      - time: "19:00-22:30"
+
+        title: "Social Event"
+        details: []
+
+  - id: tuesday
+    label: Tuesday
+    date: ""
+    entries:
+      - time: "09:00-09:30"
+
+        title: "Fast-Forward"
+        details: []
+      - time: "09:30-10:30"
+
+        title: "Keynote 1"
+        details: []
+      - time: "11:00-12:30"
+
+        title: ""
+        details:
+          - "Full Paper 1"
+          - "Full Paper 2"
+          - "Full Paper 3"
+          - "Education 3"
+      - time: "14:00-15:30"
+
+        title: ""
+        details:
+          - "Full Paper 4"
+          - "Full Paper 5"
+          - "Tutorial 5"
+          - "Tutorial 6"
+      - time: "16:00-17:30"
+
+        title: ""
+        details:
+          - "Full Paper 6"
+          - "Full Paper 7"
+          - "Tutorial 5"
+          - "Tutorial 6"
+      - time: "19:00-22:00"
+
+        title: "Fellows' Dinner"
+        details: []
+
+  - id: wednesday
+    label: Wednesday
+    date: ""
+    entries:
+      - time: "09:00-09:30"
+
+        title: "Fast-Forward"
+        details: []
+      - time: "09:30-10:30"
+
+        title: "Keynote 2"
+        details: []
+      - time: "11:00-12:30"
+
+        title: ""
+        details:
+          - "Full Paper 8"
+          - "Full Paper 9"
+          - "Full Paper 10"
+          - "Short Paper 1"
+      - time: "12:30-13:00"
+
+        title: "She-Lunch"
+        details: []
+      - time: "14:00-15:30"
+
+        title: ""
+        details:
+          - "Full Paper 11"
+          - "Full Paper 12"
+          - "Tutorial 7"
+          - "Diversity Panel"
+      - time: "15:30-16:00"
+
+        title: "Poster Q & A"
+        details: []
+      - time: "16:00-17:30"
+
+        title: ""
+        details:
+          - "Full Paper 13"
+          - "Full Paper 14"
+          - "Tutorial 7"
+          - "Sustainability Panel"
+      - time: "17:45-18:45"
+
+        title: "EG General Assembly"
+        details: []
+      - time: "19:30-21:30"
+
+        title: "Public Lecture / Keynote 3 / Keynote 4"
+        details: []
+
+  - id: thursday
+    label: Thursday
+    date: ""
+    entries:
+      - time: "09:00-09:30"
+
+        title: "Fast-Forward"
+        details: []
+      - time: "09:30-10:30"
+
+        title: "Keynote 5"
+        details: []
+      - time: "11:00-12:30"
+
+        title: ""
+        details:
+          - "Full Paper 15"
+          - "Full Paper 16"
+          - "STAR 7 / STAR 8"
+          - "Short Paper 2"
+      - time: "14:00-15:30"
+
+        title: ""
+        details:
+          - "Full Paper 17"
+          - "Full Paper 18"
+          - "Tutorial 8"
+          - "STAR 9"
+      - time: "16:00-17:30"
+
+        title: ""
+        details:
+          - "Full Paper 19"
+          - "Full Paper 20"
+          - "Tutorial 8"
+          - "Doctoral Consortium"
+      - time: "19:00-22:00"
+
+        title: "IPC Dinner"
+        details: []
+
+  - id: friday
+    label: Friday
+    date: ""
+    entries:
+      - time: "09:00-09:30"
+
+        title: "Fast-Forward"
+        details: []
+      - time: "09:30-10:30"
+
+        title: "Keynote 6"
+        details: []
+      - time: "11:00-12:30"
+
+        title: ""
+        details:
+          - "Full Paper 21"
+          - "Full Paper 22"
+          - "Short Paper 3"
+          - "Short Paper 4"
+      - time: "12:30-12:45"
+
+        title: "Best Paper Jury"
+        details: []
+      - time: "12:45-13:45"
+
+        title: "Closing Session"
+        details: []
+
 
 speakers: 
   - name: George Drettakis
@@ -333,4 +543,3 @@ paperSessions:
           - name: Matthew J. Clarkson
 
 ---  
-

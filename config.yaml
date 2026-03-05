@@ -135,18 +135,24 @@ menu:
 
 
     # ── children of “program” ────────────────────────────────────────────────
+    - identifier: timetable
+      parent: program
+      name: timetable
+      url: /program/#timetable
+      weight: 1
+
     - identifier: full_programm
       parent: program
       name: full_programm
       url: /program/#full_programm
-      weight: 1
+      weight: 2
 
     - identifier: keynotes
       parent: program
       name: keynotes
       url: /program/#keynotes
       # url: /#keynotes
-      weight: 2
+      weight: 3
 
     # - identifier: workshops
     #   parent: program

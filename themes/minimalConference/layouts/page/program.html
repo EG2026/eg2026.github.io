@@ -15,6 +15,62 @@ Attendees, presenters, volunteers and sponsors are subject to the <a class=line
   href=https://eg25.cs.ucl.ac.uk/main/codeofconduct.html/>Eurographics
   2026 Code of Conduct</a>.</p>  */}}
 
+{{ $days := .Params.timetableDays }}
+{{ if $days }}
+<h2 id=timetable>{{T "timetable" }}</h2>
+
+<ul class="nav nav-tabs timetable-tabs" id="timetable-tabs" role="tablist">
+  {{ range $i, $day := $days }}
+  <li class="nav-item" role="presentation">
+    <button class="nav-link{{ if eq $i 0 }} active{{ end }}"
+            id="timetable-{{ $day.id }}-tab"
+            data-bs-toggle="tab"
+            data-bs-target="#timetable-{{ $day.id }}"
+            type="button"
+            role="tab"
+            aria-controls="timetable-{{ $day.id }}"
+            aria-selected="{{ if eq $i 0 }}true{{ else }}false{{ end }}">
+      {{ $day.label }}
+    </button>
+  </li>
+  {{ end }}
+</ul>
+
+<div class="tab-content timetable-content" id="timetable-tab-content">
+  {{ range $i, $day := $days }}
+  <div class="tab-pane fade{{ if eq $i 0 }} show active{{ end }}"
+       id="timetable-{{ $day.id }}"
+       role="tabpanel"
+       aria-labelledby="timetable-{{ $day.id }}-tab"
+       tabindex="0">
+    <h3 class="timetable-day-heading">{{ $day.label }}{{ if $day.date }} <span class="timetable-day-date">({{ $day.date }})</span>{{ end }}</h3>
+
+    {{ $entries := default (slice) $day.entries }}
+    {{ if gt (len $entries) 0 }}
+      {{ range $entry := $entries }}
+      <div class="timetable-entry">
+        <p class="timetable-entry-time">{{ $entry.time }}</p>
+        {{ if and (isset $entry "title") (ne $entry.title "") }}
+        <p class="timetable-entry-title">{{ $entry.title }}</p>
+        {{ end }}
+        {{ $details := default (slice) $entry.details }}
+        {{ if gt (len $details) 0 }}
+        <ul class="timetable-entry-details">
+          {{ range $detail := $details }}
+          <li>{{ $detail }}</li>
+          {{ end }}
+        </ul>
+        {{ end }}
+      </div>
+      {{ end }}
+    {{ else }}
+      <p class="timetable-empty">TBA</p>
+    {{ end }}
+  </div>
+  {{ end }}
+</div>
+{{ end }}
+
 <h2 id=full_programm>{{T "full_programm" }}</h2>
 
 <h4 class=line>{{"TBA"}}</h4>

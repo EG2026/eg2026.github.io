@@ -57,7 +57,7 @@
               </a>
               <!-- Add dropdown-menu-center class -->
               <ul class="dropdown-menu bg-black border-0 dropdown-menu-center fs-5" aria-labelledby="dropdown-{{ .Identifier }}">
-                {{ range .Children }}
+                {{ range .Children.ByWeight }}
                   <a class="dropdown-item text-white" href="{{ .URL | relLangURL }}">
                     {{ T .Name }}
                   </a>
@@ -77,4 +77,3 @@
     </div>
   </div>
 </nav>
-
