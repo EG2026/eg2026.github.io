@@ -909,6 +909,220 @@ td.teaserColumn
 
 /* program timetable */
 
+#week_overview {
+  margin-top: 2rem;
+}
+
+.week-overview-legend {
+  margin: 1rem 0 0.95rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.55rem;
+}
+
+.week-overview-legend-item {
+  width: auto;
+  min-width: 0;
+  column-width: auto;
+}
+
+.week-overview-wrapper {
+  margin: 0 0 2rem;
+  border: 1px solid rgba(255, 255, 255, 0.48);
+  background-color: rgba(255, 255, 255, 0.035);
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.08);
+  overflow: hidden;
+}
+
+.week-overview-table {
+  width: 100%;
+  margin: 0;
+  border-collapse: collapse;
+  table-layout: fixed;
+  font-size: clamp(0.74rem, 0.82vw, 0.95rem);
+}
+
+.week-overview-row {
+  height: calc(1rem + var(--segment-minutes, 30) * 0.025rem);
+}
+
+.week-overview-row-brief .week-overview-time {
+  background-color: rgba(255, 255, 255, 0.04);
+  color: rgba(223, 208, 184, 0.72);
+  font-weight: 600;
+}
+
+.week-overview-row-brief .week-overview-cell-empty {
+  background-color: rgba(255, 255, 255, 0.012);
+  background-image: linear-gradient(135deg, rgba(255, 255, 255, 0.028) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.028) 50%, rgba(255, 255, 255, 0.028) 75%, transparent 75%, transparent);
+  background-size: 18px 18px;
+}
+
+.week-overview-table th,
+.week-overview-table td {
+  padding: clamp(0.35rem, 0.65vw, 0.65rem);
+  border: 1px solid rgba(255, 255, 255, 0.28);
+  vertical-align: top;
+  text-align: left;
+}
+
+.week-overview-table thead th {
+  background-color: var(--planet-menu-bg);
+  color: #000000;
+  text-align: center;
+  font-family: var(--headerfont);
+  font-size: 1.05em;
+  border-color: rgba(0, 0, 0, 0.35);
+  border-bottom: 2px solid rgba(0, 0, 0, 0.55);
+}
+
+.week-overview-heading-time {
+  width: clamp(5.4rem, 8vw, 8rem);
+}
+
+.week-overview-time {
+  background-color: rgba(255, 255, 255, 0.08);
+  color: var(--planet-menu-bg);
+  font-weight: 700;
+  text-align: center;
+  white-space: nowrap;
+  border-right: 2px solid rgba(223, 208, 184, 0.55);
+}
+
+.week-overview-cell {
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+.week-overview-cell-spans {
+  vertical-align: top;
+}
+
+.week-overview-cell-title-only {
+  vertical-align: middle;
+  padding: 0;
+}
+
+.week-overview-cell-title-only .week-overview-session-title-single {
+  width: 100%;
+  min-height: 100%;
+  height: 100%;
+  box-sizing: border-box;
+}
+
+.week-overview-cell-empty {
+  background-color: rgba(255, 255, 255, 0.025);
+  background-image: linear-gradient(135deg, rgba(255, 255, 255, 0.05) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.05) 50%, rgba(255, 255, 255, 0.05) 75%, transparent 75%, transparent);
+  background-size: 16px 16px;
+}
+
+.week-overview-session-title {
+  margin: 0;
+  font-size: 1em;
+}
+
+.week-overview-session-title-single {
+  min-height: 3.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.week-overview-session-context {
+  margin: 0 0 0.35rem;
+  text-align: center;
+  color: var(--planet-menu-bg);
+  font-size: 0.86em;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+
+.week-overview-session-block {
+  --session-rgb: 223, 208, 184;
+  margin: 0;
+  padding: 0.42rem 0.45rem;
+  border: 1px solid rgba(var(--session-rgb), 0.42);
+  box-shadow: inset 4px 0 0 rgb(var(--session-rgb));
+  background-color: rgba(var(--session-rgb), 0.14);
+  color: #ffffff;
+  text-align: center;
+  font-weight: 700;
+  line-height: 1.25;
+  overflow-wrap: anywhere;
+  hyphens: auto;
+}
+
+.week-overview-session-link {
+  display: block;
+  color: inherit;
+  text-decoration: none;
+}
+
+.week-overview-session-link:hover,
+.week-overview-session-link:focus {
+  color: #ffffff;
+  text-decoration: underline;
+  text-decoration-color: rgba(255, 255, 255, 0.8);
+}
+
+.week-overview-session-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  gap: 0.4rem;
+  column-width: auto;
+  column-count: 1;
+}
+
+.week-overview-session-list li {
+  margin: 0;
+}
+
+.week-overview-session-list-parallel {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.session-type-full-paper {
+  --session-rgb: 53, 113, 201;
+}
+
+.session-type-short-paper {
+  --session-rgb: 214, 148, 82;
+}
+
+.session-type-tutorial {
+  --session-rgb: 214, 196, 90;
+}
+
+.session-type-star {
+  --session-rgb: 197, 111, 88;
+}
+
+.session-type-education {
+  --session-rgb: 112, 171, 120;
+}
+
+.session-type-panel {
+  --session-rgb: 126, 181, 186;
+}
+
+.session-type-poster {
+  --session-rgb: 170, 128, 214;
+}
+
+.session-type-keynote {
+  --session-rgb: 65, 196, 163;
+}
+
+.session-type-community {
+  --session-rgb: 192, 128, 150;
+}
+
+.session-type-general {
+  --session-rgb: 223, 208, 184;
+}
+
 #timetable {
   margin-top: 2rem;
 }
@@ -1236,6 +1450,64 @@ td.teaserColumn
 }
 
 @media (max-width: 768px) {
+  .week-overview-legend {
+    justify-content: flex-start;
+    gap: 0.4rem;
+  }
+
+  .week-overview-legend-item {
+    font-size: 0.76rem;
+  }
+
+  .week-overview-wrapper {
+    margin-bottom: 1.5rem;
+  }
+
+  .week-overview-table {
+    font-size: 0.62rem;
+  }
+
+  .week-overview-row {
+    height: calc(0.8rem + var(--segment-minutes, 30) * 0.018rem);
+  }
+
+  .week-overview-row-brief .week-overview-time {
+    font-size: 0.68rem;
+  }
+
+  .week-overview-time {
+    font-size: 0.72rem;
+    line-height: 1.15;
+  }
+
+  .week-overview-heading-time {
+    width: 4.45rem;
+  }
+
+  .week-overview-table th,
+  .week-overview-table td {
+    padding: 0.22rem;
+  }
+
+  .week-overview-cell-title-only {
+    padding: 0;
+  }
+
+  .week-overview-session-context {
+    font-size: 0.72rem;
+    margin-bottom: 0.25rem;
+  }
+
+  .week-overview-session-block {
+    padding: 0.28rem 0.22rem;
+    box-shadow: inset 3px 0 0 rgb(var(--session-rgb));
+    line-height: 1.18;
+  }
+
+  .week-overview-session-list-parallel {
+    grid-template-columns: 1fr;
+  }
+
   .timetable-tabs {
     justify-content: flex-start;
   }

@@ -17,6 +17,21 @@ Attendees, presenters, volunteers and sponsors are subject to the <a class=line
 
 {{ $page := . }}
 {{ $days := .Params.timetableDays }}
+{{ $weekOverviewBoundaryScratch := newScratch }}
+{{ $weekOverviewBoundaryScratch.Set "points" (slice) }}
+{{ range $day := $days }}
+  {{ range $entry := default (slice) $day.entries }}
+    {{ $timeParts := split $entry.time "-" }}
+    {{ if eq (len $timeParts) 2 }}
+      {{ $weekOverviewBoundaryScratch.Add "points" (slice (index $timeParts 0) (index $timeParts 1)) }}
+    {{ end }}
+  {{ end }}
+{{ end }}
+{{ $weekOverviewBoundaries := sort (uniq ($weekOverviewBoundaryScratch.Get "points")) }}
+{{ $weekOverviewBoundaryIndex := dict }}
+{{ range $idx, $point := $weekOverviewBoundaries }}
+  {{ $weekOverviewBoundaryIndex = merge $weekOverviewBoundaryIndex (dict $point $idx) }}
+{{ end }}
 {{ $keynoteSpeakerIndex := dict "1" 0 "2" 2 "3" 5 "4" 4 "5" 1 "6" 3 }}
 {{ $starProgramDetails := default (slice) .Params.starProgramDetails }}
 {{ $starLookup := dict }}
@@ -28,7 +43,252 @@ Attendees, presenters, volunteers and sponsors are subject to the <a class=line
 {{ range $item := $tutorialProgramDetails }}
   {{ $tutorialLookup = merge $tutorialLookup (dict (printf "%v" $item.number) $item) }}
 {{ end }}
+{{ $submitPageLookup := dict
+  "Diversity Panel" "/diversity_panel/#diversity_panel"
+  "Sustainability Panel" "/sustainability_panel/#sustainability_panel"
+  "Doctoral Consortium" "/doctoral_consortium/#doctoral_consortium"
+}}
 {{ if $days }}
+<h2 id=week_overview>{{T "week_overview" }}</h2>
+
+<div class="week-overview-legend" aria-label="Week overview legend">
+  <span class="week-overview-legend-item week-overview-session-block session-type-keynote">Keynotes / Fast-Forward</span>
+  <span class="week-overview-legend-item week-overview-session-block session-type-full-paper">Full Papers</span>
+  <span class="week-overview-legend-item week-overview-session-block session-type-short-paper">Short Papers</span>
+  <span class="week-overview-legend-item week-overview-session-block session-type-tutorial">Tutorials</span>
+  <span class="week-overview-legend-item week-overview-session-block session-type-star">STARs</span>
+  <span class="week-overview-legend-item week-overview-session-block session-type-education">Education</span>
+  <span class="week-overview-legend-item week-overview-session-block session-type-panel">Panels</span>
+  <span class="week-overview-legend-item week-overview-session-block session-type-poster">Poster</span>
+  <span class="week-overview-legend-item week-overview-session-block session-type-community">Community Events</span>
+</div>
+
+<div class="week-overview-wrapper">
+  <table class="week-overview-table">
+    <caption class="visually-hidden">{{T "week_overview" }}</caption>
+    <thead>
+      <tr>
+        <th class="week-overview-heading week-overview-heading-time" scope="col">Time</th>
+        {{ range $day := $days }}
+        <th class="week-overview-heading" scope="col">{{ $day.label }}</th>
+        {{ end }}
+      </tr>
+    </thead>
+    <tbody>
+      {{ $weekOverviewSegmentCount := sub (len $weekOverviewBoundaries) 1 }}
+      {{ range $segmentIdx, $segmentStart := first $weekOverviewSegmentCount $weekOverviewBoundaries }}
+      {{ $segmentEnd := index $weekOverviewBoundaries (add $segmentIdx 1) }}
+      {{ $segmentStartParts := split $segmentStart ":" }}
+      {{ $segmentEndParts := split $segmentEnd ":" }}
+      {{ $segmentStartHour := replaceRE `^0([0-9])$` `$1` (index $segmentStartParts 0) }}
+      {{ $segmentStartMinute := replaceRE `^0([0-9])$` `$1` (index $segmentStartParts 1) }}
+      {{ $segmentEndHour := replaceRE `^0([0-9])$` `$1` (index $segmentEndParts 0) }}
+      {{ $segmentEndMinute := replaceRE `^0([0-9])$` `$1` (index $segmentEndParts 1) }}
+      {{ $segmentStartMinutes := add (mul (int $segmentStartHour) 60) (int $segmentStartMinute) }}
+      {{ $segmentEndMinutes := add (mul (int $segmentEndHour) 60) (int $segmentEndMinute) }}
+      {{ $segmentDuration := sub $segmentEndMinutes $segmentStartMinutes }}
+      <tr class="week-overview-row{{ if eq $segmentDuration 15 }} week-overview-row-brief{{ end }}" style="--segment-minutes: {{ $segmentDuration }};">
+        <th class="week-overview-time" scope="row">{{ $segmentStart }}-{{ $segmentEnd }}</th>
+        {{ range $day := $days }}
+          {{ $slot := dict }}
+          {{ $slotStart := "" }}
+          {{ $slotEnd := "" }}
+          {{ range $entry := default (slice) $day.entries }}
+            {{ $entryTimeParts := split $entry.time "-" }}
+            {{ if eq (len $entryTimeParts) 2 }}
+              {{ $entryStart := index $entryTimeParts 0 }}
+              {{ $entryEnd := index $entryTimeParts 1 }}
+              {{ if and (le $entryStart $segmentStart) (ge $entryEnd $segmentEnd) }}
+                {{ $slot = $entry }}
+                {{ $slotStart = $entryStart }}
+                {{ $slotEnd = $entryEnd }}
+              {{ end }}
+            {{ end }}
+          {{ end }}
+          {{ if gt (len $slot) 0 }}
+            {{ if eq $slotStart $segmentStart }}
+              {{ $slotTitle := default "" (index $slot "title") }}
+              {{ $slotDetails := default (slice) (index $slot "details") }}
+              {{ $slotClass := "session-type-general" }}
+              {{ $slotTypeId := "" }}
+              {{ $slotTypeQuery := "" }}
+              {{ if gt (len (findRE `(?i)full paper` $slotTitle)) 0 }}
+                {{ $slotClass = "session-type-full-paper" }}
+                {{ $slotTypeId = "full-paper" }}
+                {{ $slotTypeQuery = "Full Paper" }}
+              {{ else if gt (len (findRE `(?i)short paper` $slotTitle)) 0 }}
+                {{ $slotClass = "session-type-short-paper" }}
+                {{ $slotTypeId = "short-paper" }}
+                {{ $slotTypeQuery = "Short Paper" }}
+              {{ else if gt (len (findRE `(?i)tutorial` $slotTitle)) 0 }}
+                {{ $slotClass = "session-type-tutorial" }}
+                {{ $slotTypeId = "tutorial" }}
+                {{ $slotTypeQuery = "Tutorial" }}
+              {{ else if gt (len (findRE `(?i)star` $slotTitle)) 0 }}
+                {{ $slotClass = "session-type-star" }}
+                {{ $slotTypeId = "star" }}
+                {{ $slotTypeQuery = "STAR" }}
+              {{ else if gt (len (findRE `(?i)education` $slotTitle)) 0 }}
+                {{ $slotClass = "session-type-education" }}
+                {{ $slotTypeId = "education" }}
+                {{ $slotTypeQuery = "Education" }}
+              {{ else if gt (len (findRE `(?i)diversity panel|sustainability panel|doctoral consortium` $slotTitle)) 0 }}
+                {{ $slotClass = "session-type-panel" }}
+              {{ else if gt (len (findRE `(?i)poster` $slotTitle)) 0 }}
+                {{ $slotClass = "session-type-poster" }}
+                {{ $slotTypeId = "poster" }}
+                {{ $slotTypeQuery = "Poster" }}
+              {{ else if gt (len (findRE `(?i)keynote|fast-forward|public lecture` $slotTitle)) 0 }}
+                {{ $slotClass = "session-type-keynote" }}
+                {{ if gt (len (findRE `(?i)keynote` $slotTitle)) 0 }}
+                  {{ $slotTypeId = "keynote" }}
+                  {{ $slotTypeQuery = "Keynote" }}
+                {{ end }}
+              {{ else if gt (len (findRE `(?i)opening|closing|general assembly|business meeting|dinner|social event|she-lunch|best paper jury` $slotTitle)) 0 }}
+                {{ $slotClass = "session-type-community" }}
+              {{ end }}
+              {{ $slotKeynoteNumMatches := findRE `[0-9]+` $slotTitle }}
+              {{ $slotDisplayTitle := partial "week-overview-label.html" $slotTitle }}
+              {{ $slotHref := "" }}
+              {{ if eq $slotTypeId "keynote" }}
+                {{ if eq (len $slotKeynoteNumMatches) 1 }}
+                  {{ $keynoteNumber := index $slotKeynoteNumMatches 0 }}
+                  {{ if isset $keynoteSpeakerIndex $keynoteNumber }}
+                    {{ $speakerIdx := index $keynoteSpeakerIndex $keynoteNumber }}
+                    {{ $slotHref = printf "%s#keynote-speaker-%d" $page.RelPermalink (add $speakerIdx 1) }}
+                  {{ end }}
+                {{ end }}
+              {{ else if isset $submitPageLookup $slotTitle }}
+                {{ $slotHref = index $submitPageLookup $slotTitle }}
+              {{ else if ne $slotTypeId "" }}
+                {{ $slotAnchor := printf "full-program-item-%s-%s-%s-%s" $slotTypeId $day.id (($slot.time | default $segmentStart) | anchorize) ($slotTitle | anchorize) }}
+                {{ $slotHref = printf "%s?type=%s#%s" $page.RelPermalink ($slotTypeQuery | urlquery) $slotAnchor }}
+              {{ end }}
+              {{ $slotRowspan := 1 }}
+              {{ if and (isset $weekOverviewBoundaryIndex $slotStart) (isset $weekOverviewBoundaryIndex $slotEnd) }}
+                {{ $slotRowspan = sub (index $weekOverviewBoundaryIndex $slotEnd) (index $weekOverviewBoundaryIndex $slotStart) }}
+              {{ end }}
+              {{ $slotIsSplitKeynote := and (eq $slotTypeId "keynote") (gt (len $slotKeynoteNumMatches) 1) }}
+        <td rowspan="{{ $slotRowspan }}" class="week-overview-cell{{ if gt $slotRowspan 1 }} week-overview-cell-spans{{ end }}{{ if and (eq (len $slotDetails) 0) (not $slotIsSplitKeynote) }} week-overview-cell-title-only{{ end }}" data-day="{{ $day.label }}">
+              {{ if ne $slotTitle "" }}
+                {{ if and (eq $slotTypeId "keynote") (gt (len $slotKeynoteNumMatches) 1) }}
+                  {{ $slotContextLabel := "" }}
+                  {{ if in $slotTitle ":" }}
+                    {{ $slotContextLabel = trim (index (split $slotTitle ":") 0) " " }}
+                  {{ end }}
+                  {{ if ne $slotContextLabel "" }}
+          <p class="week-overview-session-context">{{ $slotContextLabel }}</p>
+                  {{ end }}
+          <ul class="week-overview-session-list">
+                  {{ range $keynoteNumber := $slotKeynoteNumMatches }}
+                    {{ $keynoteHref := "" }}
+                    {{ if isset $keynoteSpeakerIndex $keynoteNumber }}
+                      {{ $speakerIdx := index $keynoteSpeakerIndex $keynoteNumber }}
+                      {{ $keynoteHref = printf "%s#keynote-speaker-%d" $page.RelPermalink (add $speakerIdx 1) }}
+                    {{ end }}
+            <li>
+                    {{ if ne $keynoteHref "" }}
+              <a class="week-overview-session-link week-overview-session-block session-type-keynote" href="{{ $keynoteHref }}">{{ printf "Keynote %s" $keynoteNumber }}</a>
+                    {{ else }}
+              <span class="week-overview-session-block session-type-keynote">{{ printf "Keynote %s" $keynoteNumber }}</span>
+                    {{ end }}
+            </li>
+                  {{ end }}
+          </ul>
+                {{ else if ne $slotHref "" }}
+          <a class="week-overview-session-title week-overview-session-block week-overview-session-link {{ $slotClass }}{{ if eq (len $slotDetails) 0 }} week-overview-session-title-single{{ end }}" href="{{ $slotHref }}" title="{{ $slotTitle }}" aria-label="{{ $slotTitle }}">{{ $slotDisplayTitle }}</a>
+                {{ else }}
+          <p class="week-overview-session-title week-overview-session-block {{ $slotClass }}{{ if eq (len $slotDetails) 0 }} week-overview-session-title-single{{ end }}" title="{{ $slotTitle }}" aria-label="{{ $slotTitle }}">{{ $slotDisplayTitle }}</p>
+                {{ end }}
+              {{ end }}
+              {{ if gt (len $slotDetails) 0 }}
+          <ul class="week-overview-session-list{{ if ge (len $slotDetails) 3 }} week-overview-session-list-parallel{{ end }}">
+                {{ range $detail := $slotDetails }}
+                {{ $detailClass := "session-type-general" }}
+                {{ $detailDisplay := partial "week-overview-label.html" $detail }}
+                {{ $detailTypeId := "" }}
+                {{ $detailTypeQuery := "" }}
+                {{ if gt (len (findRE `(?i)full paper` $detail)) 0 }}
+                  {{ $detailClass = "session-type-full-paper" }}
+                  {{ $detailTypeId = "full-paper" }}
+                  {{ $detailTypeQuery = "Full Paper" }}
+                {{ else if gt (len (findRE `(?i)short paper` $detail)) 0 }}
+                  {{ $detailClass = "session-type-short-paper" }}
+                  {{ $detailTypeId = "short-paper" }}
+                  {{ $detailTypeQuery = "Short Paper" }}
+                {{ else if gt (len (findRE `(?i)tutorial` $detail)) 0 }}
+                  {{ $detailClass = "session-type-tutorial" }}
+                  {{ $detailTypeId = "tutorial" }}
+                  {{ $detailTypeQuery = "Tutorial" }}
+                {{ else if gt (len (findRE `(?i)star` $detail)) 0 }}
+                  {{ $detailClass = "session-type-star" }}
+                  {{ $detailTypeId = "star" }}
+                  {{ $detailTypeQuery = "STAR" }}
+                {{ else if gt (len (findRE `(?i)education` $detail)) 0 }}
+                  {{ $detailClass = "session-type-education" }}
+                  {{ $detailTypeId = "education" }}
+                  {{ $detailTypeQuery = "Education" }}
+                {{ else if gt (len (findRE `(?i)diversity panel|sustainability panel|doctoral consortium` $detail)) 0 }}
+                  {{ $detailClass = "session-type-panel" }}
+                {{ else if gt (len (findRE `(?i)poster` $detail)) 0 }}
+                  {{ $detailClass = "session-type-poster" }}
+                  {{ $detailTypeId = "poster" }}
+                  {{ $detailTypeQuery = "Poster" }}
+                {{ else if gt (len (findRE `(?i)keynote|fast-forward|public lecture` $detail)) 0 }}
+                  {{ $detailClass = "session-type-keynote" }}
+                  {{ if gt (len (findRE `(?i)keynote` $detail)) 0 }}
+                    {{ $detailTypeId = "keynote" }}
+                    {{ $detailTypeQuery = "Keynote" }}
+                  {{ end }}
+                {{ else if gt (len (findRE `(?i)opening|closing|general assembly|business meeting|dinner|social event|she-lunch|best paper jury` $detail)) 0 }}
+                  {{ $detailClass = "session-type-community" }}
+                {{ end }}
+                {{ $detailHref := "" }}
+                {{ if eq $detailTypeId "keynote" }}
+                  {{ $keynoteNumMatches := findRE `[0-9]+` $detail }}
+                  {{ if eq (len $keynoteNumMatches) 1 }}
+                    {{ $keynoteNumber := index $keynoteNumMatches 0 }}
+                    {{ if isset $keynoteSpeakerIndex $keynoteNumber }}
+                      {{ $speakerIdx := index $keynoteSpeakerIndex $keynoteNumber }}
+                      {{ $detailHref = printf "%s#keynote-speaker-%d" $page.RelPermalink (add $speakerIdx 1) }}
+                    {{ end }}
+                  {{ end }}
+                {{ else if isset $submitPageLookup $detail }}
+                  {{ $detailHref = index $submitPageLookup $detail }}
+                {{ else if ne $detailTypeId "" }}
+                  {{ if eq $detailTypeId "tutorial" }}
+                    {{ $tutorialNumMatch := findRE `[0-9]+` $detail 1 }}
+                    {{ if gt (len $tutorialNumMatch) 0 }}
+                      {{ $detailHref = printf "%s?type=Tutorial#full-program-item-tutorial-%s" $page.RelPermalink (index $tutorialNumMatch 0) }}
+                    {{ end }}
+                  {{ end }}
+                  {{ if eq $detailHref "" }}
+                    {{ $detailAnchor := printf "full-program-item-%s-%s-%s-%s" $detailTypeId $day.id (($slot.time | default $segmentStart) | anchorize) ($detail | anchorize) }}
+                    {{ $detailHref = printf "%s?type=%s#%s" $page.RelPermalink ($detailTypeQuery | urlquery) $detailAnchor }}
+                  {{ end }}
+                {{ end }}
+            <li>
+                  {{ if ne $detailHref "" }}
+              <a class="week-overview-session-link week-overview-session-block {{ $detailClass }}" href="{{ $detailHref }}" title="{{ $detail }}" aria-label="{{ $detail }}">{{ $detailDisplay }}</a>
+                  {{ else }}
+              <span class="week-overview-session-block {{ $detailClass }}" title="{{ $detail }}" aria-label="{{ $detail }}">{{ $detailDisplay }}</span>
+                  {{ end }}
+            </li>
+                {{ end }}
+          </ul>
+              {{ end }}
+        </td>
+            {{ end }}
+          {{ else }}
+        <td class="week-overview-cell week-overview-cell-empty" data-day="{{ $day.label }}"></td>
+          {{ end }}
+        {{ end }}
+      </tr>
+      {{ end }}
+    </tbody>
+  </table>
+</div>
+
 <h2 id=timetable>{{T "timetable" }}</h2>
 
 <ul class="nav nav-tabs timetable-tabs" id="timetable-tabs" role="tablist">

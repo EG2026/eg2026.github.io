@@ -98,8 +98,10 @@
   translation: "Student Volunteers"
 - id: full_programm
   translation: "Full Program"
+- id: week_overview
+  translation: "Week Overview"
 - id: timetable
-  translation: "Timetable"
+  translation: "Daily Program"
 - id: workshops
   translation: "Workshops"
 - id: industrial_keynote_speakers

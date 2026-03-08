@@ -1,0 +1,25 @@
+{{- $text := . -}}
+{{- $label := $text -}}
+{{- if gt (len (findRE `(?i)^Full Paper\s+[0-9]+$` $text)) 0 -}}
+  {{- $label = replaceRE `(?i)^Full Paper\s+([0-9]+)$` `FP$1` $text -}}
+{{- else if gt (len (findRE `(?i)^Short Paper\s+[0-9]+$` $text)) 0 -}}
+  {{- $label = replaceRE `(?i)^Short Paper\s+([0-9]+)$` `SP$1` $text -}}
+{{- else if gt (len (findRE `(?i)^Tutorial\s+[0-9]+$` $text)) 0 -}}
+  {{- $label = replaceRE `(?i)^Tutorial\s+([0-9]+)$` `T$1` $text -}}
+{{- else if gt (len (findRE `(?i)^STAR\s+[0-9]+(\s*/\s*STAR\s*[0-9]+)?$` $text)) 0 -}}
+  {{- $label = replaceRE `(?i)STAR\s*([0-9]+)` `St$1` $text -}}
+  {{- $label = replace $label " / " "/" -}}
+{{- else if gt (len (findRE `(?i)^Education\s+[0-9]+$` $text)) 0 -}}
+  {{- $label = replaceRE `(?i)^Education\s+([0-9]+)$` `Edu$1` $text -}}
+{{- else if eq $text "Diversity Panel" -}}
+  {{- $label = "D.P." -}}
+{{- else if eq $text "Sustainability Panel" -}}
+  {{- $label = "S.P." -}}
+{{- else if eq $text "Doctoral Consortium" -}}
+  {{- $label = "D.C." -}}
+{{- else if eq $text "Fast-Forward" -}}
+  {{- $label = "FF" -}}
+{{- else if eq $text "Poster Q & A" -}}
+  {{- $label = "Poster Q&A" -}}
+{{- end -}}
+{{- $label -}}
