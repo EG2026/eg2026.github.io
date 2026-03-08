@@ -88,7 +88,13 @@ Attendees, presenters, volunteers and sponsors are subject to the <a class=line
       {{ $segmentEndMinutes := add (mul (int $segmentEndHour) 60) (int $segmentEndMinute) }}
       {{ $segmentDuration := sub $segmentEndMinutes $segmentStartMinutes }}
       <tr class="week-overview-row{{ if eq $segmentDuration 15 }} week-overview-row-brief{{ end }}" style="--segment-minutes: {{ $segmentDuration }};">
-        <th class="week-overview-time" scope="row">{{ $segmentStart }}-{{ $segmentEnd }}</th>
+        <th class="week-overview-time" scope="row">
+          <span class="week-overview-time-range">
+            <span class="week-overview-time-start">{{ $segmentStart }}</span>
+            <span class="week-overview-time-sep" aria-hidden="true">-</span>
+            <span class="week-overview-time-end">{{ $segmentEnd }}</span>
+          </span>
+        </th>
         {{ range $day := $days }}
           {{ $slot := dict }}
           {{ $slotStart := "" }}

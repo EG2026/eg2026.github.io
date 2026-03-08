@@ -986,8 +986,24 @@ td.teaserColumn
   color: var(--planet-menu-bg);
   font-weight: 700;
   text-align: center;
-  white-space: nowrap;
   border-right: 2px solid rgba(223, 208, 184, 0.55);
+}
+
+.week-overview-time-range {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.12rem;
+  max-width: 100%;
+}
+
+.week-overview-time-start,
+.week-overview-time-end {
+  display: block;
+}
+
+.week-overview-time-sep {
+  opacity: 0.78;
 }
 
 .week-overview-cell {
@@ -1478,6 +1494,18 @@ td.teaserColumn
   .week-overview-time {
     font-size: 0.72rem;
     line-height: 1.15;
+  }
+
+  .week-overview-time-range {
+    display: flex;
+    flex-direction: column;
+    gap: 0.05rem;
+    width: 100%;
+    line-height: 1.05;
+  }
+
+  .week-overview-time-sep {
+    display: none;
   }
 
   .week-overview-heading-time {
