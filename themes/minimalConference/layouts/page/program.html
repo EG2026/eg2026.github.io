@@ -412,7 +412,7 @@ Attendees, presenters, volunteers and sponsors are subject to the <a class=line
         {{ end }}
         {{ end }}
         {{ if gt (len $details) 0 }}
-        <ul class="timetable-entry-details{{ if eq (len $details) 4 }} timetable-entry-details-parallel-4{{ end }}">
+        <ul class="timetable-entry-details{{ if gt (len $details) 1 }} timetable-entry-details-grid{{ end }}"{{ if gt (len $details) 1 }} style="--timetable-detail-columns: {{ len $details }};"{{ end }}>
           {{ range $detail := $details }}
           {{ $detailTypeId := "" }}
           {{ $detailTypeQuery := "" }}

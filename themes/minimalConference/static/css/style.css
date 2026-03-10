@@ -1240,16 +1240,16 @@ td.teaserColumn
   margin-bottom: 0.2rem;
 }
 
-.timetable-entry-details-parallel-4 {
+.timetable-entry-details-grid {
   margin: 0.55rem 0 0;
   padding: 0;
   list-style: none;
   display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-template-columns: repeat(var(--timetable-detail-columns, 4), minmax(0, 1fr));
   gap: 0.45rem;
 }
 
-.timetable-entry-details-parallel-4 li {
+.timetable-entry-details-grid li {
   margin: 0;
   list-style: none;
   text-align: center;
@@ -1553,7 +1553,7 @@ td.teaserColumn
     padding: 0.75rem;
   }
 
-  .timetable-entry-details-parallel-4 {
+  .timetable-entry-details-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
