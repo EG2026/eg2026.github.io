@@ -574,10 +574,29 @@ Attendees, presenters, volunteers and sponsors are subject to the <a class=line
                       {{ $seenTutorialNumbers = merge $seenTutorialNumbers (dict $tutorialNum true) }}
                       {{ $scratch.Set "hasItems" true }}
                       {{ $tutorialAnchor := printf "full-program-item-tutorial-%s" $tutorialNum }}
+                      {{ $tutorialLabel := printf "Tutorial %s" $tutorialNum }}
+                      {{ $tutorialSlotParts := slice }}
+                      {{ $lastTutorialDay := "" }}
+                      {{ range $slotDay := $days }}
+                        {{ range $slotEntry := default (slice) $slotDay.entries }}
+                          {{ $slotDetails := default (slice) $slotEntry.details }}
+                          {{ if in $slotDetails $tutorialLabel }}
+                            {{ if ne $lastTutorialDay $slotDay.label }}
+                              {{ $tutorialSlotParts = $tutorialSlotParts | append $slotDay.label }}
+                              {{ $lastTutorialDay = $slotDay.label }}
+                            {{ end }}
+                            {{ $tutorialSlotParts = $tutorialSlotParts | append $slotEntry.time }}
+                          {{ end }}
+                        {{ end }}
+                      {{ end }}
+                      {{ $tutorialMeta := printf "%s · %s" $day.label $entry.time }}
+                      {{ if gt (len $tutorialSlotParts) 0 }}
+                        {{ $tutorialMeta = delimit $tutorialSlotParts " · " }}
+                      {{ end }}
                       <div id="{{ $tutorialAnchor }}" class="program-type-item">
-                        <p class="program-type-meta">{{ $day.label }} · {{ $entry.time }}</p>
+                        <p class="program-type-meta">{{ $tutorialMeta }}</p>
                         <div class="program-type-star-row">
-                          <p class="program-type-title">{{ printf "Tutorial %s" $tutorialNum }}</p>
+                          <p class="program-type-title">{{ $tutorialLabel }}</p>
                           {{ if isset $tutorialLookup $tutorialNum }}
                             {{ $tutorialItem := index $tutorialLookup $tutorialNum }}
                             {{ if and (isset $tutorialItem "title") (ne $tutorialItem.title "") }}
