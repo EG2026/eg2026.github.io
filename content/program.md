@@ -173,6 +173,7 @@ timetableDays:
         details:
           - "Full Paper 17"
           - "Full Paper 18"
+          - "Tutorial 8"
           - "STAR 9"
       - time: "16:00-17:30"
 
@@ -180,6 +181,7 @@ timetableDays:
         details:
           - "Full Paper 19"
           - "Full Paper 20"
+          - "Tutorial 8"
           - "Doctoral Consortium"
       - time: "19:00-22:00"
 
