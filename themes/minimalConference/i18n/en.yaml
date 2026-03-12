@@ -100,6 +100,8 @@
   translation: "Full Program"
 - id: week_overview
   translation: "Week Overview"
+- id: download_timetable_ics
+  translation: "Download timetable (.ics)"
 - id: timetable
   translation: "Daily Program"
 - id: workshops
