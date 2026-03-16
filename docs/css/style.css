@@ -1405,6 +1405,14 @@ td.teaserColumn
   text-align: center;
 }
 
+.program-type-session {
+  margin: 0.3rem 0 0.85rem;
+  text-align: center;
+  font-weight: 700;
+  font-size: 1.08rem;
+  color: var(--turquoise);
+}
+
 .program-type-keynote-talk-title {
   margin: 0.2rem 0 0;
   text-align: center;
@@ -1457,6 +1465,30 @@ td.teaserColumn
 
 .program-type-star-authors {
   margin: 0.25rem 0 0;
+  text-align: center;
+  opacity: 0.95;
+  font-style: italic;
+}
+
+.program-type-paper-list {
+  margin: 0.85rem 0 0;
+  padding: 0.85rem 0 0;
+  list-style-position: inside;
+  border-top: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.program-type-paper-entry + .program-type-paper-entry {
+  margin-top: 0.8rem;
+}
+
+.program-type-paper-title {
+  margin: 0;
+  text-align: center;
+  font-weight: 700;
+}
+
+.program-type-paper-authors {
+  margin: 0.2rem 0 0;
   text-align: center;
   opacity: 0.95;
   font-style: italic;
