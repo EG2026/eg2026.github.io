@@ -1483,13 +1483,13 @@ td.teaserColumn
 
 .program-type-paper-title {
   margin: 0;
-  text-align: center;
+  text-align: left;
   font-weight: 700;
 }
 
 .program-type-paper-authors {
   margin: 0.2rem 0 0;
-  text-align: center;
+  text-align: left;
   opacity: 0.95;
   font-style: italic;
 }
