@@ -325,6 +325,7 @@ speakers:
     title: ""
     abstract: ""
     portrait: /images/bjorn_ommer.jpg
+    bio: "Björn Ommer is a full professor for Computer Science at LMU Munich where he leads the Computer Vision & Learning Group. Previously he was a full professor at Heidelberg University. After studying computer science and physics at the University of Bonn, he earned a Ph.D. from ETH Zurich, and held a postdoc position at UC Berkeley. He is LMU's Chief AI Officer, a director of the Bavarian AI Council, an ELLIS Fellow, and has served as an editor for IEEE T-PAMI and on the boards of numerous CVPR, ICCV, ECCV, and NeurIPS conferences. Björn's research interests are in generative AI, visual understanding, and explainable neural networks. His group developed several influential approaches in generative modeling, such as Stable Diffusion, which have seen broad adoption across academia, industry, and beyond and reflect his broader goal of advancing the democratization of generative AI."
 
 graduateSchoolCourses:
 - title: Functional Correspondence from Discrete Geometry to Learning
