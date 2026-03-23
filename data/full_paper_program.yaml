@@ -35,6 +35,10 @@
     authors: Bram Kraaijeveld, Andrei C. Jalba, Anna Vilanova, Maxime Chamberland
   - title: 'EBOAT: Error-Bounded Adaptive Tessellation of Singularities for Real-Time Catmull-Clark Subdivision Surfaces Rendering'
     authors: Yajun Zeng, Yang Lu, Cong Chen, Ruicheng Xiong, Ligang Liu
+  - title: Encoding Occupancy in Memory Location for Efficient and Compact High-Resolution Voxel Structures
+    authors: Jaina Modisett, Markus Billeter
+  - title: 'NePO: Neural Point Octrees for Large-scale Novel View Synthesis'
+    authors: Noah Lewis, Darius Rückert, Marc Stamminger, Linus Franke
   - title: 'NAADF: Globally Illuminated VoxelWorlds Accelerated with Nested Axis-Aligned Distance Fields'
     authors: Annalena Ulschmid, Marvin Ott, Jonas Macho, Michael Wimmer, Stefan Ohrhallinger
 - number: "4"
@@ -75,6 +79,10 @@
     authors: Junyuan Liu, Shusen Liu, Yuzhong Guo, Ruikai Liang, Yin Li, Xiaowei He
   - title: Dripping Thin Films for Real-time Digital Painting
     authors: Zoé Herson, Axel Paris, Élie Michel
+  - title: 'Fluid Composer: Fluid Detail Composition and Rendering Using Video Diffusion Models'
+    authors: Duowen Chen, Zhiqiang Lao, Yu Guo, Heather Yu
+  - title: A Particle-Based Approach to Extract Dynamic 3D FTLE Ridge Geometry
+    authors: Daniel Stelter, Thomas Wilde, Christian Rössl, Holger Theisel
 - number: "7"
   shortSessionId: "Geometry 5"
   sessionTitle: "Structural Geometry: From Fabrication to Fracture"
@@ -85,6 +93,8 @@
     authors: Abhinit Sati, Tiffany Bao, Jeff Tedi, Edward Chien, Emily Whiting
   - title: Designing inflatable shells using unstructured meshes
     authors: Siyuan He, Arthur Lebée, Mélina Skouras
+  - title: 'DeepFracture: A Generative Approach for Predicting Brittle Fractures with Neural Discrete Representation Learning'
+    authors: Yuhang Huang, Takashi Kanai
 - number: "8"
   shortSessionId: "Geom-Imag"
   sessionTitle: "From Pixels to Scenes: 3D Reconstruction and Generation"
@@ -109,6 +119,10 @@
     authors: Jose Luis Ponton, Eduardo Alvarado, Lin Geng Foo, Nuria Pelechano, Carlos Andujar, Marc Habermann
   - title: 'ContactVision: Learning Foot Contact from Video for Physically Plausible Gait Animation'
     authors: DaeYong Kim, Gyuseok Yi, Ri Yu
+  - title: 'Herds from Video: Learning a Microscopic Herd Model from Macroscopic Motion Data'
+    authors: Xianjin Gong, James Gain, Damien Rohmer, Sixtine Lyonnet, Julien Pettré, Marie-Paule Cani
+  - title: 'MPACT: Mesoscopic Profiling and Abstraction of Crowd Trajectories'
+    authors: Marilena Lemonari, Andreas Panayiotou, Theodoros Kyriakou, Nuria Pelechano, Yiorgos Chrysanthou, Andreas Aristidou, Panayiotis Charalambous
 - number: "10"
   shortSessionId: "Rendering 1"
   sessionTitle: "Light Transport: Sampling, Waves, and Denoising"
@@ -201,6 +215,8 @@
     authors: Kewei Xu, Simon Lucas, Mickael Ribardiere, Benjamin Bringier, Pascal Barla
   - title: 'HiMat: DiT-based Ultra-High Resolution SVBRDF Generation'
     authors: Zixiong Wang, Jian Yang, Yiwei Hu, Miloš Hašan, Beibei Wang
+  - title: Digitisation of Impasto and Gloss in Oil Paintings via Spatially Varying Bidirectional Reflectance Distribution Function Acquisition
+    authors: Chih Yang, Tzung-Han Lin
 - number: "17"
   shortSessionId: "Nature"
   sessionTitle: "From Leaf to Planet: Natural Environment Generation and Simulation"
@@ -227,6 +243,8 @@
     authors: Arno Coomans, Giacomo Nazzaro, Edoardo A. Dominici, Christian Döring, Floor Verhoeven, Konstantinos Vardis, Markus Steinberger
   - title: A Real-Time Multi-Scale Neural Representation for Complex Surface Reflectance
     authors: Heikki Timonen, Pauli Kemppinen, Jaakko Lehtinen
+  - title: 'BRDF Importance Baking: A Lightweight Neural Solution to Importance Sampling General Parametric BRDFs'
+    authors: Yaoyi Bai, Songyin Wu, Zheng Zeng, Lingqi Yan, Beibei Wang
 - number: "19"
   shortSessionId: "Geometry 4"
   sessionTitle: "Parametric and Structured Geometry"
@@ -239,6 +257,8 @@
     authors: Leon Timm Erxleben, Michael Motejat, Christian Rössl, Holger Theisel
   - title: Register-Efficient Linear-Time Evaluation in the Bernstein Basis
     authors: Gábor Valasek, Anna Lili Horváth
+  - title: Improving the watertightness of parametric surface/surface intersection
+    authors: Yuqing Wang, Xiaohong Jia, Jieyin Yang, Bolun Wang, Pengbo Bo, Yang Liu
 - number: "20"
   shortSessionId: "VR/MR"
   sessionTitle: "Immersive and Interactive: Rendering Across Displays and Devices"
@@ -257,6 +277,8 @@
   shortSessionId: "Geometry 1"
   sessionTitle: "Maps and Meshes: Parameterization and Geometry Processing"
   papers:
+  - title: Adaptive Use of LBO Bases by Shape Feature Scales for High-Quality and Efficient Shape Correspondence
+    authors: Chong Zhao, Wencheng Wang, Fei Hou
   - title: 'TABI: Tight and Balanced Interactive Atlas Packing'
     authors: Floria Gu, Nicholas Vining, Alla Sheffer
   - title: Volume Quantization with Flexible Singularities for Hexahedral Meshing
