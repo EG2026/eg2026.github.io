@@ -2,6 +2,15 @@
 title: "Diversity Panel"
 type:  "page"
 layout: "diversity_panel"
+panelists:
+  - name: "Leticia Mattos Da Silva"
+    affiliation: "MIT Geometric Data Processing Group"
+    portrait: "/images/leticia.jpg"
+    bio: "Leticia Mattos Da Silva is a fifth-year Ph.D. student in the Geometric Data Processing Group at MIT. She has worked to make academia more accessible and equitable, from advocating for disabled students as Disability Justice Representative on MIT's Graduate Student Council, to mentoring underrepresented students through MIT's Graduate Application Assistance Program (GAAP), to combating food insecurity as a member of MIT's Graduate Student Advisory Group."
+  - name: "Chenxi Liu"
+    affiliation: "University of Toronto Dynamic Graphics Project"
+    portrait: "/images/chenxil_photo.JPG"
+    bio: "Chenxi Liu is a postdoctoral researcher in the Dynamic Graphics Project at the University of Toronto, working with Alec Jacobson. Chenxi's research focuses on computational methods for understanding and assisting visual creation, including interactive model merging for image generation, 2D neural fields, and sketch processing. Chenxi holds a Ph.D. from the University of British Columbia under the supervision of Alla Sheffer, and has interned at Adobe Research and Disney Research."
 ---
 
 Join us at Eurographics 2026 for a timely panel on **Fair Access to Compute: The Emerging Inequality in the Age of AI**. As modern computer graphics and AI research increasingly depend on large-scale computational resources, a new kind of inequality is taking shape. Today, groundbreaking results often come from institutions or companies with access to vast GPU clusters, while talented researchers—especially students and early-career academics at smaller universities—may struggle to compete despite having equally strong ideas.
@@ -12,7 +21,9 @@ Whether you are a researcher navigating compute limitations, a member of industr
 
 This year’s panel consists of 4 outstanding researchers who engage in initiatives promoting inclusion and equal access within the computer graphics community to ensure broader participation from underrepresented groups.
 
-Our invited panelists: TBA
+Confirmed invited panelists include:
+
+{{< diversity_panelists >}}
 
 
 ---

@@ -1,0 +1,14 @@
+{{ range $i, $panelist := .Page.Params.panelists }}
+<div id="diversity-panelist-{{ add $i 1 }}" class="keynote-container">
+  <img src="{{ $panelist.portrait }}" alt="{{ $panelist.name }}" class="keynote-portrait">
+  <div class="keynote-text-container">
+    <h3>
+      <span class="keynote-name">{{ $panelist.name }}</span>
+      <br>
+      <span class="keynote-affiliation">{{ $panelist.affiliation }}</span>
+    </h3>
+    {{ with $panelist.pronouns }}<p><strong>Pronouns:</strong> {{ . }}</p>{{ end }}
+    <p>{{ $panelist.bio }}</p>
+  </div>
+</div>
+{{ end }}
