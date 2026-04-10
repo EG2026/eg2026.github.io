@@ -48,6 +48,11 @@ Attendees, presenters, volunteers and sponsors are subject to the <a class=line
 {{ range $item := $fullPaperProgramDetails }}
   {{ $fullPaperLookup = merge $fullPaperLookup (dict (printf "%v" $item.number) $item) }}
 {{ end }}
+{{- $shortPaperProgramDetails := default (slice) site.Data.short_paper_program -}}
+{{- $shortPaperLookup := dict -}}
+{{- range $item := $shortPaperProgramDetails -}}
+  {{- $shortPaperLookup = merge $shortPaperLookup (dict (printf "%v" $item.number) $item) -}}
+{{- end }}
 {{ $submitPageLookup := dict
   "Diversity Panel" "/diversity_panel/#diversity_panel"
   "Sustainability Panel" "/sustainability_panel/#sustainability_panel"
@@ -637,6 +642,33 @@ Attendees, presenters, volunteers and sponsors are subject to the <a class=line
                           <p class="program-type-session">{{ $fullPaperItem.sessionTitle }}</p>
                         {{ end }}
                         {{ $papers := default (slice) $fullPaperItem.papers }}
+                        {{ if gt (len $papers) 0 }}
+                          <ol class="program-type-paper-list">
+                            {{ range $paper := $papers }}
+                              <li class="program-type-paper-entry">
+                                <p class="program-type-paper-title">{{ $paper.title }}</p>
+                                {{ if and (isset $paper "authors") (ne $paper.authors "") }}
+                                  <p class="program-type-paper-authors">{{ $paper.authors }}</p>
+                                {{ end }}
+                              </li>
+                            {{ end }}
+                          </ol>
+                        {{ end }}
+                      {{ end }}
+                    {{ end }}
+                  {{ else if eq $type.id "short-paper" }}
+                    <p class="program-type-title">{{ $detail }}</p>
+                    {{ $shortPaperNumMatch := findRE `[0-9]+` $detail 1 }}
+                    {{ if gt (len $shortPaperNumMatch) 0 }}
+                      {{ $shortPaperNum := index $shortPaperNumMatch 0 }}
+                      {{ if isset $shortPaperLookup $shortPaperNum }}
+                        {{ $shortPaperItem := index $shortPaperLookup $shortPaperNum }}
+                        {{ if and (isset $shortPaperItem "sessionTitle") (ne $shortPaperItem.sessionTitle "") }}
+                          <p class="program-type-session">{{ $shortPaperItem.sessionTitle }}</p>
+                        {{ else if and (isset $shortPaperItem "shortSessionId") (ne $shortPaperItem.shortSessionId "") }}
+                          <p class="program-type-session">{{ $shortPaperItem.shortSessionId }}</p>
+                        {{ end }}
+                        {{ $papers := default (slice) $shortPaperItem.papers }}
                         {{ if gt (len $papers) 0 }}
                           <ol class="program-type-paper-list">
                             {{ range $paper := $papers }}
