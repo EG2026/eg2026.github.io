@@ -53,6 +53,11 @@ Attendees, presenters, volunteers and sponsors are subject to the <a class=line
 {{- range $item := $shortPaperProgramDetails -}}
   {{- $shortPaperLookup = merge $shortPaperLookup (dict (printf "%v" $item.number) $item) -}}
 {{- end }}
+{{- $educationProgramDetails := default (slice) site.Data.education_program -}}
+{{- $educationLookup := dict -}}
+{{- range $item := $educationProgramDetails -}}
+  {{- $educationLookup = merge $educationLookup (dict (printf "%v" $item.number) $item) -}}
+{{- end }}
 {{ $submitPageLookup := dict
   "Diversity Panel" "/diversity_panel/#diversity_panel"
   "Sustainability Panel" "/sustainability_panel/#sustainability_panel"
@@ -674,6 +679,35 @@ Attendees, presenters, volunteers and sponsors are subject to the <a class=line
                             {{ range $paper := $papers }}
                               <li class="program-type-paper-entry">
                                 <p class="program-type-paper-title">{{ $paper.title }}</p>
+                                {{ if and (isset $paper "authors") (ne $paper.authors "") }}
+                                  <p class="program-type-paper-authors">{{ $paper.authors }}</p>
+                                {{ end }}
+                              </li>
+                            {{ end }}
+                          </ol>
+                        {{ end }}
+                      {{ end }}
+                    {{ end }}
+                  {{ else if eq $type.id "education" }}
+                    <p class="program-type-title">{{ $detail }}</p>
+                    {{ $educationNumMatch := findRE `[0-9]+` $detail 1 }}
+                    {{ if gt (len $educationNumMatch) 0 }}
+                      {{ $educationNum := index $educationNumMatch 0 }}
+                      {{ if isset $educationLookup $educationNum }}
+                        {{ $educationItem := index $educationLookup $educationNum }}
+                        {{ if and (isset $educationItem "duration") (ne $educationItem.duration "") }}
+                          <p class="program-type-session">{{ $educationItem.duration }}</p>
+                        {{ end }}
+                        {{ $papers := default (slice) $educationItem.papers }}
+                        {{ if gt (len $papers) 0 }}
+                          <ol class="program-type-paper-list">
+                            {{ range $paper := $papers }}
+                              <li class="program-type-paper-entry">
+                                {{ if and (isset $paper "title") (ne $paper.title "") }}
+                                  <p class="program-type-paper-title">{{ $paper.title }}</p>
+                                {{ else if and (isset $paper "code") (ne $paper.code "") }}
+                                  <p class="program-type-paper-title">{{ $paper.code }}</p>
+                                {{ end }}
                                 {{ if and (isset $paper "authors") (ne $paper.authors "") }}
                                   <p class="program-type-paper-authors">{{ $paper.authors }}</p>
                                 {{ end }}
