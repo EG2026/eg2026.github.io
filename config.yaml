@@ -828,9 +828,6 @@ Params:
         - name: "Hao Pan"
           affiliation: "Tsinghua University"
 
-        - name: "George Papagiannakis"
-          affiliation: "University of Crete / FORTH"
-
         - name: "Adithya Pediredla"
           affiliation: "Dartmouth College"
 
@@ -839,6 +836,9 @@ Params:
 
         - name: "Ruggero Pintus"
           affiliation: "CRS4"
+
+        - name: "Aleksander Plocharski"
+          affiliation: "Warsaw University of Technology"
 
         - name: "Joanna Porter-Sobieraj"
           affiliation: "Warsaw University of Technology"
