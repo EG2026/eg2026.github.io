@@ -1416,6 +1416,10 @@ td.teaserColumn
   text-align: center;
 }
 
+.program-type-header {
+  text-align: center;
+}
+
 .program-type-title {
   margin: 0;
   text-align: center;
@@ -1427,6 +1431,15 @@ td.teaserColumn
   font-weight: 700;
   font-size: 1.08rem;
   color: var(--turquoise);
+}
+
+.program-type-session-chair {
+  margin: -0.55rem 0 0.85rem;
+  text-align: center;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--turquoise);
+  opacity: 0.95;
 }
 
 .program-type-keynote-talk-title {
@@ -1650,12 +1663,6 @@ td.teaserColumn
   .program-type-item {
     padding: 0.65rem 0.75rem;
   }
-}
-
-.sessionChair
-{
-  font-size: 0.6em;
-  color: var(--turquoise);
 }
 
 .video-container {

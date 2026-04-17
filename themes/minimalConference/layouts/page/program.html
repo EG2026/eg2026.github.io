@@ -637,15 +637,26 @@ Attendees, presenters, volunteers and sponsors are subject to the <a class=line
                 <div id="{{ $itemAnchor }}" class="program-type-item">
                   <p class="program-type-meta">{{ $day.label }} · {{ $entry.time }}</p>
                   {{ if eq $type.id "full-paper" }}
-                    <p class="program-type-title">{{ $detail }}</p>
-                    {{ $fullPaperNumMatch := findRE `[0-9]+` $detail 1 }}
+                    <div class="program-type-header">
+                      <p class="program-type-title">{{ $detail }}</p>
+                      {{ $fullPaperNumMatch := findRE `[0-9]+` $detail 1 }}
+                      {{ if gt (len $fullPaperNumMatch) 0 }}
+                        {{ $fullPaperNum := index $fullPaperNumMatch 0 }}
+                        {{ if isset $fullPaperLookup $fullPaperNum }}
+                          {{ $fullPaperItem := index $fullPaperLookup $fullPaperNum }}
+                          {{ if and (isset $fullPaperItem "sessionTitle") (ne $fullPaperItem.sessionTitle "") }}
+                            <p class="program-type-session">{{ $fullPaperItem.sessionTitle }}</p>
+                          {{ end }}
+                          {{ if and (isset $fullPaperItem "sessionChair") (ne $fullPaperItem.sessionChair "") }}
+                            <p class="program-type-session-chair">Session chair: {{ $fullPaperItem.sessionChair }}</p>
+                          {{ end }}
+                        {{ end }}
+                      {{ end }}
+                    </div>
                     {{ if gt (len $fullPaperNumMatch) 0 }}
                       {{ $fullPaperNum := index $fullPaperNumMatch 0 }}
                       {{ if isset $fullPaperLookup $fullPaperNum }}
                         {{ $fullPaperItem := index $fullPaperLookup $fullPaperNum }}
-                        {{ if and (isset $fullPaperItem "sessionTitle") (ne $fullPaperItem.sessionTitle "") }}
-                          <p class="program-type-session">{{ $fullPaperItem.sessionTitle }}</p>
-                        {{ end }}
                         {{ $papers := default (slice) $fullPaperItem.papers }}
                         {{ if gt (len $papers) 0 }}
                           <ol class="program-type-paper-list">

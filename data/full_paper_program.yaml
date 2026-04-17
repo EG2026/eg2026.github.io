@@ -2,6 +2,7 @@
 - number: "1"
   shortSessionId: "Animation 1"
   sessionTitle: "Animating Humans with Gestures and Style"
+  sessionChair: "Marc Habermann"
   papers:
   - title: 'Conversational Gesture Model (CGM): Extending Speaker-Centric Audio-Driven Motion Generation to Full Conversation Gestures'
     authors: Tomer Koren, Adi Rosenthal, Doron Friedman, Ariel Shamir
@@ -16,6 +17,7 @@
 - number: "2"
   shortSessionId: "Image/Video 1"
   sessionTitle: "Diffusion and Beyond: Controlled Image Generation and Stylization"
+  sessionChair: "Amit Bermano"
   papers:
   - title: Graph-based Black and White Stylization
     authors: Javid Ali Sattari, Jimmy Lord, David Mould
@@ -30,6 +32,7 @@
 - number: "3"
   shortSessionId: "Rend-Geom"
   sessionTitle: "Structured for Speed: Spatial Representations for Real-Time Rendering"
+  sessionChair: "Michael Guthe"
   papers:
   - title: Real-Time Rendering of Dynamic Line Sets using Voxel Ray Tracing
     authors: Bram Kraaijeveld, Andrei C. Jalba, Anna Vilanova, Maxime Chamberland
@@ -44,6 +47,7 @@
 - number: "4"
   shortSessionId: "Rend-Imag"
   sessionTitle: "Covering the Surface: Texture Synthesis, Patterns, and Compression"
+  sessionChair: "Rafael Kuffner dos Anjos"
   papers:
   - title: Real-time by-example texture synthesis and filtering using local statistics exchange
     authors: Nicolas Lutz, Guillaume Gilet
@@ -58,6 +62,7 @@
 - number: "5"
   shortSessionId: "Geometry 2"
   sessionTitle: "Learning Surface and Scene Representations"
+  sessionChair: "Ruben Wiersma"
   papers:
   - title: Mesh Processing Non-Meshes via Neural Displacement Fields
     authors: Yuta Noma, Zhecheng Wang, Chenxi Liu, Karan Singh, Alec Jacobson
@@ -72,6 +77,7 @@
 - number: "6"
   shortSessionId: "Simulation 1"
   sessionTitle: "Go with the Flow: Fluid Simulation and Rendering"
+  sessionChair: "Holger Theisel"
   papers:
   - title: 'Adaptive Optical Layers: Efficient Tall Cell Grids for Liquid Simulation'
     authors: Fumiya Narita, Takashi Kanai
@@ -86,6 +92,7 @@
 - number: "7"
   shortSessionId: "Geometry 5"
   sessionTitle: "Structural Geometry: From Fabrication to Fracture"
+  sessionChair: "Daniel Zint"
   papers:
   - title: Field-Aligned Surface-Filling Curve via Implicit Stitching
     authors: Giovanni Cocco, Xavier Chermain
@@ -98,6 +105,7 @@
 - number: "8"
   shortSessionId: "Geom-Imag"
   sessionTitle: "From Pixels to Scenes: 3D Reconstruction and Generation"
+  sessionChair: "Marc Stamminger"
   papers:
   - title: 'ZeroScene: A Zero-Shot Framework for 3D Scene Generation from a Single Image and Controllable Texture Editing'
     authors: Xiang Tang, Ruotong Li, Xiaopeng Fan
@@ -112,6 +120,7 @@
 - number: "9"
   shortSessionId: "Animation 2"
   sessionTitle: "Motion in the Wild: From Individuals to Crowds"
+  sessionChair: "Yiorgos Chrysanthou"
   papers:
   - title: Physics-Based Motion Tracking of Contact-Rich Interacting Characters
     authors: Xiaotang Zhang, Ziyi Chang, Qianhui Men, Hubert P. H. Shum
@@ -126,6 +135,7 @@
 - number: "10"
   shortSessionId: "Rendering 1"
   sessionTitle: "Light Transport: Sampling, Waves, and Denoising"
+  sessionChair: "Junqiu Zhu"
   papers:
   - title: 'Wave Tracing: Generalizing The Path Integral To Wave Optics'
     authors: Shlomi Steinberg, Matt Pharr
@@ -140,6 +150,7 @@
 - number: "11"
   shortSessionId: "Geometry 3"
   sessionTitle: "Hierarchical Geometry: Optimization and Simplification"
+  sessionChair: "Renato Pajarola"
   papers:
   - title: Convex Primitive Decomposition for Collision Detection
     authors: Julian Knodt, Xifeng Gao
@@ -154,6 +165,7 @@
 - number: "12"
   shortSessionId: "Image/Video 2"
   sessionTitle: "Temporal Vision: Video Generation, Pose, and Narrative"
+  sessionChair: "Marc Christie"
   papers:
   - title: 'Story2Board: A Training-Free Approach for Expressive Visual Storytelling'
     authors: David Dinkevich, Matan Levy, Omri Avrahami, Dvir Samuel, Dani Lischinski
@@ -168,6 +180,7 @@
 - number: "13"
   shortSessionId: "Animation 4"
   sessionTitle: "2D and Beyond: Stylized Animation and Reconstruction"
+  sessionChair: "Nuria Pelechano"
   papers:
   - title: 3D Character Reconstruction from Hand-drawn Model Sheets
     authors: Hyejeong Yoon, Wonjong Jang, Yoonha Hwang, Seungyong Lee
@@ -180,6 +193,7 @@
 - number: "14"
   shortSessionId: "Simulation 2"
   sessionTitle: "Solving Deformation: Numerical Methods for Elastic Simulation"
+  sessionChair: "Mario Botsch"
   papers:
   - title: 'STAGED: Stress-Tensor Assisted Global-local-global solver for interactive Elastic shape Design'
     authors: Liangwang Ruan, Bin Wang, Tiantian Liu, Baoquan Chen
@@ -192,6 +206,7 @@
 - number: "15"
   shortSessionId: "Animation 3"
   sessionTitle: "Digital Humans: From Capture to Control"
+  sessionChair: "Sebastian Weiss"
   papers:
   - title: 'DexterCap: Affordable and Automated Capture of Complex Hand-Object Interactions'
     authors: Yutong Liang, Shiyi Xu, Yulong Zhang, Bowen Zhan, He Zhang, Libin Liu
@@ -206,6 +221,7 @@
 - number: "16"
   shortSessionId: "Rendering 3"
   sessionTitle: "Measuring and Modeling Material Appearance"
+  sessionChair: "Enrico Gobbetti"
   papers:
   - title: High-Gloss SVBRDF Capture Using Bounce Light
     authors: Tomáš Iser, Andrei-Timotei Ardelean, Tim Weyrich
@@ -220,6 +236,7 @@
 - number: "17"
   shortSessionId: "Nature"
   sessionTitle: "From Leaf to Planet: Natural Environment Generation and Simulation"
+  sessionChair: "Oliver Deussen"
   papers:
   - title: 'LeafFit: Plant Assets Creation from 3D Gaussian Splatting'
     authors: Chang Luo, Nobuyuki Umetani
@@ -234,6 +251,7 @@
 - number: "18"
   shortSessionId: "Rendering 2"
   sessionTitle: "Neural Appearance: Reflectance, Irradiance, and Light Transport"
+  sessionChair: "Zahra Montazeri"
   papers:
   - title: Neural Progressive Photon Mapping
     authors: Justin Benoist, Joey Litalien, Adrien Gruson
@@ -248,6 +266,7 @@
 - number: "19"
   shortSessionId: "Geometry 4"
   sessionTitle: "Parametric and Structured Geometry"
+  sessionChair: "Raphaëlle Chaine"
   papers:
   - title: 'CADrawer: Autoregressive CAD Generation from 3D Sketches'
     authors: Yuanbo Li, Gilda Manfredi, Henro Kriel, Chengye Hao, Xianghao Xu, Adrien Bousseau, Daniel Ritchie
@@ -262,6 +281,7 @@
 - number: "20"
   shortSessionId: "VR/MR"
   sessionTitle: "Immersive and Interactive: Rendering Across Displays and Devices"
+  sessionChair: "Karol Myszkowski"
   papers:
   - title: 'Robo-Saber: Generating and Simulating Virtual Reality Players'
     authors: Nam Hee Kim, May Liu, Jaakko Lehtinen, Perttu Hämäläinen, James O’Brien, Jason Peng
@@ -276,6 +296,7 @@
 - number: "21"
   shortSessionId: "Geometry 1"
   sessionTitle: "Maps and Meshes: Parameterization and Geometry Processing"
+  sessionChair: "David Bommes"
   papers:
   - title: Adaptive Use of LBO Bases by Shape Feature Scales for High-Quality and Efficient Shape Correspondence
     authors: Chong Zhao, Wencheng Wang, Fei Hou
@@ -290,6 +311,7 @@
 - number: "22"
   shortSessionId: "Rendering 4"
   sessionTitle: "Advancing 3D Gaussian Splatting"
+  sessionChair: "Seungyong Lee"
   papers:
   - title: Multi-Spectral Gaussian Splatting with Neural Color Representation
     authors: Lukas Meyer, Josef Grün, Maximilian Weiherer, Bernhard Egger, Marc Stamminger, Linus Franke
