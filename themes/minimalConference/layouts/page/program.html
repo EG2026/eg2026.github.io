@@ -634,31 +634,38 @@ Attendees, presenters, volunteers and sponsors are subject to the <a class=line
               {{ else }}
                 {{ $scratch.Set "hasItems" true }}
                 {{ $itemAnchor := printf "full-program-item-%s-%s-%s-%s" $type.id $day.id ($entry.time | anchorize) ($detail | anchorize) }}
+                {{- $detailMetaTime := $entry.time -}}
+                {{- $fullPaperNumMatch := slice -}}
+                {{- $fullPaperItem := dict -}}
+                {{- if eq $type.id "full-paper" -}}
+                  {{- $fullPaperNumMatch = findRE `[0-9]+` $detail 1 -}}
+                  {{- if gt (len $fullPaperNumMatch) 0 -}}
+                    {{- $fullPaperNum := index $fullPaperNumMatch 0 -}}
+                    {{- if isset $fullPaperLookup $fullPaperNum -}}
+                      {{- $fullPaperItem = index $fullPaperLookup $fullPaperNum -}}
+                      {{- if and (isset $fullPaperItem "displayTime") (ne $fullPaperItem.displayTime "") -}}
+                        {{- $detailMetaTime = $fullPaperItem.displayTime -}}
+                      {{- end -}}
+                    {{- end -}}
+                  {{- end -}}
+                {{- end }}
                 <div id="{{ $itemAnchor }}" class="program-type-item">
-                  <p class="program-type-meta">{{ $day.label }} · {{ $entry.time }}</p>
+                  <p class="program-type-meta">{{ $day.label }} · {{ $detailMetaTime }}</p>
                   {{ if eq $type.id "full-paper" }}
                     <div class="program-type-header">
                       <p class="program-type-title">{{ $detail }}</p>
-                      {{ $fullPaperNumMatch := findRE `[0-9]+` $detail 1 }}
-                      {{ if gt (len $fullPaperNumMatch) 0 }}
-                        {{ $fullPaperNum := index $fullPaperNumMatch 0 }}
-                        {{ if isset $fullPaperLookup $fullPaperNum }}
-                          {{ $fullPaperItem := index $fullPaperLookup $fullPaperNum }}
-                          {{ if and (isset $fullPaperItem "sessionTitle") (ne $fullPaperItem.sessionTitle "") }}
-                            <p class="program-type-session">{{ $fullPaperItem.sessionTitle }}</p>
-                          {{ end }}
-                          {{ if and (isset $fullPaperItem "sessionChair") (ne $fullPaperItem.sessionChair "") }}
-                            <p class="program-type-session-chair">Session chair: {{ $fullPaperItem.sessionChair }}</p>
-                          {{ end }}
-                        {{ end }}
-                      {{ end }}
+                      {{- if gt (len $fullPaperItem) 0 }}
+                        {{- if and (isset $fullPaperItem "sessionTitle") (ne $fullPaperItem.sessionTitle "") }}
+                          <p class="program-type-session">{{ $fullPaperItem.sessionTitle }}</p>
+                        {{- end }}
+                        {{- if and (isset $fullPaperItem "sessionChair") (ne $fullPaperItem.sessionChair "") }}
+                          <p class="program-type-session-chair">Session chair: {{ $fullPaperItem.sessionChair }}</p>
+                        {{- end }}
+                      {{- end }}
                     </div>
-                    {{ if gt (len $fullPaperNumMatch) 0 }}
-                      {{ $fullPaperNum := index $fullPaperNumMatch 0 }}
-                      {{ if isset $fullPaperLookup $fullPaperNum }}
-                        {{ $fullPaperItem := index $fullPaperLookup $fullPaperNum }}
+                    {{- if gt (len $fullPaperItem) 0 }}
                         {{ $papers := default (slice) $fullPaperItem.papers }}
-                        {{ if gt (len $papers) 0 }}
+                        {{- if gt (len $papers) 0 }}
                           <ol class="program-type-paper-list">
                             {{ range $paper := $papers }}
                               <li class="program-type-paper-entry">
@@ -669,9 +676,8 @@ Attendees, presenters, volunteers and sponsors are subject to the <a class=line
                               </li>
                             {{ end }}
                           </ol>
-                        {{ end }}
-                      {{ end }}
-                    {{ end }}
+                        {{- end }}
+                    {{- end }}
                   {{ else if eq $type.id "short-paper" }}
                     <p class="program-type-title">{{ $detail }}</p>
                     {{ $shortPaperNumMatch := findRE `[0-9]+` $detail 1 }}

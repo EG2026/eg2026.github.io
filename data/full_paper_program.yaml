@@ -93,6 +93,7 @@
   shortSessionId: "Geometry 5"
   sessionTitle: "Structural Geometry: From Fabrication to Fracture"
   sessionChair: "Daniel Zint"
+  displayTime: "16:00-17:15"
   papers:
   - title: Field-Aligned Surface-Filling Curve via Implicit Stitching
     authors: Giovanni Cocco, Xavier Chermain
@@ -181,6 +182,7 @@
   shortSessionId: "Animation 4"
   sessionTitle: "2D and Beyond: Stylized Animation and Reconstruction"
   sessionChair: "Nuria Pelechano"
+  displayTime: "16:00-17:15"
   papers:
   - title: 3D Character Reconstruction from Hand-drawn Model Sheets
     authors: Hyejeong Yoon, Wonjong Jang, Yoonha Hwang, Seungyong Lee
@@ -194,6 +196,7 @@
   shortSessionId: "Simulation 2"
   sessionTitle: "Solving Deformation: Numerical Methods for Elastic Simulation"
   sessionChair: "Mario Botsch"
+  displayTime: "16:00-17:15"
   papers:
   - title: 'STAGED: Stress-Tensor Assisted Global-local-global solver for interactive Elastic shape Design'
     authors: Liangwang Ruan, Bin Wang, Tiantian Liu, Baoquan Chen
