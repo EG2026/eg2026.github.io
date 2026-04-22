@@ -42,7 +42,7 @@
     authors: Jaina Modisett, Markus Billeter
   - title: 'NePO: Neural Point Octrees for Large-scale Novel View Synthesis'
     authors: Noah Lewis, Darius Rückert, Marc Stamminger, Linus Franke
-  - title: 'NAADF: Globally Illuminated VoxelWorlds Accelerated with Nested Axis-Aligned Distance Fields'
+  - title: 'NAADF: Globally Illuminated Voxel Worlds Accelerated with Nested Axis-Aligned Distance Fields'
     authors: Annalena Ulschmid, Marvin Ott, Jonas Macho, Michael Wimmer, Stefan Ohrhallinger
 - number: "4"
   shortSessionId: "Rend-Imag"
