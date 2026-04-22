@@ -11,6 +11,10 @@ panelists:
     affiliation: "University of Toronto Dynamic Graphics Project"
     portrait: "/images/chenxil_photo.JPG"
     bio: "Chenxi Liu is a postdoctoral researcher in the Dynamic Graphics Project at the University of Toronto, working with Alec Jacobson. Chenxi's research focuses on computational methods for understanding and assisting visual creation, including interactive model merging for image generation, 2D neural fields, and sketch processing. Chenxi holds a Ph.D. from the University of British Columbia under the supervision of Alla Sheffer, and has interned at Adobe Research and Disney Research."
+  - name: "Ursula Augsdörfer"
+    affiliation: "Graz University of Technology, Intelligent Geometry and Simulation Group"
+    portrait: "/images/AugsdörferUrsula_ss.png"
+    bio: "Ursula Augsdörfer leads the Intelligent Geometry and Simulation Group at Graz University of Technology. Her research focuses on advancing methods at the intersection of geometry and machine learning, with an emphasis on practical applications and interdisciplinary collaboration. Beyond her academic work, she is committed to fostering a more inclusive and supportive research community."
 ---
 
 Join us at Eurographics 2026 for a timely panel on **Fair Access to Compute: The Emerging Inequality in the Age of AI**. As modern computer graphics and AI research increasingly depend on large-scale computational resources, a new kind of inequality is taking shape. Today, groundbreaking results often come from institutions or companies with access to vast GPU clusters, while talented researchers—especially students and early-career academics at smaller universities—may struggle to compete despite having equally strong ideas.
@@ -19,7 +23,7 @@ This panel will examine whether our community is unintentionally reinforcing a �
 
 Whether you are a researcher navigating compute limitations, a member of industry shaping the next generation of tools, or simply someone invested in building a fair and inclusive graphics community, we invite you to join the conversation and help shape practical solutions.
 
-This year’s panel consists of 4 outstanding researchers who engage in initiatives promoting inclusion and equal access within the computer graphics community to ensure broader participation from underrepresented groups.
+This year’s panel brings together outstanding researchers who engage in initiatives promoting inclusion and equal access within the computer graphics community to ensure broader participation from underrepresented groups.
 
 Confirmed invited panelists include:
 
