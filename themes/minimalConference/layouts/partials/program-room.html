@@ -1,0 +1,15 @@
+{{- $rooms := default (dict) .rooms -}}
+{{- $day := .day -}}
+{{- $time := .time -}}
+{{- $label := .label -}}
+{{- with index $rooms $day -}}
+  {{- with index . $time -}}
+    {{- with index . $label -}}
+      {{- if reflect.IsMap . -}}
+        {{- .name -}}
+      {{- else -}}
+        {{- . -}}
+      {{- end -}}
+    {{- end -}}
+  {{- end -}}
+{{- end -}}

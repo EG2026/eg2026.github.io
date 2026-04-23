@@ -217,6 +217,115 @@ timetableDays:
         title: "Closing Session"
         details: []
 
+fullProgramRooms:
+  monday:
+    "09:00-10:30":
+      "Tutorial 1": "Kino 4"
+      "Tutorial 2": "Kino 6"
+      "STAR 1": "Kino 7"
+      "STAR 2": "Kino 5"
+    "10:45-12:15":
+      "Tutorial 1": "Kino 4"
+      "Tutorial 2": "Kino 5"
+      "STAR 3": "Kino 6"
+      "STAR 4": "Kino 7"
+    "13:15-14:45":
+      "Tutorial 3": "Kino 4"
+      "Tutorial 4": "Kino 5"
+      "STAR 5": "Kino 6"
+      "Education 1": "Kino 7"
+    "15:00-16:30":
+      "Tutorial 3": "Kino 4"
+      "Tutorial 4": "Kino 6"
+      "STAR 6": "Kino 5"
+      "Education 2": "Kino 7"
+    "17:00-18:00":
+      "Opening Session": "Kino 1"
+    "19:00-22:30":
+      "Social Event":
+        name: "Coronation Hall"
+        url: "https://maps.app.goo.gl/jqauDk3YdjYL7V9x8"
+  tuesday:
+    "09:00-09:30":
+      "Fast-Forward": "Kino 1"
+    "09:30-10:30":
+      "Keynote 1": "Kino 1"
+    "11:00-12:30":
+      "Full Paper 1": "Kino 4"
+      "Full Paper 2": "Kino 5"
+      "Full Paper 3": "Kino 6"
+      "Education 3": "Kino 7"
+    "14:00-15:30":
+      "Full Paper 4": "Kino 4"
+      "Full Paper 5": "Kino 5"
+      "Tutorial 5": "Kino 6"
+      "Tutorial 6": "Kino 7"
+    "16:00-17:30":
+      "Full Paper 6": "Kino 4"
+      "Full Paper 7": "Kino 5"
+      "Tutorial 5": "Kino 6"
+      "Tutorial 6": "Kino 7"
+  wednesday:
+    "09:00-09:30":
+      "Fast-Forward": "Kino 1"
+    "09:30-10:30":
+      "Keynote 2": "Kino 1"
+    "11:00-12:30":
+      "Full Paper 8": "Kino 4"
+      "Full Paper 9": "Kino 5"
+      "Full Paper 10": "Kino 6"
+      "Short Paper 1": "Kino 7"
+    "14:00-15:30":
+      "Full Paper 11": "Kino 4"
+      "Full Paper 12": "Kino 5"
+      "Tutorial 7": "Kino 6"
+      "Diversity Panel": "Kino 7"
+    "16:00-17:30":
+      "Full Paper 13": "Kino 4"
+      "Full Paper 14": "Kino 5"
+      "Tutorial 7": "Kino 6"
+      "Sustainability Panel": "Kino 7"
+    "17:45-18:45":
+      "EG General Assembly": "Kino 5"
+    "19:30-21:00":
+      "Public Lecture: Keynote 3 & Keynote 4":
+        name: "Aula 1"
+        url: "https://maps.app.goo.gl/TtYnDQBh4JTpuHqv9"
+  thursday:
+    "09:00-09:30":
+      "Fast-Forward": "Kino 1"
+    "09:30-10:30":
+      "Keynote 5": "Kino 1"
+    "11:00-12:30":
+      "Full Paper 15": "Kino 4"
+      "Full Paper 16": "Kino 5"
+      "STAR 7 / STAR 8": "Kino 6"
+      "Short Paper 2": "Kino 7"
+    "14:00-15:30":
+      "Full Paper 17": "Kino 4"
+      "Full Paper 18": "Kino 5"
+      "Tutorial 8": "Kino 6"
+      "STAR 9": "Kino 7"
+    "16:00-17:30":
+      "Full Paper 19": "Kino 4"
+      "Full Paper 20": "Kino 5"
+      "Tutorial 8": "Kino 6"
+      "Doctoral Consortium": "Kino 7"
+  friday:
+    "09:00-09:30":
+      "Fast-Forward": "Kino 1"
+    "09:30-10:30":
+      "Keynote 6": "Kino 1"
+    "11:00-12:30":
+      "Full Paper 21": "Kino 4"
+      "Full Paper 22": "Kino 5"
+      "Short Paper 3": "Kino 6"
+      "Short Paper 4": "Kino 7"
+    "12:30-12:45":
+      "Best Paper Jury": "Kino 1"
+    "12:45-13:45":
+      "Closing Session": "Kino 1"
+
 starProgramDetails:
   - number: "1"
     title: "Magnetic Modeling and Simulation for Computer Graphics (STAR1011)"

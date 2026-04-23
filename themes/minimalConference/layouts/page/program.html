@@ -58,6 +58,7 @@ Attendees, presenters, volunteers and sponsors are subject to the <a class=line
 {{- range $item := $educationProgramDetails -}}
   {{- $educationLookup = merge $educationLookup (dict (printf "%v" $item.number) $item) -}}
 {{- end }}
+{{- $fullProgramRooms := default (dict) .Params.fullProgramRooms -}}
 {{ $submitPageLookup := dict
   "Diversity Panel" "/diversity_panel/#diversity_panel"
   "Sustainability Panel" "/sustainability_panel/#sustainability_panel"
@@ -347,8 +348,12 @@ Attendees, presenters, volunteers and sponsors are subject to the <a class=line
       <div class="timetable-entry">
         <p class="timetable-entry-time">{{ $entry.time }}</p>
         {{ $details := default (slice) $entry.details }}
+        {{ $entryRoom := "" }}
+        {{ $entryRoomURL := "" }}
         {{ if and (isset $entry "title") (ne $entry.title "") }}
         {{ $entryTitle := $entry.title }}
+        {{ $entryRoom = trim (partial "program-room.html" (dict "rooms" $fullProgramRooms "day" $day.id "time" $entry.time "label" $entryTitle)) " \n\t" }}
+        {{ $entryRoomURL = trim (partial "program-room-url.html" (dict "rooms" $fullProgramRooms "day" $day.id "time" $entry.time "label" $entryTitle)) " \n\t" }}
         {{ $entryTypeId := "" }}
         {{ $entryTypeQuery := "" }}
         {{ if gt (len (findRE `(?i)full paper` $entryTitle)) 0 }}
@@ -385,6 +390,9 @@ Attendees, presenters, volunteers and sponsors are subject to the <a class=line
             {{ end }}
           {{ else }}
             {{ $entryTitle }}
+          {{ end }}
+          {{ if ne $entryRoom "" }}
+            <span class="timetable-room-inline"> · {{ if ne $entryRoomURL "" }}<a class="timetable-room-link" href="{{ $entryRoomURL }}">{{ $entryRoom }}</a>{{ else }}{{ $entryRoom }}{{ end }}</span>
           {{ end }}
         </p>
         {{ if eq $entryTypeId "keynote" }}
@@ -432,6 +440,8 @@ Attendees, presenters, volunteers and sponsors are subject to the <a class=line
         {{ if gt (len $details) 0 }}
         <ul class="timetable-entry-details{{ if gt (len $details) 1 }} timetable-entry-details-grid{{ end }}"{{ if gt (len $details) 1 }} style="--timetable-detail-columns: {{ len $details }};"{{ end }}>
           {{ range $detail := $details }}
+          {{ $detailRoom := trim (partial "program-room.html" (dict "rooms" $fullProgramRooms "day" $day.id "time" $entry.time "label" $detail)) " \n\t" }}
+          {{ $detailRoomURL := trim (partial "program-room-url.html" (dict "rooms" $fullProgramRooms "day" $day.id "time" $entry.time "label" $detail)) " \n\t" }}
           {{ $detailTypeId := "" }}
           {{ $detailTypeQuery := "" }}
           {{ if gt (len (findRE `(?i)full paper` $detail)) 0 }}
@@ -476,6 +486,9 @@ Attendees, presenters, volunteers and sponsors are subject to the <a class=line
               {{ end }}
             {{ else }}
               {{ $detail }}
+            {{ end }}
+            {{ if ne $detailRoom "" }}
+              <span class="timetable-room">{{ if ne $detailRoomURL "" }}<a class="timetable-room-link" href="{{ $detailRoomURL }}">{{ $detailRoom }}</a>{{ else }}{{ $detailRoom }}{{ end }}</span>
             {{ end }}
           </li>
           {{ end }}
@@ -540,8 +553,10 @@ Attendees, presenters, volunteers and sponsors are subject to the <a class=line
           {{ if and (ne $entryTitle "") (gt (len (findRE $pattern $entryTitle)) 0) }}
             {{ $scratch.Set "hasItems" true }}
             {{ $itemAnchor := printf "full-program-item-%s-%s-%s-%s" $type.id $day.id ($entry.time | anchorize) ($entryTitle | anchorize) }}
+            {{ $itemRoom := trim (partial "program-room.html" (dict "rooms" $fullProgramRooms "day" $day.id "time" $entry.time "label" $entryTitle)) " \n\t" }}
+            {{ $itemRoomURL := trim (partial "program-room-url.html" (dict "rooms" $fullProgramRooms "day" $day.id "time" $entry.time "label" $entryTitle)) " \n\t" }}
             <div id="{{ $itemAnchor }}" class="program-type-item">
-              <p class="program-type-meta">{{ $day.label }} · {{ $entry.time }}</p>
+              <p class="program-type-meta">{{ $day.label }} · {{ $entry.time }}{{ if ne $itemRoom "" }} · {{ if ne $itemRoomURL "" }}<a class="program-type-room-link" href="{{ $itemRoomURL }}">{{ $itemRoom }}</a>{{ else }}{{ $itemRoom }}{{ end }}{{ end }}</p>
               {{ $keynoteRows := slice }}
               {{ $keynoteMatches := findRE `(?i)keynote\s*[0-9]+` $entryTitle }}
               {{ range $match := $keynoteMatches }}
@@ -604,6 +619,10 @@ Attendees, presenters, volunteers and sponsors are subject to the <a class=line
                               {{ $lastTutorialDay = $slotDay.label }}
                             {{ end }}
                             {{ $tutorialSlotParts = $tutorialSlotParts | append $slotEntry.time }}
+                            {{ $tutorialRoom := trim (partial "program-room.html" (dict "rooms" $fullProgramRooms "day" $slotDay.id "time" $slotEntry.time "label" $tutorialLabel)) " \n\t" }}
+                            {{ if ne $tutorialRoom "" }}
+                              {{ $tutorialSlotParts = $tutorialSlotParts | append $tutorialRoom }}
+                            {{ end }}
                           {{ end }}
                         {{ end }}
                       {{ end }}
@@ -649,8 +668,10 @@ Attendees, presenters, volunteers and sponsors are subject to the <a class=line
                     {{- end -}}
                   {{- end -}}
                 {{- end }}
+                {{ $itemRoom := trim (partial "program-room.html" (dict "rooms" $fullProgramRooms "day" $day.id "time" $entry.time "label" $detail)) " \n\t" }}
+                {{ $itemRoomURL := trim (partial "program-room-url.html" (dict "rooms" $fullProgramRooms "day" $day.id "time" $entry.time "label" $detail)) " \n\t" }}
                 <div id="{{ $itemAnchor }}" class="program-type-item">
-                  <p class="program-type-meta">{{ $day.label }} · {{ $detailMetaTime }}</p>
+                  <p class="program-type-meta">{{ $day.label }} · {{ $detailMetaTime }}{{ if ne $itemRoom "" }} · {{ if ne $itemRoomURL "" }}<a class="program-type-room-link" href="{{ $itemRoomURL }}">{{ $itemRoom }}</a>{{ else }}{{ $itemRoom }}{{ end }}{{ end }}</p>
                   {{ if eq $type.id "full-paper" }}
                     <div class="program-type-header">
                       <p class="program-type-title">{{ $detail }}</p>
