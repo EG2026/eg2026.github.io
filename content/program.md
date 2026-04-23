@@ -389,6 +389,7 @@ speakers:
   - name: George Drettakis
     url: https://www-sop.inria.fr/members/George.Drettakis/
     affiliation: Inria Université Côte d’Azur
+    chair: Michael Wimmer
     title: "The Quest for Easy Creation, Editing and Real-Time Rendering of Realistic 3D Scenes"
     abstract: "In this talk we will present over 25 years of research motivated by the goal of providing solutions to easily create realistic 3D scenes by capturing real content, allowing subsequent editing -- most importantly re-lighting – and allowing real-time rendering of the resulting scenes. We look back at several early projects, and how they allowed us to advance our understanding of the fundamental difficulties of developing algorithms to achieve our goals by building on physics-based rendering and traditional graphics solutions. We will then stress the importance of being open to new tools and methodologies, most importantly deep learning. We will illustrate how adopting such techniques and methodologies early provided a significant advantage, both in relighting and real-time rendering for novel view synthesis, in part by building on our expertise in realistic rendering for training data generation. We will discuss the importance of efficiency and optimization even in early stages of these research projects, and finally discuss how the power of recent generative models provides exciting new possibilities, opening the way to powerful solutions to our overarching goals of easily creating, editing and rendering realistic 3D content."
     portrait: /images/george_grettakis.png
@@ -397,6 +398,7 @@ speakers:
   - name: Jaakko Lehtinen
     url: https://users.aalto.fi/~lehtinj7/
     affiliation: Aalto University / NVIDIA Research
+    chair: Belen Masia
     title: "Graphics' Final Frontier"
     abstract: " Computer graphics has undergone an incredible journey from its (visually) humble beginnings into our current ability to simulate the appearance and motion of complex scenes to a degree often difficult to distinguish from reality. Yet closing the final gap to the look and feel of live action footage remains elusive. At the same time, modern purely data-driven methods routinely surpass the realism of traditional first-principles graphics approaches, but come with only coarse controls.In this talk, I'll draw on my experience of working with both classic and data-driven image generation techniques and attempt to outline a vision for the \"endgame\" of computer graphics that synthesizes the classic first-principles approaches with the power of data."
     portrait: /images/jaakko_lehtinen_.png
@@ -407,6 +409,7 @@ speakers:
   - name: Lourdes De Agapito Vicente
     url: https://profiles.ucl.ac.uk/40331-lourdes-de-agapito-vicente
     affiliation: University College London / Synthesia Technologies
+    chair: Justus Thies
     title: "Learning to See the 3D World"
     abstract: "Building algorithms that can emulate human 3D perception, using as input single images or video sequences taken with a consumer camera, proved to be a challenging task for years but has recently seen astounding progress. For decades, machine learning solutions faced the challenge of scarcity of 3D annotations, encouraging important advances in weak and self-supervision. However, recent efforts in large-scale paired image-3D dataset collection have led to a paradigm shift and fully supervised feed-forward large 3D reconstruction models have become a reality. In this talk I will describe progress in both static and dynamic 3D reconstruction, from early optimization-based solutions that captured sequence-specific 3D models, towards more powerful 3D-aware neural representations that can be trained from 2D image supervision only, to today’s large transformer-based, multi-view feed-forward models for metric-scale dense 3D reconstruction. I will also describe the successful commercial uptake of this technology and will show its application to AI-driven video synthesis. "
     portrait: /images/lourdes_agapito_.png    
@@ -415,6 +418,7 @@ speakers:
   - name: Bernd Bickel
     url: https://berndbickel.com/about-me
     affiliation: ETH Zurich
+    chair: Amir Vaxman
     title: "Design in the Age of AI and Spatial Computing"
     abstract: "As the boundaries between the digital and physical worlds blur, we face a profound opportunity to reimagine how we design the world around us. While advanced manufacturing, artificial intelligence, and spatial computing offer unprecedented potential for architecture, engineering, and art, their impact is often limited by a lack of design tools that can seamlessly bridge human creativity with physical realizability. In this talk, I will explore the transformation of design workflows from traditional CAD tools toward intelligent design systems. I will discuss how optimization-based design and tailored data-driven models enable novel approaches for interactive shape exploration and beyond, demonstrating their applicability to challenges ranging from intricate microstructures to high-performance building facades. A central theme is the control problem: the inherent tension between the probabilistic nature of modern generative AI and the high precision and editability required for professional engineering. I will conclude by reflecting on the evolving role of algorithms as creative partners. I will share a vision for a future where technology provides the \"digital superpowers\" that complement rather than replace human intuition, enabling us to build a more sustainable, functional, and resilient world."
     portrait: /images/bernd_bickel.png
@@ -423,6 +427,7 @@ speakers:
   - name: Anatole Lécuyer
     url: https://people.rennes.inria.fr/Anatole.Lecuyer/
     affiliation: Inria Rennes/IRISA 
+    chair: Ana Serrano
     title: "Shaping the future of our 3D immersion in digital worlds"
     abstract: "Virtual reality (VR) naturally evokes a set of advanced technologies designed to immerse users in synthetic 3D worlds simulated in real-time by a computer. Through dedicated interfaces such as head‑mounted displays, VR applications enable powerful experiences, transporting users to imaginary places or allowing them to interact with virtual characters and remote people. The first VR systems date back to the 1960s, but today we are living through a pivotal moment for the field, as it steadily moves toward widespread, mass‑market adoption. In this talk, we will explore the next steps for VR technologies. We will first argue that VR is progressively introducing greater physical engagement into 3D human-computer interaction, for example through haptic technologies (tactile or force feedback) or through virtual embodiment via self‑avatars (anthropomorphic representations of the user within a virtual environment). We will also examine the ongoing convergence of VR with physiological and neural interfaces, pointing toward future interactive systems that directly leverage users’ cognitive states and open the door to even more compelling and holistic experiences. The talk will be illustrated with some of our latest scientific results, offering a glimpse of what could become.. the future of our 3D immersion in digital worlds."
     portrait: /images/anatole_lecuyer.jpg
@@ -431,6 +436,7 @@ speakers:
   - name: Björn Ommer
     url: https://ommer-lab.com/people/ommer/
     affiliation: Ludwig Maximilian University of Munich
+    chair: Leif Kobbelt
     title: "Towards Efficient World Models for Visual Intelligence"
     abstract: "Visual intelligence requires more than perception or the generation of plausible images or videos. It requires world models that represent the state of the world and how it changes. While recent progress in learning scene appearance from images and video has been remarkable, explicit models of kinematics are still vastly lacking: Current video models are largely computationally costly, focus on synthesizing only a single likely future, and paint future pixels rather than explicitly representing all possible motions that could lead there. In this talk, I will present recent progress toward efficient world models that make dynamics directly accessible, represent a multitude of possible futures, and allocate computation adaptively to the dynamic content of a scene rather than uniformly to individual pixels. Consequently, efficiency is not merely a matter of speed. It becomes a modeling principle that shapes what world models represent, how they reason, and what applications they make possible. The talk will then broaden the perspective and ask what happens when generative AI turns intelligence into a scalable, widely accessible commodity, propelling us from an information society toward a knowledge society with democratized access to actionable knowledge. Efficient world models, in this sense, are not simply compressed versions of larger systems, but a step toward visual intelligence grounded in dynamics, uncertainty, and efficient reasoning."
     portrait: /images/bjorn_ommer.jpg

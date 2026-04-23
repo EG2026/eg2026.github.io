@@ -406,6 +406,7 @@ Attendees, presenters, volunteers and sponsors are subject to the <a class=line
                   {{ $number := index $numMatch 0 }}
                   {{ $speakerName := "" }}
                   {{ $speakerTitle := "" }}
+                  {{ $speakerChair := "" }}
                   {{ $speakerAnchor := "" }}
                   {{ if isset $keynoteSpeakerIndex $number }}
                     {{ $speakerIdx := index $keynoteSpeakerIndex $number }}
@@ -413,6 +414,7 @@ Attendees, presenters, volunteers and sponsors are subject to the <a class=line
                       {{ $speaker := index $page.Params.speakers $speakerIdx }}
                       {{ $speakerName = $speaker.name }}
                       {{ $speakerTitle = default "" $speaker.title }}
+                      {{ $speakerChair = default "" $speaker.chair }}
                       {{ $speakerAnchor = printf "%s#keynote-speaker-%d" $page.RelPermalink (add $speakerIdx 1) }}
                     {{ end }}
                   {{ end }}
@@ -428,6 +430,9 @@ Attendees, presenters, volunteers and sponsors are subject to the <a class=line
                       {{ end }}
                       {{ if ne $speakerTitle "" }}
                         <span class="timetable-keynote-talk">{{ $speakerTitle }}</span>
+                      {{ end }}
+                      {{ if ne $speakerChair "" }}
+                        <span class="timetable-keynote-chair">Session chair: {{ $speakerChair }}</span>
                       {{ end }}
                     </li>
                   {{ end }}
@@ -564,13 +569,13 @@ Attendees, presenters, volunteers and sponsors are subject to the <a class=line
                 {{ if gt (len $numMatch) 0 }}
                   {{ $number := index $numMatch 0 }}
                   {{ $keynoteLabel := printf "Keynote %s" $number }}
-                  {{ $row := dict "label" $keynoteLabel "talkTitle" "" "speakerName" "" "speakerAnchor" "" }}
+                  {{ $row := dict "label" $keynoteLabel "talkTitle" "" "speakerName" "" "speakerAnchor" "" "speakerChair" "" }}
                   {{ if isset $keynoteSpeakerIndex $number }}
                     {{ $speakerIdx := index $keynoteSpeakerIndex $number }}
                     {{ if and (ge $speakerIdx 0) (lt $speakerIdx (len $page.Params.speakers)) }}
                       {{ $speaker := index $page.Params.speakers $speakerIdx }}
                       {{ $speakerTitle := default "" $speaker.title }}
-                      {{ $row = dict "label" $keynoteLabel "talkTitle" $speakerTitle "speakerName" $speaker.name "speakerAnchor" (printf "%s#keynote-speaker-%d" $page.RelPermalink (add $speakerIdx 1)) }}
+                      {{ $row = dict "label" $keynoteLabel "talkTitle" $speakerTitle "speakerName" $speaker.name "speakerAnchor" (printf "%s#keynote-speaker-%d" $page.RelPermalink (add $speakerIdx 1)) "speakerChair" (default "" $speaker.chair) }}
                     {{ end }}
                   {{ end }}
                   {{ $keynoteRows = $keynoteRows | append $row }}
@@ -587,6 +592,9 @@ Attendees, presenters, volunteers and sponsors are subject to the <a class=line
                       <p class="program-type-speakers">
                         <a class="program-type-speaker-link" href="{{ $row.speakerAnchor }}">{{ $row.speakerName }}</a>
                       </p>
+                    {{ end }}
+                    {{ if ne $row.speakerChair "" }}
+                      <p class="program-type-keynote-chair">Session chair: {{ $row.speakerChair }}</p>
                     {{ end }}
                   </div>
                 {{ end }}
@@ -867,6 +875,10 @@ Attendees, presenters, volunteers and sponsors are subject to the <a class=line
       <span class=keynote-name><a href={{ $speaker.url }}>{{ $speaker.name }}</a></span>
     <br>
     <span class=keynote-affiliation>{{ $speaker.affiliation }}</span>
+    {{ if and (isset $speaker "chair") (ne $speaker.chair "") }}
+    <br>
+    <span class=keynote-chair>Session chair: {{ $speaker.chair }}</span>
+    {{ end }}
     </h3>
     <p>
     {{ if (not (isset $speaker "title")) | or (eq $speaker.title "") }}
