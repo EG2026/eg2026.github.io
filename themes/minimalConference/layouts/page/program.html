@@ -58,6 +58,7 @@ Attendees, presenters, volunteers and sponsors are subject to the <a class=line
 {{- range $item := $educationProgramDetails -}}
   {{- $educationLookup = merge $educationLookup (dict (printf "%v" $item.number) $item) -}}
 {{- end }}
+{{- $posterProgramDetails := default (slice) site.Data.poster_program -}}
 {{- $fullProgramRooms := default (dict) .Params.fullProgramRooms -}}
 {{ $submitPageLookup := dict
   "Diversity Panel" "/diversity_panel/#diversity_panel"
@@ -801,6 +802,30 @@ Attendees, presenters, volunteers and sponsors are subject to the <a class=line
                 </div>
               {{ end }}
             {{ end }}
+          {{ end }}
+        {{ else if eq $type.id "poster" }}
+          {{ $entryTitle := default "" $entry.title }}
+          {{ if and (ne $entryTitle "") (gt (len (findRE $pattern $entryTitle)) 0) }}
+            {{ $scratch.Set "hasItems" true }}
+            {{ $itemAnchor := printf "full-program-item-%s-%s-%s-%s" $type.id $day.id ($entry.time | anchorize) ($entryTitle | anchorize) }}
+            {{ $itemRoom := trim (partial "program-room.html" (dict "rooms" $fullProgramRooms "day" $day.id "time" $entry.time "label" $entryTitle)) " \n\t" }}
+            {{ $itemRoomURL := trim (partial "program-room-url.html" (dict "rooms" $fullProgramRooms "day" $day.id "time" $entry.time "label" $entryTitle)) " \n\t" }}
+            <div id="{{ $itemAnchor }}" class="program-type-item">
+              <p class="program-type-meta">{{ $day.label }} · {{ $entry.time }}{{ if ne $itemRoom "" }} · {{ if ne $itemRoomURL "" }}<a class="program-type-room-link" href="{{ $itemRoomURL }}">{{ $itemRoom }}</a>{{ else }}{{ $itemRoom }}{{ end }}{{ end }}</p>
+              <p class="program-type-title">{{ $entryTitle }}</p>
+              {{ if gt (len $posterProgramDetails) 0 }}
+                <ol class="program-type-paper-list">
+                  {{ range $poster := $posterProgramDetails }}
+                    <li class="program-type-paper-entry"{{ if and (isset $poster "position") (ne $poster.position "") }} value="{{ $poster.position }}"{{ end }}>
+                      <p class="program-type-paper-title">{{ $poster.title }}</p>
+                      {{ if and (isset $poster "authors") (ne $poster.authors "") }}
+                        <p class="program-type-paper-authors">{{ $poster.authors }}</p>
+                      {{ end }}
+                    </li>
+                  {{ end }}
+                </ol>
+              {{ end }}
+            </div>
           {{ end }}
         {{ else }}
           {{ $entryTitle := default "" $entry.title }}
