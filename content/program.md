@@ -231,8 +231,8 @@ fullProgramRooms:
       "STAR 4": "Kino 7"
     "13:15-14:45":
       "Tutorial 3": "Kino 4"
-      "Tutorial 4": "Kino 5"
-      "STAR 5": "Kino 6"
+      "Tutorial 4": "Kino 6"
+      "STAR 5": "Kino 5"
       "Education 1": "Kino 7"
     "15:00-16:30":
       "Tutorial 3": "Kino 4"
