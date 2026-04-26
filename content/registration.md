@@ -37,7 +37,7 @@ To purchase your registration, please first read the EG26 [Code of Conduct](http
 
 **Full Conference**
 
-Full Conference registration includes access to all main conference sessions and all tutorials. Full Conference registration includes access to all main conference sessions and all tutorials. The fee also includes the conference digital proceedings, coffee breaks, lunch, and social events. Events are subject to a limited number of places. Some events' pre-registration is mandatory and is on a first-come first-serve access.
+Full Conference registration includes access to all main conference sessions and all tutorials. Full Conference registration includes access to all main conference sessions and all tutorials. The fee also includes the conference digital proceedings, coffee breaks, lunch, and social events.
 
 **Student**
 
