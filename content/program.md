@@ -192,7 +192,7 @@ timetableDays:
     label: Friday
     date: ""
     entries:
-      - time: "09:00-09:30"
+      - time: "09:15-09:30"
 
         title: "Fast-Forward"
         details: []
@@ -298,9 +298,9 @@ fullProgramRooms:
       "Keynote 5": "Kino 1"
     "11:00-12:30":
       "Full Paper 15": "Kino 4"
-      "Full Paper 16": "Kino 5"
+      "Full Paper 16": "Kino 7"
       "STAR 7 / STAR 8": "Kino 6"
-      "Short Paper 2": "Kino 7"
+      "Short Paper 2": "Kino 5"
     "14:00-15:30":
       "Full Paper 17": "Kino 4"
       "Full Paper 18": "Kino 5"
@@ -312,15 +312,15 @@ fullProgramRooms:
       "Tutorial 8": "Kino 6"
       "Doctoral Consortium": "Kino 7"
   friday:
-    "09:00-09:30":
+    "09:15-09:30":
       "Fast-Forward": "Kino 1"
     "09:30-10:30":
       "Keynote 6": "Kino 1"
     "11:00-12:30":
       "Full Paper 21": "Kino 4"
-      "Full Paper 22": "Kino 5"
+      "Full Paper 22": "Kino 7"
       "Short Paper 3": "Kino 6"
-      "Short Paper 4": "Kino 7"
+      "Short Paper 4": "Kino 5"
     "12:30-12:45":
       "Best Paper Jury": "Kino 1"
     "12:45-13:45":
