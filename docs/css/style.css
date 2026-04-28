@@ -1576,6 +1576,29 @@ td.teaserColumn
   font-weight: 700;
 }
 
+.program-type-paper-link {
+  color: var(--turquoise);
+  text-decoration: underline;
+  text-decoration-color: rgba(255, 255, 255, 0.5);
+  text-underline-offset: 0.12em;
+}
+
+.program-type-paper-link:hover,
+.program-type-paper-link:focus {
+  color: var(--planet-menu-bg);
+  text-decoration-color: var(--planet-menu-bg);
+}
+
+.program-type-paper-cgf {
+  margin-left: 0.35rem;
+  color: var(--planet-menu-bg);
+  font-family: 'Linux Biolinum', sans-serif;
+  font-size: 0.88em;
+  font-style: italic;
+  font-weight: 400;
+  white-space: nowrap;
+}
+
 .program-type-paper-authors {
   margin: 0.2rem 0 0;
   text-align: left;

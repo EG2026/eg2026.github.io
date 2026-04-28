@@ -699,7 +699,16 @@ Attendees, presenters, volunteers and sponsors are subject to the <a class=line
                           <ol class="program-type-paper-list">
                             {{ range $paper := $papers }}
                               <li class="program-type-paper-entry">
-                                <p class="program-type-paper-title">{{ $paper.title }}</p>
+                                <p class="program-type-paper-title">
+                                  {{- if and (isset $paper "url") (ne $paper.url "") -}}
+                                    <a class="program-type-paper-link" href="{{ $paper.url }}">{{ $paper.title }}</a>
+                                  {{- else -}}
+                                    {{ $paper.title }}
+                                  {{- end -}}
+                                  {{- if $paper.cgf }}
+                                    <span class="program-type-paper-cgf">(CGF paper)</span>
+                                  {{- end -}}
+                                </p>
                                 {{ if and (isset $paper "authors") (ne $paper.authors "") }}
                                   <p class="program-type-paper-authors">{{ $paper.authors }}</p>
                                 {{ end }}
@@ -725,7 +734,13 @@ Attendees, presenters, volunteers and sponsors are subject to the <a class=line
                           <ol class="program-type-paper-list">
                             {{ range $paper := $papers }}
                               <li class="program-type-paper-entry">
-                                <p class="program-type-paper-title">{{ $paper.title }}</p>
+                                <p class="program-type-paper-title">
+                                  {{- if and (isset $paper "url") (ne $paper.url "") -}}
+                                    <a class="program-type-paper-link" href="{{ $paper.url }}">{{ $paper.title }}</a>
+                                  {{- else -}}
+                                    {{ $paper.title }}
+                                  {{- end -}}
+                                </p>
                                 {{ if and (isset $paper "authors") (ne $paper.authors "") }}
                                   <p class="program-type-paper-authors">{{ $paper.authors }}</p>
                                 {{ end }}

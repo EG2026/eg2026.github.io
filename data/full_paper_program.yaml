@@ -6,14 +6,19 @@
   papers:
   - title: 'Conversational Gesture Model (CGM): Extending Speaker-Centric Audio-Driven Motion Generation to Full Conversation Gestures'
     authors: Tomer Koren, Adi Rosenthal, Doron Friedman, Ariel Shamir
+    url: "https://diglib.eg.org/handle/10.1111/cgf70412"
   - title: Skeletal-Driven Animation of Anatomical Humans via Neural Deformation Gradients
     authors: Gerritt Nolte, Fabian Kemper, Ulrich Schwanecke, Mario Botsch
+    url: "https://diglib.eg.org/handle/10.1111/cgf70388"
   - title: 'Dance Like a Chicken: Low-Rank Stylization for Human Motion Diffusion'
     authors: Haim Sawdayee, Chuan Guo, Guy Tevet, Bing Zhou, Jian Wang, Amit Haim Bermano
+    url: "https://diglib.eg.org/handle/10.1111/cgf70365"
   - title: 'SkinCells: Sparse Skinning using Voronoi Cells'
     authors: Egor Larionov, Igor Santesteban, Hsiao-yu Chen, Wei-Chin Gene Lin, Philipp Herholz, Ryan Goldade, Ladislav Kavan, Doug Roble, Tuur Stuyck
+    url: "https://diglib.eg.org/handle/10.1111/cgf70381"
   - title: 'VQ-Style: Disentangling Style and Content in Motion with Residual Quantized Representations'
     authors: Fatemeh Zargarbashi, Dhruv Agrawal, Jakob Buhmann, Martin Guay, Stelian Coros, Robert W. Sumner
+    url: "https://diglib.eg.org/handle/10.1111/cgf70377"
 - number: "2"
   shortSessionId: "Image/Video 1"
   sessionTitle: "Diffusion and Beyond: Controlled Image Generation and Stylization"
@@ -21,14 +26,19 @@
   papers:
   - title: Graph-based Black and White Stylization
     authors: Javid Ali Sattari, Jimmy Lord, David Mould
+    url: "https://diglib.eg.org/handle/10.1111/cgf70364"
   - title: Palette Aligned Image Diffusion
     authors: Elad Aharoni, Noy Porat, Dani Lischinski, Ariel Shamir
+    url: "https://diglib.eg.org/handle/10.1111/cgf70384"
   - title: 'Latent Diffusion-GAN: Adversarial Learning in the Autoencoded Latent Space'
     authors: U-Chae Jun, Jaeeun Ko, Jiwoo Kang
+    url: "https://diglib.eg.org/handle/10.1111/cgf70409"
   - title: Edge-preserving noise for diffusion models
     authors: Jente Vandersanden, Sascha Holl, Xingchang Huang, Gurprit Singh
+    url: "https://diglib.eg.org/handle/10.1111/cgf70383"
   - title: 'TextFlux: An OCR-Free DiT Model for High-Fidelity Multilingual Scene Text Synthesis'
     authors: Yu Xie, Jielei Zhang, Pengyu Chen, Weihang Wang, Longwen Gao, Peiyi Li, Qian Qiao, Zhouhui Lian
+    url: "https://diglib.eg.org/handle/10.1111/cgf70342"
 - number: "3"
   shortSessionId: "Rend-Geom"
   sessionTitle: "Structured for Speed: Spatial Representations for Real-Time Rendering"
@@ -36,14 +46,21 @@
   papers:
   - title: Real-Time Rendering of Dynamic Line Sets using Voxel Ray Tracing
     authors: Bram Kraaijeveld, Andrei C. Jalba, Anna Vilanova, Maxime Chamberland
+    url: "https://diglib.eg.org/handle/10.1111/cgf70372"
   - title: 'EBOAT: Error-Bounded Adaptive Tessellation of Singularities for Real-Time Catmull-Clark Subdivision Surfaces Rendering'
     authors: Yajun Zeng, Yang Lu, Cong Chen, Ruicheng Xiong, Ligang Liu
+    url: "https://diglib.eg.org/handle/10.1111/cgf70346"
   - title: Encoding Occupancy in Memory Location for Efficient and Compact High-Resolution Voxel Structures
     authors: Jaina Modisett, Markus Billeter
+    url: "https://onlinelibrary.wiley.com/doi/10.1111/cgf.70292"
+    cgf: true
   - title: 'NePO: Neural Point Octrees for Large-scale Novel View Synthesis'
     authors: Noah Lewis, Darius Rückert, Marc Stamminger, Linus Franke
+    url: "https://onlinelibrary.wiley.com/doi/10.1111/cgf.70287"
+    cgf: true
   - title: 'NAADF: Globally Illuminated Voxel Worlds Accelerated with Nested Axis-Aligned Distance Fields'
     authors: Annalena Ulschmid, Marvin Ott, Jonas Macho, Michael Wimmer, Stefan Ohrhallinger
+    url: "https://diglib.eg.org/handle/10.1111/cgf70413"
 - number: "4"
   shortSessionId: "Rend-Imag"
   sessionTitle: "Covering the Surface: Texture Synthesis, Patterns, and Compression"
@@ -51,14 +68,19 @@
   papers:
   - title: Real-time by-example texture synthesis and filtering using local statistics exchange
     authors: Nicolas Lutz, Guillaume Gilet
+    url: "https://diglib.eg.org/handle/10.1111/cgf70355"
   - title: 'Variable-Rate Texture Compression: Real-Time Rendering with JPEG'
     authors: Elias Kristmann, Michael Wimmer, Markus Schütz
+    url: "https://diglib.eg.org/handle/10.1111/cgf70338"
   - title: 'ProcTex: Consistent and Interactive Text-to-texture Synthesis for Part-based Procedural Models'
     authors: Ruiqi Xu, Zihan Zhu, Benjamin Ahlbrand, Srinath Sridhar, Daniel Ritchie
+    url: "https://diglib.eg.org/handle/10.1111/cgf70385"
   - title: Lightmap Compression with Color-Coherent UV Clustering and Cascade Texture Optimization
     authors: Dehan Chen, Hongyu Huang, Yuzhe Luo, Hao Xu, Yuqing Zhang, Sipeng Yang, Xifeng Gao, Heng Cai, Chao Li, Xiaogang Jin
+    url: "https://diglib.eg.org/handle/10.1111/cgf70316"
   - title: Controllable Intrinsic Surface Pattern Generation Using Slime Mold Simulations
     authors: Jeffrey Layton, Faramarz Samavati, Adam Runions
+    url: "https://diglib.eg.org/handle/10.1111/cgf70324"
 - number: "5"
   shortSessionId: "Geometry 2"
   sessionTitle: "Learning Surface and Scene Representations"
@@ -66,14 +88,19 @@
   papers:
   - title: Mesh Processing Non-Meshes via Neural Displacement Fields
     authors: Yuta Noma, Zhecheng Wang, Chenxi Liu, Karan Singh, Alec Jacobson
+    url: "https://diglib.eg.org/handle/10.1111/cgf70354"
   - title: 'Basis Networks: Learning basis functions for free-form triangulations'
     authors: Tobias Djuren, Marc Alexa
+    url: "https://diglib.eg.org/handle/10.1111/cgf70326"
   - title: Self-supervised Learning of Fine-to-Coarse Cuboid Shape Abstraction
     authors: Gregor Kobsik, Morten Henkel, Yanjiang He, Victor Czech, Tim Elsner, Isaak Lim, Leif Kobbelt
+    url: "https://diglib.eg.org/handle/10.1111/cgf70344"
   - title: 'TLC-Plan: A Two-Level Codebook Based Network for End-to-End Vector Floorplan Generation'
     authors: Biao Xiong, Zhen Peng, Ping Wang, Qiegen Liu, Xian Zhong
+    url: "https://diglib.eg.org/handle/10.1111/cgf70360"
   - title: Floorplan Generation by Alternating Geometry and Semantics Optimization
     authors: Wenming Wu, Sizhe Hu, Ligang Liu, Liping Zheng, Xiao-Ming Fu
+    url: "https://diglib.eg.org/handle/10.1111/cgf70370"
 - number: "6"
   shortSessionId: "Simulation 1"
   sessionTitle: "Go with the Flow: Fluid Simulation and Rendering"
@@ -81,14 +108,21 @@
   papers:
   - title: 'Adaptive Optical Layers: Efficient Tall Cell Grids for Liquid Simulation'
     authors: Fumiya Narita, Takashi Kanai
+    url: "https://diglib.eg.org/handle/10.1111/cgf70357"
   - title: A Semi-Analytical Energy Model for Particle-Based Fluid Simulation Involving Complex Moving Boundaries
     authors: Junyuan Liu, Shusen Liu, Yuzhong Guo, Ruikai Liang, Ying Li, Xiaowei He
+    url: "https://diglib.eg.org/handle/10.1111/cgf70333"
   - title: Dripping Thin Films for Real-time Digital Painting
     authors: Zoé Herson, Axel Paris, Élie Michel
+    url: "https://diglib.eg.org/handle/10.1111/cgf70416"
   - title: 'Fluid Composer: Fluid Detail Composition and Rendering Using Video Diffusion Models'
     authors: Duowen Chen, Zhiqiang Lao, Yu Guo, Heather Yu
+    url: "https://onlinelibrary.wiley.com/doi/10.1111/cgf.70300?af=R"
+    cgf: true
   - title: A Particle-Based Approach to Extract Dynamic 3D FTLE Ridge Geometry
     authors: Daniel Stelter, Thomas Wilde, Christian Rössl, Holger Theisel
+    url: "https://onlinelibrary.wiley.com/doi/10.1111/cgf.15203"
+    cgf: true
 - number: "7"
   shortSessionId: "Geometry 5"
   sessionTitle: "Structural Geometry: From Fabrication to Fracture"
@@ -97,12 +131,17 @@
   papers:
   - title: Field-Aligned Surface-Filling Curve via Implicit Stitching
     authors: Giovanni Cocco, Xavier Chermain
+    url: "https://diglib.eg.org/handle/10.1111/cgf70361"
   - title: Strain-Field Based Segmentation for Fabric Formwork
     authors: Abhinit Sati, Tiffany Bao, Jeff Tedi, Edward Chien, Emily Whiting
+    url: "https://diglib.eg.org/handle/10.1111/cgf70367"
   - title: Designing inflatable shells using unstructured meshes
     authors: Siyuan He, Arthur Lebée, Mélina Skouras
+    url: "https://diglib.eg.org/handle/10.1111/cgf70350"
   - title: 'DeepFracture: A Generative Approach for Predicting Brittle Fractures with Neural Discrete Representation Learning'
     authors: Yuhang Huang, Takashi Kanai
+    url: "https://onlinelibrary.wiley.com/doi/10.1111/cgf.70002"
+    cgf: true
 - number: "8"
   shortSessionId: "Geom-Imag"
   sessionTitle: "From Pixels to Scenes: 3D Reconstruction and Generation"
@@ -110,14 +149,19 @@
   papers:
   - title: 'ZeroScene: A Zero-Shot Framework for 3D Scene Generation from a Single Image and Controllable Texture Editing'
     authors: Xiang Tang, Ruotong Li, Xiaopeng Fan
+    url: "https://diglib.eg.org/handle/10.1111/cgf70419"
   - title: 'GS-2M: Material-aware Gaussian Splatting for High-fidelity Mesh Reconstruction'
     authors: Dinh Minh Nguyen, Malte Avenhaus, Thomas Lindemeier
+    url: "https://diglib.eg.org/handle/10.1111/cgf70347"
   - title: 'Layer3D: A 3D Layered Representation for Multiview Vector Graphics'
     authors: Zhongyue Guan, Yixin Hu, Zeyu Wang
+    url: "https://diglib.eg.org/handle/10.1111/cgf70375"
   - title: 'GeoFusionLRM: Geometry-Aware Self-Correction for Consistent 3D Reconstruction'
     authors: Ahmet Burak Yildirim, Tuna Saygin, Duygu Ceylan, Aysegul Dundar
+    url: "https://diglib.eg.org/handle/10.1111/cgf70325"
   - title: 'UniCross3D: Unified Cross-View and Cross-Domain Diffusion for Consistent Single-Image 3D Generation'
     authors: U-Chae Jun, Jaeeun Ko, Jiwoo Kang
+    url: "https://diglib.eg.org/handle/10.1111/cgf70378"
 - number: "9"
   shortSessionId: "Animation 2"
   sessionTitle: "Motion in the Wild: From Individuals to Crowds"
@@ -125,14 +169,21 @@
   papers:
   - title: Physics-Based Motion Tracking of Contact-Rich Interacting Characters
     authors: Xiaotang Zhang, Ziyi Chang, Qianhui Men, Hubert P. H. Shum
+    url: "https://diglib.eg.org/handle/10.1111/cgf70336"
   - title: 'Step2Motion: Locomotion Reconstruction from Pressure Sensing Insoles'
     authors: Jose Luis Ponton, Eduardo Alvarado, Lin Geng Foo, Nuria Pelechano, Carlos Andujar, Marc Habermann
+    url: "https://diglib.eg.org/handle/10.1111/cgf70405"
   - title: 'ContactVision: Learning Foot Contact from Video for Physically Plausible Gait Animation'
     authors: DaeYong Kim, Gyuseok Yi, Ri Yu
+    url: "https://diglib.eg.org/handle/10.1111/cgf70334"
   - title: 'Herds from Video: Learning a Microscopic Herd Model from Macroscopic Motion Data'
     authors: Xianjin Gong, James Gain, Damien Rohmer, Sixtine Lyonnet, Julien Pettré, Marie-Paule Cani
+    url: "https://onlinelibrary.wiley.com/doi/10.1111/cgf.70225?af=R"
+    cgf: true
   - title: 'MPACT: Mesoscopic Profiling and Abstraction of Crowd Trajectories'
     authors: Marilena Lemonari, Andreas Panayiotou, Theodoros Kyriakou, Nuria Pelechano, Yiorgos Chrysanthou, Andreas Aristidou, Panayiotis Charalambous
+    url: "https://onlinelibrary.wiley.com/doi/10.1111/cgf.70156"
+    cgf: true
 - number: "10"
   shortSessionId: "Rendering 1"
   sessionTitle: "Light Transport: Sampling, Waves, and Denoising"
@@ -140,14 +191,19 @@
   papers:
   - title: 'Wave Tracing: Generalizing The Path Integral To Wave Optics'
     authors: Shlomi Steinberg, Matt Pharr
+    url: "https://diglib.eg.org/handle/10.1111/cgf70322"
   - title: Gradient-Domain ReSTIR Path Tracing
     authors: Yu-Chen Wang, Chris Wyman, Markus Kettunen, Daqi Lin, Lifan Wu, Shuang Zhao
+    url: "https://diglib.eg.org/handle/10.1111/cgf70328"
   - title: Statistical Denoising of Transient Rendering
     authors: Oscar Pueyo-Ciutad, Álvaro López, Diego Gutierrez
+    url: "https://diglib.eg.org/handle/10.1111/cgf70321"
   - title: Stochastic Pairwise MIS for Unbiased Large-Kernel Reuse in Real-Time
     authors: Trevor Hedstrom, Markus Kettunen, Daqi Lin, Chris Wyman, Tzu-Mao Li
+    url: "https://diglib.eg.org/handle/10.1111/cgf70391"
   - title: 'Deep Residual Combiner: A Learned Fusion of Spatial, Temporal, and Multiscale Correlated Pixel Estimates'
     authors: Weijie Zhou, Euan Hughes, Toshiya Hachisuka
+    url: "https://diglib.eg.org/handle/10.1111/cgf70358"
 - number: "11"
   shortSessionId: "Geometry 3"
   sessionTitle: "Hierarchical Geometry: Optimization and Simplification"
@@ -155,14 +211,19 @@
   papers:
   - title: Convex Primitive Decomposition for Collision Detection
     authors: Julian Knodt, Xifeng Gao
+    url: "https://diglib.eg.org/handle/10.1111/cgf70411"
   - title: Construction of clustered HLOD with As-Simplified-As-Possible boundaries
     authors: Mathieu Ladeuil, Marc Trabucato, Alexis Vaisse, Noura Faraj
+    url: "https://diglib.eg.org/handle/10.1111/cgf70380"
   - title: Hierarchical Optimization of the As-Rigid-As-Possible Energy
     authors: Hendrik Meyer, Bernd Bickel, Marc Alexa
+    url: "https://diglib.eg.org/handle/10.1111/cgf70404"
   - title: Embedding Optimization of Layouts via Distortion Minimization
     authors: Alexandra Heuschling, Isaak Lim, Leif Kobbelt
+    url: "https://diglib.eg.org/handle/10.1111/cgf70421"
   - title: Contouring Signed Distance Fields by Approximating Gradients
     authors: Maximilian Kohlbrenner, Marc Alexa
+    url: "https://diglib.eg.org/handle/10.1111/cgf70373"
 - number: "12"
   shortSessionId: "Image/Video 2"
   sessionTitle: "Temporal Vision: Video Generation, Pose, and Narrative"
@@ -170,14 +231,19 @@
   papers:
   - title: 'Story2Board: A Training-Free Approach for Expressive Visual Storytelling'
     authors: David Dinkevich, Matan Levy, Omri Avrahami, Dvir Samuel, Dani Lischinski
+    url: "https://diglib.eg.org/handle/10.1111/cgf70319"
   - title: 'SAGE: Structure-Aware Generative Video Transitions between Diverse Clips'
     authors: Mia Kan, Yilin Liu, Niloy J. Mitra
+    url: "https://diglib.eg.org/handle/10.1111/cgf70420"
   - title: 'MultiCOIN: Multi-Modal COntrollable Inbetweening'
     authors: Maham Tanveer, Yang Zhou, Simon Niklaus, Ali Mahdavi Amiri, Hao (Richard) Zhang, Krishna Kumar Singh, Nanxuan Zhao
+    url: "https://diglib.eg.org/handle/10.1111/cgf70362"
   - title: 'SEE4D: Pose-Free 4D Generation via Auto-Regressive Video Inpainting'
     authors: Dongyue Lu, Ao Liang, Tianxin Huang, Xiao Fu, Yuyang Zhao, Baorui Ma, Liang Pan, Wei Yin, Lingdong Kong, Wei Tsang Ooi, Ziwei Liu
+    url: "https://diglib.eg.org/handle/10.1111/cgf70345"
   - title: Enhancing Robust Category-Agnostic Pose Estimation through Multi-Modal Feature Alignment
     authors: Boxuan Li, Juan Liu
+    url: "https://diglib.eg.org/handle/10.1111/cgf70368"
 - number: "13"
   shortSessionId: "Animation 4"
   sessionTitle: "2D and Beyond: Stylized Animation and Reconstruction"
@@ -186,12 +252,16 @@
   papers:
   - title: 3D Character Reconstruction from Hand-drawn Model Sheets
     authors: Hyejeong Yoon, Wonjong Jang, Yoonha Hwang, Seungyong Lee
+    url: "https://diglib.eg.org/handle/10.1111/cgf70323"
   - title: Generative Cutout Animation
     authors: Ivan Puhachov, Noam Aigerman, Thibault Groueix, Mikhail Bessmeltsev
+    url: "https://diglib.eg.org/handle/10.1111/cgf70422"
   - title: Mixed Super-Circles
     authors: Emile Hohnadel, Thibaut Métivet, Florence Bertails-Descoubes
+    url: "https://diglib.eg.org/handle/10.1111/cgf70414"
   - title: Vector sketch animation generation with differentialable motion trajectories
     authors: Xinding Zhu, Xinye Yang, Shuyang Zheng, Zhexin Zhang, Fei Gao, Jing Huang, Jiazhou Chen
+    url: "https://diglib.eg.org/handle/10.1111/cgf70335"
 - number: "14"
   shortSessionId: "Simulation 2"
   sessionTitle: "Solving Deformation: Numerical Methods for Elastic Simulation"
@@ -200,12 +270,16 @@
   papers:
   - title: 'STAGED: Stress-Tensor Assisted Global-local-global solver for interactive Elastic shape Design'
     authors: Liangwang Ruan, Bin Wang, Tiantian Liu, Baoquan Chen
+    url: "https://diglib.eg.org/handle/10.1111/cgf70402"
   - title: Interpolated Adaptive Linear Reduced Order Modeling for Deformation Dynamics
     authors: Yutian Tao, Maurizio Chiaramonte, Pablo Fernandez
+    url: "https://diglib.eg.org/handle/10.1111/cgf70371"
   - title: Progressively Projected Newton’s Method
     authors: José Antonio Fernández-Fernández, Fabian Löschner, Jan Bender
+    url: "https://diglib.eg.org/handle/10.1111/cgf70386"
   - title: 'Affinification: A Fine Approximation of Deformations'
     authors: Alexandre Mercier-Aubin, Teseo Schneider, Paul Kry, Sheldon Andrews
+    url: "https://diglib.eg.org/handle/10.1111/cgf70382"
 - number: "15"
   shortSessionId: "Animation 3"
   sessionTitle: "Digital Humans: From Capture to Control"
@@ -213,14 +287,19 @@
   papers:
   - title: 'DexterCap: Affordable and Automated Capture of Complex Hand-Object Interactions'
     authors: Yutong Liang, Shiyi Xu, Yulong Zhang, Bowen Zhan, He Zhang, Libin Liu
+    url: "https://diglib.eg.org/handle/10.1111/cgf70330"
   - title: Improving Facial Rig Semantics for Tracking and Retargeting
     authors: Dalton Omens, Allise Thurman, Jihun Yu, Ron Fedkiw
+    url: "https://diglib.eg.org/handle/10.1111/cgf70417"
   - title: 'CANRIG: Cross-Attention Neural Face Rigging with Variable Local Control'
     authors: Arad Mohammadi, Sebastian Weiss, Jakob Buhmann, Loïc Ciccone, Robert W. Sumner, Derek Bradley, Martin Guay
+    url: "https://diglib.eg.org/handle/10.1111/cgf70426"
   - title: 'GTAvatar: Bridging Gaussian Splatting and Texture Mapping for Relightable and Editable Gaussian Avatars'
     authors: Kelian Baert, Mae Younes, Francois Bourel, Marc Christie, Adnane Boukhayma
+    url: "https://diglib.eg.org/handle/10.1111/cgf70351"
   - title: 'Neuralocks: Real-Time Dynamic Neural Hair Simulation'
     authors: Wei-Chin Gene Lin, Egor Larionov, Hsiao-yu Chen, Doug Roble, Tuur Stuyck
+    url: "https://diglib.eg.org/handle/10.1111/cgf70407"
 - number: "16"
   shortSessionId: "Rendering 3"
   sessionTitle: "Measuring and Modeling Material Appearance"
@@ -228,14 +307,20 @@
   papers:
   - title: High-Gloss SVBRDF Capture Using Bounce Light
     authors: Tomáš Iser, Andrei-Timotei Ardelean, Tim Weyrich
+    url: "https://diglib.eg.org/handle/10.1111/cgf70359"
   - title: A Texture-Free Multi-Scale Model for Surface-Based Rendering of Knitted Fabrics
     authors: Apoorv Khattar, Jean-Marie Aubry, Ling-Qi Yan, Zahra Montazeri
+    url: "https://diglib.eg.org/handle/10.1111/cgf70356"
   - title: A Discrete Polydisperse Anisotropic BSDF Model based on the Micrograin Framework
     authors: Kewei Xu, Simon Lucas, Mickael Ribardiere, Benjamin Bringier, Pascal Barla
+    url: "https://diglib.eg.org/handle/10.1111/cgf70387"
   - title: 'HiMat: DiT-based Ultra-High Resolution SVBRDF Generation'
     authors: Zixiong Wang, Jian Yang, Yiwei Hu, Miloš Hašan, Beibei Wang
+    url: "https://diglib.eg.org/handle/10.1111/cgf70343"
   - title: Digitisation of Impasto and Gloss in Oil Paintings via Spatially Varying Bidirectional Reflectance Distribution Function Acquisition
     authors: Chih Yang, Tzung-Han Lin
+    url: "https://onlinelibrary.wiley.com/doi/10.1111/cgf.70295"
+    cgf: true
 - number: "17"
   shortSessionId: "Nature"
   sessionTitle: "From Leaf to Planet: Natural Environment Generation and Simulation"
@@ -243,14 +328,19 @@
   papers:
   - title: 'LeafFit: Plant Assets Creation from 3D Gaussian Splatting'
     authors: Chang Luo, Nobuyuki Umetani
+    url: "https://diglib.eg.org/handle/10.1111/cgf70374"
   - title: 'TreeON: Reconstructing 3D Tree Point Clouds from Orthophotos and Heightmaps'
     authors: Angeliki Grammatikaki, Johannes Eschner, Pedro Hermosilla, Oscar Argudo, Manuela Waldner
+    url: "https://diglib.eg.org/handle/10.1111/cgf70366"
   - title: 'HeatMat: Simulation of City Material Impact on Urban Heat Island Effect'
     authors: Marie Reinbigler, Romain Rouffet, Peter Naylor, Mikolaj Czerkawski, Nikolaos Dionelis, Elisabeth Brunet, Catalin Fetita, Rosalie Martin
+    url: "https://diglib.eg.org/handle/10.1111/cgf70376"
   - title: Authoring Terrestrial Planets with Diffusion Models
     authors: Oliver Borg, James Gain, Éric Guérin, Adrien Peytavie, Marie-Paule Cani, Eric Galin, Guillaume Cordonnier
+    url: "https://diglib.eg.org/handle/10.1111/cgf70390"
   - title: Terrain Synthesis and Authoring based on Iso-Contours
     authors: Benoit Huftier, Hugo Schott, Eric Galin, Oscar Argudo, Adrien Peytavie, Eric Guérin
+    url: "https://diglib.eg.org/handle/10.1111/cgf70389"
 - number: "18"
   shortSessionId: "Rendering 2"
   sessionTitle: "Neural Appearance: Reflectance, Irradiance, and Light Transport"
@@ -258,14 +348,20 @@
   papers:
   - title: Neural Progressive Photon Mapping
     authors: Justin Benoist, Joey Litalien, Adrien Gruson
+    url: "https://diglib.eg.org/handle/10.1111/cgf70408"
   - title: Neural Local Inter-reflection Modeling for Garment Fold Rendering
     authors: Jooeun Son, Nuri Ryu, Gyoonseo Kim, Joo Ho Lee, Seungyong Lee
+    url: "https://diglib.eg.org/handle/10.1111/cgf70348"
   - title: Real-time Rendering with a Neural Irradiance Volume
     authors: Arno Coomans, Giacomo Nazzaro, Edoardo A. Dominici, Christian Döring, Floor Verhoeven, Konstantinos Vardis, Markus Steinberger
+    url: "https://diglib.eg.org/handle/10.1111/cgf70400"
   - title: A Real-Time Multi-Scale Neural Representation for Complex Surface Reflectance
     authors: Heikki Timonen, Pauli Kemppinen, Jaakko Lehtinen
+    url: "https://diglib.eg.org/handle/10.1111/cgf70331"
   - title: 'BRDF Importance Baking: A Lightweight Neural Solution to Importance Sampling General Parametric BRDFs'
     authors: Yaoyi Bai, Songyin Wu, Zheng Zeng, Lingqi Yan, Beibei Wang
+    url: "https://onlinelibrary.wiley.com/doi/10.1111/cgf.70286?af=R"
+    cgf: true
 - number: "19"
   shortSessionId: "Geometry 4"
   sessionTitle: "Parametric and Structured Geometry"
@@ -273,14 +369,20 @@
   papers:
   - title: 'CADrawer: Autoregressive CAD Generation from 3D Sketches'
     authors: Yuanbo Li, Gilda Manfredi, Henro Kriel, Chengye Hao, Xianghao Xu, Adrien Bousseau, Daniel Ritchie
+    url: "https://diglib.eg.org/handle/10.1111/cgf70352"
   - title: Differentiable variable fonts
     authors: Kinjal Parikh, Danny M. Kaufman, David I.W. Levin, Alec Jacobson
+    url: "https://diglib.eg.org/handle/10.1111/cgf70415"
   - title: 2D Piecewise Linear Scalar Fields with Invertible Integral Lines
     authors: Leon Timm Erxleben, Michael Motejat, Christian Rössl, Holger Theisel
+    url: "https://diglib.eg.org/handle/10.1111/cgf70340"
   - title: Register-Efficient Linear-Time Evaluation in the Bernstein Basis
     authors: Gábor Valasek, Anna Lili Horváth
+    url: "https://diglib.eg.org/handle/10.1111/cgf70403"
   - title: Improving the watertightness of parametric surface/surface intersection
     authors: Yuqing Wang, Xiaohong Jia, Jieyin Yang, Bolun Wang, Pengbo Bo, Yang Liu
+    url: "https://onlinelibrary.wiley.com/doi/10.1111/cgf.70298?af=R"
+    cgf: true
 - number: "20"
   shortSessionId: "VR/MR"
   sessionTitle: "Immersive and Interactive: Rendering Across Displays and Devices"
@@ -288,14 +390,19 @@
   papers:
   - title: 'Robo-Saber: Generating and Simulating Virtual Reality Players'
     authors: Nam Hee Kim, May Liu, Jaakko Lehtinen, Perttu Hämäläinen, James O’Brien, Jason Peng
+    url: "https://diglib.eg.org/handle/10.1111/cgf70353"
   - title: Real-Time Neural Materials on Mobile VR
     authors: Zilin Xu, Yang Zhou, Yehonathan Litman, Matt Jen-Yuan Chiang, Lingqi Yan, Anton Michels
+    url: "https://diglib.eg.org/handle/10.1111/cgf70318"
   - title: 'ML-PEA: Machine Learning-Based Perceptual Algorithms for Display Power Optimization'
     authors: Kenneth Chen, Nathan Matsuda, Thomas Wan, Ajit Ninan, Alexandre Chapiro, Qi Sun
+    url: "https://diglib.eg.org/handle/10.1111/cgf70369"
   - title: 'ProjectiveShading: Inserting 3D Objects into Indoor Images with Complex Shadows'
     authors: Jundan Luo, Xiaolong Wu, Nanxuan Zhao, Lu Wang, Wenbin Li, Christian Richardt
+    url: "https://diglib.eg.org/handle/10.1111/cgf70320"
   - title: PBR-Inspired Controllable Diffusion for Image Generation
     authors: Bowen Xue, Giuseppe Claudio Guarnera, Shuang Zhao, Zahra Montazeri
+    url: "https://diglib.eg.org/handle/10.1111/cgf70329"
 - number: "21"
   shortSessionId: "Geometry 1"
   sessionTitle: "Maps and Meshes: Parameterization and Geometry Processing"
@@ -303,14 +410,20 @@
   papers:
   - title: Adaptive Use of LBO Bases by Shape Feature Scales for High-Quality and Efficient Shape Correspondence
     authors: Chong Zhao, Wencheng Wang, Fei Hou
+    url: "https://onlinelibrary.wiley.com/doi/full/10.1111/cgf.70294"
+    cgf: true
   - title: 'TABI: Tight and Balanced Interactive Atlas Packing'
     authors: Floria Gu, Nicholas Vining, Alla Sheffer
+    url: "https://diglib.eg.org/handle/10.1111/cgf70332"
   - title: Volume Quantization with Flexible Singularities for Hexahedral Meshing
     authors: Hendrik Brückler, Marcel Campen
+    url: "https://diglib.eg.org/handle/10.1111/cgf70349"
   - title: Fast Injective Mesh Parameterization via Beltrami Coefficient Prolongation
     authors: Guy Fargion, Ofir Weber
+    url: "https://diglib.eg.org/handle/10.1111/cgf70341"
   - title: 'DiskScissors: Cutting Arbitrary-Topology Solids for Bijective Mapping'
     authors: Steffen Hinderink, Marcel Campen
+    url: "https://diglib.eg.org/handle/10.1111/cgf70379"
 - number: "22"
   shortSessionId: "Rendering 4"
   sessionTitle: "Advancing 3D Gaussian Splatting"
@@ -318,11 +431,16 @@
   papers:
   - title: Multi-Spectral Gaussian Splatting with Neural Color Representation
     authors: Lukas Meyer, Josef Grün, Maximilian Weiherer, Bernhard Egger, Marc Stamminger, Linus Franke
+    url: "https://diglib.eg.org/handle/10.1111/cgf70337"
   - title: 'RotGS: Rotation-Guided 3D Gaussian Splatting for Turntable Sequences without Structure-from-Motion'
     authors: Kyumin Kim, Dohae Lee, Hanul Baek, In-Kwon Lee
+    url: "https://diglib.eg.org/handle/10.1111/cgf70317"
   - title: Adaptive Spatio-Temporal 3D Gaussian Splatting for Scenes with Oscillatory Motion
     authors: Petros Tzathas, Jeffrey Hu, Andréas Meuleman, Guillaume Cordonnier, George Drettakis
+    url: "https://diglib.eg.org/handle/10.1111/cgf70410"
   - title: 'OUGS: Active View Selection via Object-aware Uncertainty Estimation in 3DGS'
     authors: Haiyi Li, Qi Chen, Denis Kalkofen, Hsiang-Ting Chen
+    url: "https://diglib.eg.org/handle/10.1111/cgf70363"
   - title: Splat-based Metal Artifact Reduction in Cone-Beam CT via Polychromatic Modeling
     authors: Kiseok Choi, Inchul Kim, Jaemin Cho, Hyeongjun Cho, Min H. Kim
+    url: "https://diglib.eg.org/handle/10.1111/cgf70339"
