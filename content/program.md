@@ -302,8 +302,8 @@ fullProgramRooms:
       "STAR 7 / STAR 8": "Kino 6"
       "Short Paper 2": "Kino 5"
     "14:00-15:30":
-      "Full Paper 17": "Kino 4"
-      "Full Paper 18": "Kino 5"
+      "Full Paper 17": "Kino 5"
+      "Full Paper 18": "Kino 4"
       "Tutorial 8": "Kino 6"
       "STAR 9": "Kino 7"
     "16:00-17:30":
