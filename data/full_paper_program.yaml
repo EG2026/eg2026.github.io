@@ -408,6 +408,9 @@
   sessionTitle: "Maps and Meshes: Parameterization and Geometry Processing"
   sessionChair: "David Bommes"
   papers:
+  - title: 'DiskScissors: Cutting Arbitrary-Topology Solids for Bijective Mapping'
+    authors: Steffen Hinderink, Marcel Campen
+    url: "https://diglib.eg.org/handle/10.1111/cgf70379"
   - title: Adaptive Use of LBO Bases by Shape Feature Scales for High-Quality and Efficient Shape Correspondence
     authors: Chong Zhao, Wencheng Wang, Fei Hou
     url: "https://onlinelibrary.wiley.com/doi/full/10.1111/cgf.70294"
@@ -421,14 +424,14 @@
   - title: Fast Injective Mesh Parameterization via Beltrami Coefficient Prolongation
     authors: Guy Fargion, Ofir Weber
     url: "https://diglib.eg.org/handle/10.1111/cgf70341"
-  - title: 'DiskScissors: Cutting Arbitrary-Topology Solids for Bijective Mapping'
-    authors: Steffen Hinderink, Marcel Campen
-    url: "https://diglib.eg.org/handle/10.1111/cgf70379"
 - number: "22"
   shortSessionId: "Rendering 4"
   sessionTitle: "Advancing 3D Gaussian Splatting"
   sessionChair: "Seungyong Lee"
   papers:
+  - title: Splat-based Metal Artifact Reduction in Cone-Beam CT via Polychromatic Modeling
+    authors: Kiseok Choi, Inchul Kim, Jaemin Cho, Hyeongjun Cho, Min H. Kim
+    url: "https://diglib.eg.org/handle/10.1111/cgf70339"
   - title: Multi-Spectral Gaussian Splatting with Neural Color Representation
     authors: Lukas Meyer, Josef Grün, Maximilian Weiherer, Bernhard Egger, Marc Stamminger, Linus Franke
     url: "https://diglib.eg.org/handle/10.1111/cgf70337"
@@ -441,6 +444,3 @@
   - title: 'OUGS: Active View Selection via Object-aware Uncertainty Estimation in 3DGS'
     authors: Haiyi Li, Qi Chen, Denis Kalkofen, Hsiang-Ting Chen
     url: "https://diglib.eg.org/handle/10.1111/cgf70363"
-  - title: Splat-based Metal Artifact Reduction in Cone-Beam CT via Polychromatic Modeling
-    authors: Kiseok Choi, Inchul Kim, Jaemin Cho, Hyeongjun Cho, Min H. Kim
-    url: "https://diglib.eg.org/handle/10.1111/cgf70339"
