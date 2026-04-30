@@ -729,6 +729,9 @@ Attendees, presenters, volunteers and sponsors are subject to the <a class=line
                         {{ else if and (isset $shortPaperItem "shortSessionId") (ne $shortPaperItem.shortSessionId "") }}
                           <p class="program-type-session">{{ $shortPaperItem.shortSessionId }}</p>
                         {{ end }}
+                        {{ if and (isset $shortPaperItem "sessionChair") (ne $shortPaperItem.sessionChair "") }}
+                          <p class="program-type-session-chair">Session chair: {{ $shortPaperItem.sessionChair }}</p>
+                        {{ end }}
                         {{ $papers := default (slice) $shortPaperItem.papers }}
                         {{ if gt (len $papers) 0 }}
                           <ol class="program-type-paper-list">

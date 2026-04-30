@@ -1,6 +1,7 @@
 - number: "1"
   shortSessionId: "Session 1"
   sessionTitle: "Faces, Characters & Human Modeling"
+  sessionChair: "Aleksander Płocharski"
   papers:
     - title: "ARTIST: Adaptive Humanoid Rigging by Transferring Individual Style with Optimal Transport"
       authors: "Jeanne-Emma Lefèvre, Théo Cheynel, Omar El Khalifi, Thomas Daniel, Bellot-Gurlet Baptiste"
@@ -26,6 +27,7 @@
 - number: "2"
   shortSessionId: "Session 2"
   sessionTitle: "Appearance, Imaging & Tools"
+  sessionChair: "Xavier Chermain"
   papers:
     - title: "RetiDiff: Stable Underwater Image Color Reconstruction Based on Retinex and Diffusion Distillation"
       authors: "Wenyao Qiu, Zhuang Zhou, Xin Zhang, Jiayi Chen, Shiping Zhou, Ran Tao"
@@ -51,6 +53,7 @@
 - number: "3"
   shortSessionId: "Session 3"
   sessionTitle: "Simulation, Geometry & Computational Design"
+  sessionChair: "Ana Serrano"
   papers:
     - title: "VisACD: Visibility-Based GPU-Accelerated Approximate Convex Decomposition"
       authors: "Egor Fokin, Manolis Savva"
@@ -76,6 +79,7 @@
 - number: "4"
   shortSessionId: "Session 4"
   sessionTitle: "Rendering Representations & GPU Pipelines"
+  sessionChair: "Markus Schütz"
   papers:
     - title: "Voxel Deformation-Aware Neural Intersection Function"
       authors: "Chih-Chen Kao, Grzegorz Makowski, Shin Fujieda, Takahiro Harada"
