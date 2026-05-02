@@ -25,16 +25,16 @@ Whether you are a researcher navigating compute limitations, a member of industr
 
 This year’s panel brings together outstanding researchers who engage in initiatives promoting inclusion and equal access within the computer graphics community to ensure broader participation from underrepresented groups.
 
-Confirmed invited panelists include:
+The invited panelists include:
 
 {{< diversity_panelists >}}
 
 
----
+<!-- ---
 
 ### Program
 
-TBA
+TBA -->
 
 ---
 
