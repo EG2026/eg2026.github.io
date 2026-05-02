@@ -344,7 +344,7 @@
 - number: "18"
   shortSessionId: "Rendering 2"
   sessionTitle: "Neural Appearance: Reflectance, Irradiance, and Light Transport"
-  sessionChair: "Zahra Montazeri"
+  sessionChair: "Diego Gutierrez"
   papers:
   - title: Neural Progressive Photon Mapping
     authors: Justin Benoist, Joey Litalien, Adrien Gruson
