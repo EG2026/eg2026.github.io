@@ -145,7 +145,7 @@
 - number: "8"
   shortSessionId: "Geom-Imag"
   sessionTitle: "From Pixels to Scenes: 3D Reconstruction and Generation"
-  sessionChair: "Marc Stamminger"
+  sessionChair: "Linus Franke"
   papers:
   - title: 'ZeroScene: A Zero-Shot Framework for 3D Scene Generation from a Single Image and Controllable Texture Editing'
     authors: Xiang Tang, Ruotong Li, Xiaopeng Fan
