@@ -15,6 +15,14 @@ panelists:
     affiliation: "Graz University of Technology, Intelligent Geometry and Simulation Group"
     portrait: "/images/AugsdörferUrsula_ss.png"
     bio: "Ursula Augsdörfer leads the Intelligent Geometry and Simulation Group at Graz University of Technology. Her research focuses on advancing methods at the intersection of geometry and machine learning, with an emphasis on practical applications and interdisciplinary collaboration. Beyond her academic work, she is committed to fostering a more inclusive and supportive research community."
+  - name: "Michael Guthe"
+    affiliation: "University of Bayreuth, Visual Computing Group"
+    portrait: "/images/Michael_Guthe.jpeg"
+    bio: "Michael Guthe leads the Visual Computing Group at the University of Bayreuth. His research focuses on 3D modeling and rendering with applications in industry, cultural heritage, and medicine. Beyond his research, he is active in university politics, having served as dean, dean of studies, and member of the anti-discrimination board."
+  - name: "Karina Rodriguez Echavarria"
+    affiliation: "University of Brighton"
+    portrait: "/images/karina_new.png.webp"
+    bio: "Karina Rodriguez Echavarria is a Professor of Visual Computing at the University of Brighton. With a background in Computer Science, her research interests include computing technologies and digital infrastructures for the digitisation of objects and environments, and the information management of visual representations, with a focus on Cultural Heritage applications. She also leads the UKRI-funded Digital Skills Network in Arts and Humanities (DISKAH), which aims to broaden digital skills for digital research infrastructures. She is also the Editor-in-Chief of the ACM Journal of Computing and Cultural Heritage, and chairs the Eurographics Workshops and Symposia Board."
 ---
 
 Join us at Eurographics 2026 for a timely panel on **Fair Access to Compute: The Emerging Inequality in the Age of AI**. As modern computer graphics and AI research increasingly depend on large-scale computational resources, a new kind of inequality is taking shape. Today, groundbreaking results often come from institutions or companies with access to vast GPU clusters, while talented researchers—especially students and early-career academics at smaller universities—may struggle to compete despite having equally strong ideas.
